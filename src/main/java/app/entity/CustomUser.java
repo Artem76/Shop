@@ -24,8 +24,8 @@ public class CustomUser {
 
 //    @ManyToMany(mappedBy = "boxes", cascade = CascadeType.ALL)
 //    private List<Box> boxes = new ArrayList<>();
-//    @OneToMany(cascade = CascadeType.ALL)
-//    private List<Message> messages = new ArrayList<>();
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Message> messages = new ArrayList<>();
 
     public CustomUser(String login, String password, UserRole role) {
         this.login = login;

@@ -11,8 +11,8 @@ public class Message {
     private String message;
     private Long time;
 
-//    @ManyToOne(fetch = FetchType.EAGER)
-//    private CustomUser user;
+    @ManyToOne(fetch = FetchType.EAGER)
+    private CustomUser user;
 
 /*
     public Message(String message, Long time, CustomUser user) {
