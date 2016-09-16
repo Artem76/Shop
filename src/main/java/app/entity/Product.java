@@ -15,21 +15,16 @@ public class Product {
     private Double area;
     private Integer number;
     private String description;
-/*
 
-    @OneToMany(*/
-/*mappedBy = "product", *//*
+   /* @OneToMany(
+mappedBy = "product",
 cascade = CascadeType.ALL)
-    private List<Ord> orders = new ArrayList<>();
+    private List<Ord> orders = new ArrayList<>();*/
 
-    @ManyToOne(fetch = FetchType.EAGER*/
-/*, cascade = CascadeType.ALL*//*
-)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Photo photo;
-*/
 
     public Product() { }
-/*
 
     public Product(String type, Integer numberOfWires, Double area, Integer number, String description, Photo photo) {
         this.type = type;
@@ -39,7 +34,6 @@ cascade = CascadeType.ALL)
         this.description = description;
         this.photo = photo;
     }
-*/
 
     public long getId() {
         return id;
@@ -96,6 +90,7 @@ cascade = CascadeType.ALL)
     public void setOrders(List<Ord> ords) {
         this.orders = ords;
     }
+*/
 
     public Photo getPhoto() {
         return photo;
@@ -103,5 +98,5 @@ cascade = CascadeType.ALL)
 
     public void setPhoto(Photo photo) {
         this.photo = photo;
-    }*/
+    }
 }

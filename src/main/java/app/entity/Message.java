@@ -14,13 +14,11 @@ public class Message {
     @ManyToOne(fetch = FetchType.EAGER)
     private CustomUser user;
 
-/*
     public Message(String message, Long time, CustomUser user) {
         this.message = message;
         this.time = time;
         this.user = user;
     }
-*/
 
     public Message() { }
 
@@ -47,12 +45,11 @@ public class Message {
     public void setTime(Long time) {
         this.time = time;
     }
-/*
     public CustomUser getUser() {
         return user;
     }
 
     public void setUser(CustomUser user) {
         this.user = user;
-    }*/
+    }
 }

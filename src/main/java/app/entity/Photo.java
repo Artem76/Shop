@@ -12,15 +12,12 @@ public class Photo {
 
     private String name;
     private byte[] body;
-/*
 
-    @OneToMany(*/
-/*mappedBy = "photo", *//*
-cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Product> products = new ArrayList<>();
-*/
 
-    public Photo() { }
+    public Photo() {
+    }
 
     public Photo(String name, byte[] body) {
         this.name = name;
@@ -51,11 +48,11 @@ cascade = CascadeType.ALL)
         this.body = body;
     }
 
- /*   public List<Product> getProducts() {
+    public List<Product> getProducts() {
         return products;
     }
 
     public void setProducts(List<Product> products) {
         this.products = products;
-    }*/
+    }
 }
