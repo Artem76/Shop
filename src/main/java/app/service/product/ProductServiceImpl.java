@@ -9,11 +9,23 @@ import java.util.List;
 
 @Service
 public class ProductServiceImpl implements ProductService {
-  /*  @Autowired
+    @Autowired
     private ProductRepository productRepository;
 
     @Override
-    @Transactional
+    @Transactional(readOnly = true)
+    public List<Product> getProductByTypeAndNumberOfWiresAndArea(String type, Integer numberOfWires, Double area) {
+        return productRepository.findByTypeAndNumberOfWiresAndArea(type, numberOfWires, area);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Product getProductOne(long id) {
+        return productRepository.findOne(id);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
     public List<Product> getProductAll() {
         return productRepository.findAll();
     }
@@ -34,5 +46,5 @@ public class ProductServiceImpl implements ProductService {
     @Transactional
     public void deleteProduct(Product product) {
         productRepository.delete(product);
-    }*/
+    }
 }
