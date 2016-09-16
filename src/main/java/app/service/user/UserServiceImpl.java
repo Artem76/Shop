@@ -1,6 +1,7 @@
 package app.service.user;
 
 import app.entity.CustomUser;
+import app.entity.enums.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,7 +16,6 @@ public class UserServiceImpl implements UserService {
     public CustomUser getUserByLogin(String login) {
         return userRepository.findByLogin(login);
     }
-/*
     @Override
     @Transactional(readOnly = true)
     public CustomUser getUserByLogin(String login, UserRole role) {
@@ -33,7 +33,6 @@ public class UserServiceImpl implements UserService {
     public CustomUser getUserByEmail(String email, UserRole role) {
         return userRepository.findByEmail(email,role);
     }
-*/
     @Override
     @Transactional
     public void addUser(CustomUser customUser) {
@@ -46,7 +45,7 @@ public class UserServiceImpl implements UserService {
         userRepository.save(customUser);
     }
 
- /*   @Override
+    @Override
     @Transactional
-    public void deleteUser(CustomUser customUser) { userRepository.delete(customUser);}*/
+    public void deleteUser(CustomUser customUser) { userRepository.delete(customUser);}
 }
