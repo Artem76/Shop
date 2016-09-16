@@ -22,8 +22,9 @@ public class CustomUser {
     private String phone;
     private String address;
 
-//    @ManyToMany(mappedBy = "boxes", cascade = CascadeType.ALL)
-//    private List<Box> boxes = new ArrayList<>();
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<Box> boxes = new ArrayList<>();
+
     @OneToMany(cascade = CascadeType.ALL)
     private List<Message> messages = new ArrayList<>();
 
@@ -96,7 +97,6 @@ public class CustomUser {
     public String getAddress() { return address; }
 
     public void setAddress(String address) { this.address = address; }
-/*
     public List<Box> getBoxes() {
         return boxes;
     }
@@ -111,5 +111,5 @@ public class CustomUser {
 
     public void setMessages(List<Message> messages) {
         this.messages = messages;
-    }*/
+    }
 }

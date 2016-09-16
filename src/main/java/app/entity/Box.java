@@ -10,15 +10,11 @@ public class Box {
     @GeneratedValue
     private long id;
 
-  /*  @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-            name="BoxCustomUser",
-            joinColumns={@JoinColumn(name="box_id", referencedColumnName="id")},
-            inverseJoinColumns={@JoinColumn(name="customUser_id", referencedColumnName="id")})*/
-//    private List<CustomUser> customUsers = new ArrayList<>();
+    @ManyToMany(fetch = FetchType.EAGER)
+    private List<CustomUser> customUsers = new ArrayList<>();
 
-//    @OneToMany(cascade = CascadeType.ALL)
-//    private List<Ord> ords = new ArrayList<>();
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Ord> ords = new ArrayList<>();
 
     private Boolean status;
     private String description;
@@ -26,9 +22,9 @@ public class Box {
 
     public Box() { }
 
- /*   public Box(List<CustomUser> customUsers) {
-        this.customUsers = customUsers;
-    }*/
+    public Box(CustomUser customUser) {
+        this.customUsers.add(0,customUser);
+    }
 
     public long getId() {
         return id;
@@ -38,14 +34,21 @@ public class Box {
         this.id = id;
     }
 
-  /*  public List<CustomUser> getCustomUsers() {
-        return customUsers;
-    }*/
-/*
-    public void setCustomUsers(List<CustomUser> customUsers) {
-        this.customUsers = customUsers;
-    }*/
-/*
+    public CustomUser getCustomUserClient() {
+        return customUsers.get(0);
+    }
+
+    public CustomUser getCustomUserManager() {
+        return customUsers.get(1);
+    }
+
+    public void setCustomUserClient(CustomUser customUser) {
+        this.customUsers.add(0,customUser);
+    }
+
+    public void setCustomUserManager(CustomUser customUser) {
+        this.customUsers.add(1,customUser);
+    }
 
     public List<Ord> getOrders() {
         return ords;
@@ -54,7 +57,6 @@ public class Box {
     public void setOrders(List<Ord> ords) {
         this.ords = ords;
     }
-*/
 
     public Boolean getStatus() {
         return status;

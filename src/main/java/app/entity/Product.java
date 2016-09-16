@@ -16,10 +16,8 @@ public class Product {
     private Integer number;
     private String description;
 
-   /* @OneToMany(
-mappedBy = "product",
-cascade = CascadeType.ALL)
-    private List<Ord> orders = new ArrayList<>();*/
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Ord> orders = new ArrayList<>();
 
     @ManyToOne(fetch = FetchType.EAGER)
     private Photo photo;
@@ -82,7 +80,6 @@ cascade = CascadeType.ALL)
     public void setDescription(String description) {
         this.description = description;
     }
-/*
     public List<Ord> getOrders() {
         return orders;
     }
@@ -90,7 +87,6 @@ cascade = CascadeType.ALL)
     public void setOrders(List<Ord> ords) {
         this.orders = ords;
     }
-*/
 
     public Photo getPhoto() {
         return photo;
