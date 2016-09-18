@@ -5,23 +5,30 @@ import app.entity.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class MessageServiceImpl implements MessageService{
     @Autowired
     MessageRepository massageRepository;
-
     @Override
     @Transactional(readOnly = true)
     public List<Message> getMessageAll() {
-        return massageRepository.findAllSort();
+        List<Message> messages = new ArrayList<>();
+        messages = massageRepository.findAll();
+        Collections.sort(messages,(a,b) -> b.getDate().compareTo(a.getDate()));
+        return messages;
     }
 
     @Override
     @Transactional(readOnly = true)
     public List<Message> getMessageByUser(CustomUser customUser) {
-        return massageRepository.findByCustomUser(customUser);
+        List<Message> messages = new ArrayList<>();
+        messages = massageRepository.findAll();
+        for (Message message: messages){
+            if(!message.getUser().equals(customUser)) messages.remove(message);
+        }
+        Collections.sort(messages,(a,b) -> b.getDate().compareTo(a.getDate()));
+        return messages;
     }
 
     @Override

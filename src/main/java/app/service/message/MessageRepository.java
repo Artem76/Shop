@@ -9,9 +9,5 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface MessageRepository extends JpaRepository<Message, Long> {
-    @Query("SELECT m FROM Message m where m.customUser = :customUser ORDER BY m.date desc ")
-    List<Message> findByCustomUser(@Param("customUser")CustomUser customUser);
 
-    @Query("SELECT m FROM Message m where m.customUser = :customUser ORDER BY m.date desc ")
-    List<Message> findAllSort();
 }
