@@ -1,6 +1,9 @@
 package app.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class Message {
@@ -9,14 +12,16 @@ public class Message {
     private long id;
 
     private String message;
-    private Long time;
+
+    @Temporal(value = TemporalType.TIMESTAMP)
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
+    private Date date;
 
     @ManyToOne(fetch = FetchType.EAGER)
     private CustomUser user;
 
-    public Message(String message, Long time, CustomUser user) {
+    public Message(String message, CustomUser user) {
         this.message = message;
-        this.time = time;
         this.user = user;
     }
 
@@ -38,13 +43,14 @@ public class Message {
         this.message = message;
     }
 
-    public Long getTime() {
-        return time;
+    public Date getDate() {
+        return date;
     }
 
-    public void setTime(Long time) {
-        this.time = time;
+    public void setDate(Date date) {
+        this.date = date;
     }
+
     public CustomUser getUser() {
         return user;
     }
