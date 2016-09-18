@@ -10,25 +10,17 @@ import java.util.*;
 public class MessageServiceImpl implements MessageService{
     @Autowired
     MessageRepository massageRepository;
+
     @Override
     @Transactional(readOnly = true)
-    public List<Message> getMessageAll() {
-        List<Message> messages = new ArrayList<>();
-        messages = massageRepository.findAll();
-        Collections.sort(messages,(a,b) -> b.getDate().compareTo(a.getDate()));
-        return messages;
+    public List<Message> getMessageAllSort() {
+        return massageRepository.findAllSort();
     }
 
     @Override
     @Transactional(readOnly = true)
-    public List<Message> getMessageByUser(CustomUser customUser) {
-        List<Message> messages = new ArrayList<>();
-        messages = massageRepository.findAll();
-        for (Message message: messages){
-            if(!message.getUser().equals(customUser)) messages.remove(message);
-        }
-        Collections.sort(messages,(a,b) -> b.getDate().compareTo(a.getDate()));
-        return messages;
+    public List<Message> getMessageByUserSort(CustomUser customUser) {
+        return massageRepository.findByUserSort(customUser);
     }
 
     @Override

@@ -1,7 +1,10 @@
 package app.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -18,7 +21,10 @@ public class Box {
 
     private Boolean status;
     private String description;
-    private Long time;
+
+    @Temporal(value = TemporalType.TIMESTAMP)
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
+    private Date date;
 
     public Box() { }
 
@@ -74,11 +80,11 @@ public class Box {
         this.description = description;
     }
 
-    public Long getTime() {
-        return time;
+    public Date getDate() {
+        return date;
     }
 
-    public void setTime(Long time) {
-        this.time = time;
+    public void setDate(Date date) {
+        this.date = date;
     }
 }
