@@ -2,6 +2,9 @@ package app.service.box;
 
 import app.entity.Box;
 import app.entity.CustomUser;
+import app.entity.Ord;
+import app.entity.Product;
+import app.service.product.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -11,6 +14,9 @@ import java.util.List;
 public class BoxServiceImpl implements BoxService{
     @Autowired
     BoxRepository boxRepository;
+
+    @Autowired
+    ProductRepository productRepository;
 
     @Override
     @Transactional(readOnly = true)
@@ -62,7 +68,23 @@ public class BoxServiceImpl implements BoxService{
 
     @Override
     @Transactional
-    public void completeBox(Box box) {
-//Дописать
+    public boolean completeBox(Box box) {
+        if(box.getStatus()!=null && box.getStatus()) {
+            List<Ord> ords = box.getOrders();
+            for (Ord ord : ords) {
+                if(ord.getNumberProduct() > ord.getProduct().getNumber()){
+                    return false;
+                }
+            }
+            for (Ord ord: ords) {
+                Product product = ord.getProduct();
+                product.setNumber(product.getNumber() - ord.getNumberProduct());
+                productRepository.save(product);
+            }
+            box.setStatus(false);
+            boxRepository.save(box);
+            return true;
+        }
+        return false;
     }
 }

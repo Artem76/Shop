@@ -12,5 +12,5 @@ public interface BoxService {
     void addBox(Box box);
     void updateBox(Box box);
     void deleteBox(Box box);
-    void completeBox(Box box);
+    boolean completeBox(Box box);
 }
