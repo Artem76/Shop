@@ -7,23 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1608cc52-eac6-48e3-97a2-4ff57e309dc2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/app/controller/MyController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/app/service/product/ProductService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/app/service/product/ProductServiceImpl.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/Application$1.class" afterPath="$PROJECT_DIR$/target/classes/app/Application$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/Application.class" afterPath="$PROJECT_DIR$/target/classes/app/Application.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/config/AppConfig.class" afterPath="$PROJECT_DIR$/target/classes/app/config/AppConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/config/SecurityConfig.class" afterPath="$PROJECT_DIR$/target/classes/app/config/SecurityConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/entity/Photo.class" afterPath="$PROJECT_DIR$/target/classes/app/entity/Photo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/entity/Product.class" afterPath="$PROJECT_DIR$/target/classes/app/entity/Product.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/service/photo/PhotoRepository.class" afterPath="$PROJECT_DIR$/target/classes/app/service/photo/PhotoRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/service/photo/PhotoService.class" afterPath="$PROJECT_DIR$/target/classes/app/service/photo/PhotoService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/service/photo/PhotoServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/app/service/photo/PhotoServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/service/product/ProductRepository.class" afterPath="$PROJECT_DIR$/target/classes/app/service/product/ProductRepository.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/service/product/ProductServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/app/service/product/ProductServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/pages/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
     </list>
     <ignored path="Shop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,8 +57,8 @@
       <file leaf-file-name="ProductServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/service/product/ProductServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
               <folding>
                 <element signature="e#1677#1685#0" expanded="true" />
                 <element signature="e#2085#2094#0" expanded="true" />
@@ -1348,7 +1332,7 @@
       <workItem from="1474192856927" duration="36224000" />
       <workItem from="1474536607114" duration="26605000" />
       <workItem from="1474882620117" duration="5927000" />
-      <workItem from="1474888959331" duration="58138000" />
+      <workItem from="1474888959331" duration="58240000" />
     </task>
     <task id="LOCAL-00001" summary="Проект">
       <created>1473930874683</created>
@@ -1441,11 +1425,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475242350159</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Первая страница">
+      <created>1475242604885</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1475242604885</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221450000" />
+    <option name="totallyTimeSpent" value="221552000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1915,8 +1906,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/service/product/ProductServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
           <folding>
             <element signature="e#1677#1685#0" expanded="true" />
             <element signature="e#2085#2094#0" expanded="true" />
