@@ -96,7 +96,7 @@
                 <div class="col-sm-8">
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
-                            <li><a href="/shop"><i class="fa fa-lock"></i> Вход / Регистрация</a></li>
+                            <li><a href="#"><i class="fa fa-lock"></i> Вход / Регистрация</a></li>
                         </ul>
                     </div>
                 </div>

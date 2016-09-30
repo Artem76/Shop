@@ -2,6 +2,7 @@ package app.controller;
 
 import app.entity.CustomUser;
 import app.entity.Product;
+import app.entity.enums.UserRole;
 import app.service.photo.PhotoService;
 import app.service.photo.PhotoServiceImpl;
 import app.service.product.ProductService;
@@ -24,6 +25,8 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 
 @Controller
@@ -58,7 +61,13 @@ public class MyController {
         return "index";
     }
 
-    @RequestMapping("/ind")
+    @RequestMapping("/shop")
+    public String shop(Model model){
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return "shop";
+    }
+
+   /* @RequestMapping("/ind")
     public String ind(Model model){
         User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();//получение обьекта связанного с учегной записью под которой авторизировался пользователь
         String login = user.getUsername();//получение логина пользователя
@@ -71,9 +80,46 @@ public class MyController {
         model.addAttribute("phone", dbUser.getPhone());
 
         return "ind";
+    }*/
+
+    @RequestMapping(value = "/reg", method = RequestMethod.POST)
+    public String update(@RequestParam(required = false) String login,
+                         @RequestParam(required = false) String password1,
+                         @RequestParam(required = false) String password2,
+                         @RequestParam(required = false) String email,
+                         @RequestParam(required = false) String phone,
+                         @RequestParam(required = false) String address,
+                         Model model){
+        CustomUser checkUser = userService.getUserByLogin(login);
+        if (checkUser!=null){
+            model.addAttribute("log","error");
+            return "redirect:/login";
+        }
+        if (login.equals("") || password1.equals("") || !password1.equals(password2) || email.equals("") || phone.equals("") ||address.equals("") ){
+            model.addAttribute("error", "error");
+            return "redirect:/login";
+        }
+        MessageDigest mDigest = null;
+        try {
+            mDigest = MessageDigest.getInstance("SHA1");
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        byte[] result = mDigest.digest(password1.getBytes());
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < result.length; i++) {
+            sb.append(Integer.toString((result[i] & 0xff) + 0x100, 16).substring(1));
+        }
+        String passwordSHA1 = sb.toString();
+        CustomUser customUser = new CustomUser(login, passwordSHA1, UserRole.USER, email, phone ,address);
+
+        userService.addUser(customUser);
+        model.addAttribute("reg", "ok");
+
+        return "redirect:/login";
     }
 
-    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    /*@RequestMapping(value = "/update", method = RequestMethod.POST)
     public String update(@RequestParam(required = false) String email, @RequestParam(required = false) String phone) {
         User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String login = user.getUsername();
@@ -85,7 +131,7 @@ public class MyController {
         userService.updateUser(dbUser);
 
         return "redirect:/ind";
-    }
+    }*/
 
     @RequestMapping("/admin")
     public String admin(){
