@@ -15,7 +15,6 @@ public class ProductServiceImpl implements ProductService {
     @Override
     @Transactional(readOnly = true)
     public List<Product> getProductByTypeAndNumberOfWiresAndAreaSort(String type, Integer numberOfWires, Double area) {
-        System.out.println(type + numberOfWires + area);
         List<Product> products = new ArrayList<>(productRepository.findAll());
         List<Product> productList = new ArrayList<>();
         for (Product product:
