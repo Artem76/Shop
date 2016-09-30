@@ -17,6 +17,18 @@ public class PhotoServiceImpl implements PhotoService{
     }
 
     @Override
+    @Transactional(readOnly = true)
+    public Photo getPhotoByName(String name) {
+        return photoRepository.findByName(name);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Photo getPhotoOne(long id) {
+        return photoRepository.findOne(id);
+    }
+
+    @Override
     @Transactional
     public void addPhoto(Photo photo) {
         photoRepository.save(photo);

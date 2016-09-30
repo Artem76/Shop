@@ -1,33 +1,69 @@
 package app.controller;
 
 import app.entity.CustomUser;
+import app.entity.Product;
+import app.service.photo.PhotoService;
+import app.service.photo.PhotoServiceImpl;
+import app.service.product.ProductService;
 import app.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 
 @Controller
 public class MyController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private ProductService productService;
+/*
+    @Autowired
+    private PhotoService photoService;*/
+
     @RequestMapping("/")
     public String index(Model model){
+        model.addAttribute("products", productService.getProductAll());
+        model.addAttribute("types",productService.getTypes());
+        model.addAttribute("numberOfWireses", productService.getNumberOfWires());
+        model.addAttribute("areas", productService.getAreas());
+        return "index";
+    }
 
+    @RequestMapping("/index")
+    public String index(@RequestParam String type_cable,
+                        @RequestParam Integer numberOfWires_cable,
+                        @RequestParam Double area_cable,
+                        Model model) {
+        model.addAttribute("products", productService.getProductByTypeAndNumberOfWiresAndAreaSort(type_cable,numberOfWires_cable,area_cable));
+        model.addAttribute("types",productService.getTypes());
+        model.addAttribute("numberOfWireses", productService.getNumberOfWires());
+        model.addAttribute("areas", productService.getAreas());
         return "index";
     }
 
     @RequestMapping("/ind")
     public String ind(Model model){
-        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();//РїРѕР»СѓС‡РµРЅРёРµ РѕР±СЊРµРєС‚Р° СЃРІСЏР·Р°РЅРЅРѕРіРѕ СЃ СѓС‡РµРіРЅРѕР№ Р·Р°РїРёСЃСЊСЋ РїРѕРґ РєРѕС‚РѕСЂРѕР№ Р°РІС‚РѕСЂРёР·РёСЂРѕРІР°Р»СЃСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ
-        String login = user.getUsername();//РїРѕР»СѓС‡РµРЅРёРµ Р»РѕРіРёРЅР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();//получение обьекта связанного с учегной записью под которой авторизировался пользователь
+        String login = user.getUsername();//получение логина пользователя
 
-        CustomUser dbUser = userService.getUserByLogin(login);//РїРѕР»СѓС‡РµРЅРёРµ РІСЃРµР№ РёРЅС„РѕСЂРјР°С†РёРё РёР· Р‘Р” РїРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЋ
+        CustomUser dbUser = userService.getUserByLogin(login);//получение всей информации из БД по пользователю
 
         model.addAttribute("login", login);
         model.addAttribute("roles", user.getAuthorities());
@@ -62,4 +98,18 @@ public class MyController {
         model.addAttribute("login", user.getUsername());
         return "unauthorized";
     }
+
+  /*  @RequestMapping(value = "/images/{photo_id}", method=RequestMethod.GET)
+    public void getImage(HttpServletRequest request, HttpServletResponse response, @PathVariable("photo_id") long photoId){
+        PhotoService photoService=new PhotoServiceImpl();
+        try {
+            byte [] bytes = photoService.getPhotoOne(photoId).getBody();
+            response.setContentType("images/png");
+            response.getOutputStream().write(bytes);
+        }catch (IOException e){
+            System.out.println(e);
+        }
+    }*/
+
+
 }

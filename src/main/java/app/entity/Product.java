@@ -14,23 +14,25 @@ public class Product {
     private Integer numberOfWires;
     private Double area;
     private Integer number;
+    private Double price;
     private String description;
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<Ord> orders = new ArrayList<>();
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    private Photo photo;
+    /*@ManyToOne(fetch = FetchType.EAGER)*/
+    private String filePhoto;
 
     public Product() { }
 
-    public Product(String type, Integer numberOfWires, Double area, Integer number, String description, Photo photo) {
+    public Product(String type, Integer numberOfWires, Double area, Integer number, Double price, String description, String filePhoto) {
         this.type = type;
         this.numberOfWires = numberOfWires;
         this.area = area;
         this.number = number;
+        this.price = price;
         this.description = description;
-        this.photo = photo;
+        this.filePhoto = filePhoto;
     }
 
     public long getId() {
@@ -88,11 +90,19 @@ public class Product {
         this.orders = ords;
     }
 
-    public Photo getPhoto() {
-        return photo;
+    public String getFilePhoto() {
+        return filePhoto;
     }
 
-    public void setPhoto(Photo photo) {
-        this.photo = photo;
+    public void setFilePhoto(String filePhoto) {
+        this.filePhoto = filePhoto;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
     }
 }

@@ -109,6 +109,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.2.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:4.2.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:1.9.4.RELEASE" />
         </element>
       </element>
     </root>

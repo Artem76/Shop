@@ -13,8 +13,8 @@ public class Photo {
     private String name;
     private byte[] body;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<Product> products = new ArrayList<>();
+    /*@OneToMany(cascade = CascadeType.ALL)
+    private List<Product> products = new ArrayList<>();*/
 
     public Photo() {
     }
@@ -48,11 +48,11 @@ public class Photo {
         this.body = body;
     }
 
-    public List<Product> getProducts() {
+    /*public List<Product> getProducts() {
         return products;
     }
 
     public void setProducts(List<Product> products) {
         this.products = products;
-    }
+    }*/
 }
