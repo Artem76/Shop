@@ -1,44 +1,26 @@
 package app.controller;
 
 import app.entity.CustomUser;
-import app.entity.Product;
 import app.entity.enums.UserRole;
-import app.service.photo.PhotoService;
-import app.service.photo.PhotoServiceImpl;
 import app.service.product.ProductService;
 import app.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.FileSystemResource;
-import org.springframework.core.io.InputStreamResource;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 
 @Controller
-public class MyController {
+public class MainController {
     @Autowired
     private UserService userService;
 
     @Autowired
     private ProductService productService;
-/*
-    @Autowired
-    private PhotoService photoService;*/
 
     @RequestMapping("/")
     public String index(Model model){
@@ -64,7 +46,17 @@ public class MyController {
     @RequestMapping("/shop")
     public String shop(Model model){
         User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return "shop";
+        String login = user.getUsername();
+        String role = userService.getUserByLogin(login).getRole().toString();
+        switch (role){
+            case "ROLE_ADMIN":
+                return "redirect:/admin";
+            case "ROLE_MANAGER":
+                return "redirect:/manager";
+            case "ROLE_USER":
+                return "redirect:/user";
+        }
+        return "redirect:/";
     }
 
    /* @RequestMapping("/ind")
@@ -90,12 +82,8 @@ public class MyController {
                          @RequestParam(required = false) String phone,
                          @RequestParam(required = false) String address,
                          Model model){
-        CustomUser checkUser = userService.getUserByLogin(login);
-        if (checkUser!=null){
-            model.addAttribute("log","error");
-            return "redirect:/login";
-        }
-        if (login.equals("") || password1.equals("") || !password1.equals(password2) || email.equals("") || phone.equals("") ||address.equals("") ){
+
+        if (login.equals("") || password1.equals("") || password2.equals("") || !password1.equals(password2) || email.equals("") || phone.equals("") ||address.equals("") ){
             model.addAttribute("error", "error");
             return "redirect:/login";
         }
@@ -113,7 +101,10 @@ public class MyController {
         String passwordSHA1 = sb.toString();
         CustomUser customUser = new CustomUser(login, passwordSHA1, UserRole.USER, email, phone ,address);
 
-        userService.addUser(customUser);
+        if(!userService.addUser(customUser)){
+            model.addAttribute("log","error");
+            return "redirect:/login";
+        }
         model.addAttribute("reg", "ok");
 
         return "redirect:/login";
@@ -133,17 +124,17 @@ public class MyController {
         return "redirect:/ind";
     }*/
 
-    @RequestMapping("/admin")
+   /* @RequestMapping("/admin")
     public String admin(){
         return "admin";
     }
-
-    @RequestMapping("/unauthorized")
+*/
+    /*@RequestMapping("/unauthorized")
     public String unauthorized(Model model){
         User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         model.addAttribute("login", user.getUsername());
         return "unauthorized";
-    }
+    }*/
 
   /*  @RequestMapping(value = "/images/{photo_id}", method=RequestMethod.GET)
     public void getImage(HttpServletRequest request, HttpServletResponse response, @PathVariable("photo_id") long photoId){

@@ -16,6 +16,7 @@ public class UserServiceImpl implements UserService {
     public CustomUser getUserByLogin(String login) {
         return userRepository.findByLogin(login);
     }
+
     @Override
     @Transactional(readOnly = true)
     public CustomUser getUserByLogin(String login, UserRole role) {
@@ -33,10 +34,13 @@ public class UserServiceImpl implements UserService {
     public CustomUser getUserByEmail(String email, UserRole role) {
         return userRepository.findByEmail(email,role);
     }
+
     @Override
     @Transactional
-    public void addUser(CustomUser customUser) {
+    public boolean addUser(CustomUser customUser) {
+        if (userRepository.findByLogin(customUser.getLogin()) != null) return false;
         userRepository.save(customUser);
+        return true;
     }
 
     @Override

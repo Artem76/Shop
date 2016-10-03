@@ -30,9 +30,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()//отключение защиты
                 .authorizeRequests()//все страницы авторизовать
                 .antMatchers("/shop").hasAnyRole("USER", "ADMIN", "MANAGER")//кого пускать в конкретный юрл по роли
+                .antMatchers("/user").hasRole("USER")
+                .antMatchers("/user_filter").hasRole("USER")
                 .antMatchers("/admin").hasRole("ADMIN")
+                .antMatchers("/manager").hasRole("MANAGER")
                 .and()
-        .exceptionHandling().accessDeniedPage("/unauthorized")//страница в случае вызова недопустимой страницы
+        .exceptionHandling().accessDeniedPage("/shop")//страница в случае вызова недопустимой страницы
                 .and()
         .formLogin()
                 .loginPage("/login")//страница ввода логина и пароля
@@ -45,7 +48,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         .logout()
                 .permitAll()
                 .logoutUrl("/logout")
-                .logoutSuccessUrl("/login?logout")//выхоод из сесии
+                .logoutSuccessUrl("/")//выхоод из сесии
                 .invalidateHttpSession(true);//прибить сесию
     }
 

@@ -1,31 +1,18 @@
 package app;
 
 import app.entity.CustomUser;
-import app.entity.Photo;
 import app.entity.Product;
 import app.entity.enums.UserRole;
-import app.service.photo.PhotoRepository;
-import app.service.photo.PhotoService;
-import app.service.photo.PhotoServiceImpl;
 import app.service.product.ProductService;
 import app.service.user.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-
-import java.io.DataInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.List;
 import java.util.TimeZone;
 
 @SpringBootApplication
 public class Application {
-    /*@Autowired
-    PhotoRepository photoRepository;*/
 
     public static void main(String[] args) {
         TimeZone.setDefault(TimeZone.getTimeZone("Etc/UTC"));
@@ -56,6 +43,7 @@ public class Application {
 
                 userService.addUser(new CustomUser("admin", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.ADMIN));
                 userService.addUser(new CustomUser("user", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.USER));
+                userService.addUser(new CustomUser("manager", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.MANAGER));
                 productService.addProduct(new Product("ВВГ",3,6.0,750,38.40,"Медный силовой кабель для наружных и внутренних работ.","vvg3.png"));
                 productService.addProduct(new Product("ПВС",4,4.0,350,25.90,"Медный гибкий шнур для внутренних работ.","pvs4.png"));
                 productService.addProduct(new Product("ПВС",2,1.5,350,9.56,"Медный гибкий шнур для внутренних работ.","pvs2.png"));
@@ -67,4 +55,4 @@ public class Application {
             }
         };
     }
-}/*src/main/webapp/images/*/
+}

@@ -7,7 +7,7 @@
 <%--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//RU">--%>
 <html lang="ru">
 <head>
-    <title></title>
+    <%--<title></title>--%>
     <%--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>--%>
@@ -16,7 +16,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta http-equiv="Content-Type" content="text/html; charset=cp1251" \>
-    <title>Shop | E-Shopper</title>
+    <title>Shop | КАБЕЛЬ.ЕСТЬ</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -24,9 +24,11 @@
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
+    <%--<link rel="stylesheet" href="css/reveal.css">--%>
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
+    <!--<script type="text/javascript" src="js/jquery.reveal.js"></script>-->
     <![endif]-->
     <link rel="shortcut icon" href="images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
@@ -427,7 +429,7 @@
                                 <div class="single-products">
                                     <div class="productinfo text-center">
                                         <img src="images/cable/${product.filePhoto}" <%--style="height: 150px; width: 150px"--%> alt=""/>
-                                        <h2>${product.price} грн.</h2>
+                                        <h2 data-reveal-id="myModal" >${product.price} грн.</h2>
                                         <p>${product.type}${product.numberOfWires}x${product.area}</p>
                                         <%--<a href="#" class="btn btn-default add-to-cart"><i
                                                 class="fa fa-shopping-cart"></i>Add to cart</a>--%>
@@ -437,6 +439,7 @@
                                             <h2>${product.price} грн.</h2>
                                             <p>${product.type}${product.numberOfWires}x${product.area}</p>
                                             <p>${product.description}</p>
+
                                             <%--<a href="#" class="btn btn-default add-to-cart"><i
                                                     class="fa fa-shopping-cart"></i>Add to cart</a>--%>
                                         </div>
@@ -744,6 +747,7 @@
                     </ul>--%>
                 </div><!--features_items-->
             </div>
+
         </div>
     </div>
 </section>
