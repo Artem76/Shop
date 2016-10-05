@@ -19,7 +19,7 @@ public class Box {
     @OneToMany(cascade = CascadeType.ALL)
     private List<Ord> ords = new ArrayList<>();
 
-    private Boolean status;
+    private Integer status;
     private String description;
 
     @Temporal(value = TemporalType.TIMESTAMP)
@@ -30,6 +30,7 @@ public class Box {
 
     public Box(CustomUser customUser) {
         this.customUsers.add(0,customUser);
+        this.status = 0;
     }
 
     public long getId() {
@@ -64,11 +65,11 @@ public class Box {
         this.ords = ords;
     }
 
-    public Boolean getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 

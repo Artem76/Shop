@@ -4,59 +4,93 @@ import app.entity.Box;
 import app.entity.CustomUser;
 import app.entity.Ord;
 import app.entity.Product;
-import app.service.product.ProductRepository;
+import app.service.ord.OrdService;
+//import app.service.product.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class BoxServiceImpl implements BoxService{
+@Service
+public class BoxServiceImpl implements BoxService {
     @Autowired
     BoxRepository boxRepository;
 
+//    @Autowired
+//    ProductRepository productRepository;
+
     @Autowired
-    ProductRepository productRepository;
+    OrdService ordService;
 
     @Override
     @Transactional(readOnly = true)
-    public List<Box> getBoxesByClientStatusSort(CustomUser customUser, Boolean status) {
+    public List<Box> getBoxesByClientStatusSort(CustomUser customUser, Integer status) {
         List<Box> boxes = boxRepository.findByStatusSort(status);
-        for (Box box:
-             boxes) {
-            if(!box.getCustomUserClient().equals(customUser)) boxes.remove(box);
+        List<Box> boxesFilter = new ArrayList<>();
+        for (Box b: boxes) {
+            if (b.getCustomUserClient().getLogin().equals(customUser.getLogin())) {
+                boxesFilter.add(b);
+            }
         }
-        return boxes;
+        return boxesFilter;
     }
 
     @Override
     @Transactional(readOnly = true)
-    public List<Box> getBoxesByManagerStatusSort(CustomUser customUser, Boolean status) {
+    public List<Box> getBoxesByManagerStatusSort(CustomUser customUser, Integer status) {
         List<Box> boxes = boxRepository.findByStatusSort(status);
-        for (Box box:
-                boxes) {
-            if(!box.getCustomUserManager().equals(customUser)) boxes.remove(box);
+        List<Box> boxesFilter = null;
+        for (Box b: boxes) {
+            if (b.getCustomUserManager().getLogin().equals(customUser.getLogin())) {
+                boxesFilter.add(b);
+            }
         }
-        return boxes;
+        return boxesFilter;
     }
 
     @Override
     @Transactional(readOnly = true)
-    public List<Box> getBoxesAllStatusSort(Boolean status) {
+    public List<Box> getBoxesAllStatusSort(Integer status) {
         return boxRepository.findByStatusSort(status);
     }
 
     @Override
     @Transactional
-    public void addBox(Box box) {
-        box.setDate(new Date(System.currentTimeMillis()));
-        boxRepository.save(box);
+    public Box addBox(CustomUser customUser) {
+        List<Box> boxes = getBoxesByClientStatusSort(customUser,0);
+        if (boxes.size() == 0) {
+            Box box = new Box(customUser);
+            boxRepository.save(box);
+            return box;
+        }
+        return boxes.get(0);
     }
 
     @Override
     @Transactional
-    public void updateBox(Box box) {
-        box.setDate(new Date(System.currentTimeMillis()));
+    public void addProductInBox(CustomUser customUser, Product product, Integer numberProduct) {
+        Box box = addBox(customUser);
+        Ord ord = new Ord(box,product,numberProduct);
+        ord = ordService.addOrd(ord);
+    }
+
+//    @Override
+//    @Transactional
+//    public void updateBox(Box box) { //доработать
+//        box.setDate(new Date(System.currentTimeMillis()));
+//        boxRepository.save(box);
+//    }
+
+    @Override
+    @Transactional
+    public void deleteProductFromBox(CustomUser customUser, Ord ord) {
+        Box box = addBox(customUser);
+        List<Ord> ords = box.getOrders();
+        ords.remove(ord);
+        box.setOrders(ords);
         boxRepository.save(box);
     }
 
@@ -66,25 +100,25 @@ public class BoxServiceImpl implements BoxService{
         boxRepository.delete(box);
     }
 
-    @Override
-    @Transactional
-    public boolean completeBox(Box box) {
-        if(box.getStatus()!=null && box.getStatus()) {
-            List<Ord> ords = box.getOrders();
-            for (Ord ord : ords) {
-                if(ord.getNumberProduct() > ord.getProduct().getNumber()){
-                    return false;
-                }
-            }
-            for (Ord ord: ords) {
-                Product product = ord.getProduct();
-                product.setNumber(product.getNumber() - ord.getNumberProduct());
-                productRepository.save(product);
-            }
-            box.setStatus(false);
-            boxRepository.save(box);
-            return true;
-        }
-        return false;
-    }
+//    @Override
+//    @Transactional
+//    public boolean completeBox(Box box) {
+//        if (box.getStatus() == 1) {
+//            List<Ord> ords = box.getOrders();
+//            for (Ord ord : ords) {
+//                if (ord.getNumberProduct() > ord.getProduct().getNumber()) {
+//                    return false;
+//                }
+//            }
+//            for (Ord ord : ords) {
+//                Product product = ord.getProduct();
+//                product.setNumber(product.getNumber() - ord.getNumberProduct());
+//                productRepository.save(product);
+//            }
+//            box.setStatus(2);
+//            boxRepository.save(box);
+//            return true;
+//        }
+//        return false;
+//    }
 }

@@ -61,7 +61,7 @@
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
                             <li><a <%--href="#"--%>><i class="fa fa-user"></i> ${login}</a></li>
-                            <li><a href="/user_cart"><i class="fa fa-shopping-cart"></i> Корзина</a></li>
+                            <li><a href="/user"><i class="fa fa-shopping-cart"></i> Магазин</a></li>
                             <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Выход</a></li>
                         </ul>
                     </div>
@@ -128,123 +128,14 @@
     </div>
 </section><!--/slider-->
 
-<section>
+<section id="form" style="margin: 3%"><!--form-->
     <div class="container">
         <div class="row">
-            <div class="col-sm-3">
-                <div class="left-sidebar">
-                    <h2>Фильтр</h2>
-                    <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-                        <form action="/user_filter" method="post">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#type">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Тип кабеля
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="type" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><input type="radio" name="type_cable" value="All"
-                                                       checked><a <%--href=""--%>> Все типы</a></li>
-                                            <c:forEach items="${types}" var="type">
-                                                <li><input type="radio" name="type_cable"
-                                                           value="${type}"><a <%--href=""--%>> ${type}</a></li>
-                                            </c:forEach>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#numberOfWires">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Колличество жил кабеля
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="numberOfWires" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><input type="radio" name="numberOfWires_cable" value="0"
-                                                       checked><a <%--href=""--%>> Все типы</a></li>
-                                            <c:forEach items="${numberOfWireses}" var="numberOfWires">
-                                                <li><input type="radio" name="numberOfWires_cable"
-                                                           value="${numberOfWires}"><a <%--href=""--%>> ${numberOfWires}</a>
-                                                </li>
-                                            </c:forEach>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#area">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Площадь поперечного сечения жили кабеля
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="area" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><input type="radio" name="area_cable" value="0.0"
-                                                       checked><a <%--href=""--%>> Все типы</a></li>
-                                            <c:forEach items="${areas}" var="area">
-                                                <li><input type="radio" name="area_cable"
-                                                           value="${area}"><a <%--href=""--%>> ${area}</a></li>
-                                            </c:forEach>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <input type="submit" value="Применить фильтр"
-                                               style="background-color: orange; text-align: center; border: none ">
-                                    </h4>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-9 padding-right">
-                <div class="features_items"><!--features_items-->
-                    <h2 class="title text-center">Кабельнопроводниковая продукция</h2>
-                    <c:forEach items="${products}" var="product">
-                        <div class="col-sm-4">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/cable/${product.filePhoto}" alt=""/>
-                                        <h2>${product.price} грн.</h2>
-                                        <p>${product.type}${product.numberOfWires}x${product.area}</p>
-                                    </div>
-                                    <div class="product-overlay">
-                                        <div class="overlay-content">
-                                            <h2>${product.price} грн.</h2>
-                                            <p>${product.type}${product.numberOfWires}x${product.area}</p>
-                                            <p>${product.description}</p>
-                                            <a class="btn btn-default add-to-cart" data="${product.id}">
-                                                <i class="fa fa-shopping-cart"></i>Добавить в корзину</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </c:forEach>
-                </div><!--features_items-->
-            </div>
+            <h2 style="color: orange; margin-left: 28%">Страница Корзины! Пока все :-)</h2>
         </div>
     </div>
 </section>
+
 <footer id="footer"><!--Footer-->
     <div class="footer-top">
         <div class="container">
@@ -346,7 +237,7 @@
 <script>
     $(".btn.btn-default.add-to-cart").click(function () {
         var d = $(this).attr("data");
-        $.post("/box_add_product", {product_id: d});
+        $.post("/box", {product_id: d});
         alert("Товар добавлен в корзину!");
     });
     $("#logout").click(function (event) {

@@ -1,6 +1,11 @@
 package app.controller;
 
+import app.entity.Box;
+import app.entity.CustomUser;
+import app.entity.Ord;
 import app.entity.Product;
+import app.service.box.BoxService;
+import app.service.ord.OrdService;
 import app.service.product.ProductService;
 import app.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +23,12 @@ public class UserController {
 
     @Autowired
     ProductService productService;
+
+    @Autowired
+    BoxService boxService;
+
+    @Autowired
+    OrdService ordService;
 
     @RequestMapping("/user")
     public String userShop(Model model){
@@ -46,9 +57,23 @@ public class UserController {
         return "user_shop";
     }
 
-    @RequestMapping("/box")
+    @RequestMapping("/box_add_product")
     public void box(@RequestParam long product_id){
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();//получение обьекта связанного с учегной записью под которой авторизировался пользователь
+        String login = user.getUsername();
+        CustomUser customUser = userService.getUserByLogin(login);
         Product product = productService.getProductOne(product_id);
-        System.out.println(product.getType()+product.getNumberOfWires()+"x"+product.getArea());
+        boxService.addProductInBox(customUser,product,1);
+    }
+
+    @RequestMapping("/user_cart")
+    public String userCart(Model model){
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();//получение обьекта связанного с учегной записью под которой авторизировался пользователь
+        String login = user.getUsername();//получение логина пользователя
+        CustomUser customUser = userService.getUserByLogin(login);
+        Box box = boxService.addBox(customUser);
+        model.addAttribute("login", login);
+        model.addAttribute("ords",ordService.getOrdByBoxSort(box));
+        return "user_cart";
     }
 }

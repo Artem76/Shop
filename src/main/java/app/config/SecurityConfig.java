@@ -32,6 +32,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/shop").hasAnyRole("USER", "ADMIN", "MANAGER")//кого пускать в конкретный юрл по роли
                 .antMatchers("/user").hasRole("USER")
                 .antMatchers("/user_filter").hasRole("USER")
+                .antMatchers("/box_add_product").hasRole("USER")
                 .antMatchers("/admin").hasRole("ADMIN")
                 .antMatchers("/manager").hasRole("MANAGER")
                 .and()
