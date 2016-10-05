@@ -11,10 +11,11 @@ public interface BoxService {
     List<Box> getBoxesByClientStatusSort(CustomUser customUser, Integer status);
     List<Box> getBoxesByManagerStatusSort(CustomUser customUser, Integer status);
     List<Box> getBoxesAllStatusSort(Integer status);
+    Double getSum(CustomUser customUser);
     Box addBox(CustomUser customUser);
     void addProductInBox(CustomUser customUser, Product product, Integer numberProduct);
 //    void updateBox(Box box);
-    void deleteProductFromBox(CustomUser customUser, Ord ord);
     void deleteBox(Box box);
+    void orderBox(CustomUser customUser);
 //    boolean completeBox(Box box);
 }

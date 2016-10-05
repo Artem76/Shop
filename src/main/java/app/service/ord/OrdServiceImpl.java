@@ -39,7 +39,7 @@ public class OrdServiceImpl implements OrdService{
     @Transactional
     public Ord addOrd(Ord ord) {
         List <Ord> ords = ordRepository.findByProductBox(ord.getProduct(),ord.getBox());
-        if (ords != null){
+        if (ords.size() != 0){
             int n = ord.getNumberProduct();
             ord = ords.get(0);
             ord.setNumberProduct(n);

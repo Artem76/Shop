@@ -8,13 +8,14 @@ public class Ord {
     @GeneratedValue
     private long id;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Box box;
 
     @ManyToOne(fetch = FetchType.EAGER)
     private Product product;
 
     private Integer numberProduct;
+    private Double priceOrd;
 
     public Ord() { }
 
@@ -22,6 +23,7 @@ public class Ord {
         this.box = box;
         this.product = product;
         this.numberProduct = numberProduct;
+        this.priceOrd = product.getPrice();
     }
     public long getId() {
         return id;
@@ -53,5 +55,13 @@ public class Ord {
 
     public void setNumberProduct(Integer numberProduct) {
         this.numberProduct = numberProduct;
+    }
+
+    public Double getPriceOrd() {
+        return priceOrd;
+    }
+
+    public void setPriceOrd(Double priceOrd) {
+        this.priceOrd = priceOrd;
     }
 }

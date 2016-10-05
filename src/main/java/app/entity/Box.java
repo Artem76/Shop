@@ -16,7 +16,7 @@ public class Box {
     @ManyToMany(fetch = FetchType.EAGER)
     private List<CustomUser> customUsers = new ArrayList<>();
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Ord> ords = new ArrayList<>();
 
     private Integer status;
@@ -57,11 +57,11 @@ public class Box {
         this.customUsers.add(1,customUser);
     }
 
-    public List<Ord> getOrders() {
+    public List<Ord> getOrds() {
         return ords;
     }
 
-    public void setOrders(List<Ord> ords) {
+    public void setOrds(List<Ord> ords) {
         this.ords = ords;
     }
 

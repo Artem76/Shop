@@ -57,13 +57,43 @@ public class UserController {
         return "user_shop";
     }
 
-    @RequestMapping("/box_add_product")
-    public void box(@RequestParam long product_id){
+    @RequestMapping("/user_box_add_product")
+    public void boxAddProduct(@RequestParam long product_id){
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();//получение обьекта связанного с учегной записью под которой авторизировался пользователь
         String login = user.getUsername();
         CustomUser customUser = userService.getUserByLogin(login);
         Product product = productService.getProductOne(product_id);
         boxService.addProductInBox(customUser,product,1);
+    }
+
+    @RequestMapping("/user_box_delete_ord")
+    public String boxDeleteOrd(@RequestParam long ord_id, Model model){
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();//получение обьекта связанного с учегной записью под которой авторизировался пользователь
+        String login = user.getUsername();
+        CustomUser customUser = userService.getUserByLogin(login);
+        Ord ord = ordService.getOrdOne(ord_id);
+        ordService.deleteOrd(ord);
+        return "redirect:/user_cart";
+    }
+
+    @RequestMapping("/user_box_update_ord")
+    public String boxUpdateOrd(@RequestParam long ord_id, @RequestParam Integer numberProduct, Model model){
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();//получение обьекта связанного с учегной записью под которой авторизировался пользователь
+        String login = user.getUsername();
+        CustomUser customUser = userService.getUserByLogin(login);
+        Ord ord = ordService.getOrdOne(ord_id);
+        ord.setNumberProduct(numberProduct);
+        ordService.updateOrd(ord);
+        return "redirect:/user_cart";
+    }
+
+    @RequestMapping("/user_box_order")
+    public String boxOrd(Model model){
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();//получение обьекта связанного с учегной записью под которой авторизировался пользователь
+        String login = user.getUsername();
+        CustomUser customUser = userService.getUserByLogin(login);
+        boxService.orderBox(customUser);
+        return "redirect:/user_cart";
     }
 
     @RequestMapping("/user_cart")
@@ -73,7 +103,8 @@ public class UserController {
         CustomUser customUser = userService.getUserByLogin(login);
         Box box = boxService.addBox(customUser);
         model.addAttribute("login", login);
-        model.addAttribute("ords",ordService.getOrdByBoxSort(box));
+        model.addAttribute("ords", ordService.getOrdByBoxSort(box));
+        model.addAttribute("sum", boxService.getSum(customUser));
         return "user_cart";
     }
 }

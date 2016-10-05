@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -30,7 +32,7 @@ public class BoxServiceImpl implements BoxService {
     public List<Box> getBoxesByClientStatusSort(CustomUser customUser, Integer status) {
         List<Box> boxes = boxRepository.findByStatusSort(status);
         List<Box> boxesFilter = new ArrayList<>();
-        for (Box b: boxes) {
+        for (Box b : boxes) {
             if (b.getCustomUserClient().getLogin().equals(customUser.getLogin())) {
                 boxesFilter.add(b);
             }
@@ -43,7 +45,7 @@ public class BoxServiceImpl implements BoxService {
     public List<Box> getBoxesByManagerStatusSort(CustomUser customUser, Integer status) {
         List<Box> boxes = boxRepository.findByStatusSort(status);
         List<Box> boxesFilter = null;
-        for (Box b: boxes) {
+        for (Box b : boxes) {
             if (b.getCustomUserManager().getLogin().equals(customUser.getLogin())) {
                 boxesFilter.add(b);
             }
@@ -58,9 +60,20 @@ public class BoxServiceImpl implements BoxService {
     }
 
     @Override
+    public Double getSum(CustomUser customUser) {
+        Box box = addBox(customUser);
+        double sum = 0.0;
+        for (Ord ord :
+                ordService.getOrdByBoxSort(box)) {
+            sum = sum+(ord.getPriceOrd()*ord.getNumberProduct());
+        }
+        return new BigDecimal(sum).setScale(2, RoundingMode.HALF_UP).doubleValue();
+    }
+
+    @Override
     @Transactional
     public Box addBox(CustomUser customUser) {
-        List<Box> boxes = getBoxesByClientStatusSort(customUser,0);
+        List<Box> boxes = getBoxesByClientStatusSort(customUser, 0);
         if (boxes.size() == 0) {
             Box box = new Box(customUser);
             boxRepository.save(box);
@@ -73,8 +86,8 @@ public class BoxServiceImpl implements BoxService {
     @Transactional
     public void addProductInBox(CustomUser customUser, Product product, Integer numberProduct) {
         Box box = addBox(customUser);
-        Ord ord = new Ord(box,product,numberProduct);
-        ord = ordService.addOrd(ord);
+        Ord ord = new Ord(box, product, numberProduct);
+        ordService.addOrd(ord);
     }
 
 //    @Override
@@ -84,20 +97,18 @@ public class BoxServiceImpl implements BoxService {
 //        boxRepository.save(box);
 //    }
 
-    @Override
-    @Transactional
-    public void deleteProductFromBox(CustomUser customUser, Ord ord) {
-        Box box = addBox(customUser);
-        List<Ord> ords = box.getOrders();
-        ords.remove(ord);
-        box.setOrders(ords);
-        boxRepository.save(box);
-    }
 
     @Override
     @Transactional
     public void deleteBox(Box box) {
         boxRepository.delete(box);
+    }
+
+    @Override
+    public void orderBox(CustomUser customUser) {
+        Box box = addBox(customUser);
+        box.setStatus(1);
+        boxRepository.save(box);
     }
 
 //    @Override

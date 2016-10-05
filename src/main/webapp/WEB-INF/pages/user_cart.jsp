@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="cp1251"?>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html;charset=cp1251" %>
 <%@ page import="java.net.URLEncoder" %>
 
@@ -54,7 +55,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo pull-left">
-                        <a href="/"><img src="images/logo.png" alt=""/></a>
+                        <a href="/user"><img src="images/logo.png" alt=""/></a>
                     </div>
                 </div>
                 <div class="col-sm-8">
@@ -128,13 +129,144 @@
     </div>
 </section><!--/slider-->
 
-<section id="form" style="margin: 3%"><!--form-->
+<section id="cart_items">
     <div class="container">
-        <div class="row">
-            <h2 style="color: orange; margin-left: 28%">Страница Корзины! Пока все :-)</h2>
+        <%--<div class="breadcrumbs">
+            <ol class="breadcrumb">
+                <li><a href="/user">Магазин</a></li>
+                <li class="active">Корзина</li>
+            </ol>
+        </div>--%>
+        <div class="table-responsive cart_info">
+            <table class="table table-condensed">
+                <thead>
+                <tr class="cart_menu">
+                    <td class="image">Кабель</td>
+                    <td class="description"></td>
+                    <td class="price">Цена за единицу, грн.</td>
+                    <td class="quantity">Количество, м.</td>
+                    <td class="description"></td>
+                    <td class="total">Стоимость, грн.</td>
+                    <td></td>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach items="${ords}" var="ord">
+                    <tr>
+                        <td class="cart_product">
+                            <a <%--href=""--%>><img src="images/cable/${ord.product.filePhoto}" alt=""
+                                                    style="height: 40px; width: 40px; margin: 0 auto"></a>
+                        </td>
+                        <td class="cart_description">
+                            <h4>
+                                <a <%--href=""--%> style="margin: 0 auto">${ord.product.type}${ord.product.numberOfWires}x${ord.product.area}</a>
+                            </h4>
+                                <%--<p>${ord.product.description}</p>--%>
+                        </td>
+                        <td class="cart_price">
+                            <p style="margin: 0 auto">${ord.priceOrd}</p>
+                        </td>
+                        <form action="/user_box_update_ord?ord_id=${ord.id}" method="post">
+                        <td class="cart_quantity" style="vertical-align: middle">
+                            <div class="cart_quantity_button">
+                                <input class="cart_quantity_input" type="text" name="numberProduct"
+                                       value="${ord.numberProduct}"
+                                       autocomplete="off" size="8" style="margin: 0 auto">
+                            </div>
+                        </td>
+                        <td >
+                            <%--<input name="ord_id" value="${ord.id}">--%>
+                            <input type="submit" class="btn btn-default update" value="Обновить" style="margin: 0 auto">
+                        </td>
+                        </form>
+                        <td class="cart_total" >
+                            <p class="cart_total_price" style="margin: 0 auto">${ord.numberProduct*ord.priceOrd}</p>
+                        </td>
+                        <td class="cart_delete">
+                            <a class="cart_quantity_delete" href="/user_box_delete_ord?ord_id=${ord.id}" style="margin: 0 auto"><i
+                                    class="fa fa-times"></i></a>
+                        </td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
         </div>
     </div>
-</section>
+</section> <!--/#cart_items-->
+
+<section id="do_action">
+    <div class="container">
+        <%--<div class="heading">
+            <h3>What would you like to do next?</h3>
+            <p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="chose_area">
+                    <ul class="user_option">
+                        <li>
+                            <input type="checkbox">
+                            <label>Use Coupon Code</label>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <label>Use Gift Voucher</label>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <label>Estimate Shipping & Taxes</label>
+                        </li>
+                    </ul>
+                    <ul class="user_info">
+                        <li class="single_field">
+                            <label>Country:</label>
+                            <select>
+                                <option>United States</option>
+                                <option>Bangladesh</option>
+                                <option>UK</option>
+                                <option>India</option>
+                                <option>Pakistan</option>
+                                <option>Ucrane</option>
+                                <option>Canada</option>
+                                <option>Dubai</option>
+                            </select>
+
+                        </li>
+                        <li class="single_field">
+                            <label>Region / State:</label>
+                            <select>
+                                <option>Select</option>
+                                <option>Dhaka</option>
+                                <option>London</option>
+                                <option>Dillih</option>
+                                <option>Lahore</option>
+                                <option>Alaska</option>
+                                <option>Canada</option>
+                                <option>Dubai</option>
+                            </select>
+
+                        </li>
+                        <li class="single_field zip-field">
+                            <label>Zip Code:</label>
+                            <input type="text">
+                        </li>
+                    </ul>
+                    <a class="btn btn-default update" href="">Get Quotes</a>
+                    <a class="btn btn-default check_out" href="">Continue</a>
+                </div>
+            </div>--%>
+            <div class="col-sm-6">
+                <div class="total_area">
+                    <ul>
+
+                        <li>Общая стоимость <span>${sum} грн.</span></li>
+                    </ul>
+                    <a id="order" class="btn btn-default check_out" href="/user_box_order">Заказать</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--/#do_action-->
 
 <footer id="footer"><!--Footer-->
     <div class="footer-top">
@@ -235,13 +367,8 @@
 <script src="js/jquery.prettyPhoto.js"></script>
 <script src="js/main.js"></script>
 <script>
-    $(".btn.btn-default.add-to-cart").click(function () {
-        var d = $(this).attr("data");
-        $.post("/box", {product_id: d});
-        alert("Товар добавлен в корзину!");
-    });
-    $("#logout").click(function (event) {
-        alert("Выход из акаунта!");
+    $("#order").click(function (event) {
+        alert("Заказ отправлен в обработку!");
     });
 </script>
 </body>

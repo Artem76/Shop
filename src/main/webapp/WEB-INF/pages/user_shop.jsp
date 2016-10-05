@@ -54,7 +54,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo pull-left">
-                        <a href="/"><img src="images/logo.png" alt=""/></a>
+                        <a href="/user"><img src="images/logo.png" alt=""/></a>
                     </div>
                 </div>
                 <div class="col-sm-8">
@@ -346,7 +346,7 @@
 <script>
     $(".btn.btn-default.add-to-cart").click(function () {
         var d = $(this).attr("data");
-        $.post("/box_add_product", {product_id: d});
+        $.post("/user_box_add_product", {product_id: d});
         alert("Товар добавлен в корзину!");
     });
     $("#logout").click(function (event) {
