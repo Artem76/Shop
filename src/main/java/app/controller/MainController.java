@@ -17,6 +17,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.sql.Blob;
+import java.sql.SQLException;
 
 
 @Controller
@@ -147,10 +149,12 @@ public class MainController {
     @RequestMapping(value = "/photo/{photo_id}")
     public void getImage(HttpServletRequest request, HttpServletResponse response, @PathVariable("photo_id") long photoId){
         try {
-            byte [] bytes = photoService.getPhotoOne(photoId).getBody();
+            Blob blob = photoService.getPhotoOne(photoId).getBody();
             response.setContentType("images/png");
-            response.getOutputStream().write(bytes);
+            response.getOutputStream().write(blob.getBytes(1,(int)blob.length()));
         }catch (IOException e){
+            System.out.println(e);
+        } catch (SQLException e) {
             System.out.println(e);
         }
     }

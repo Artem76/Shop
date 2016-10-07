@@ -1,6 +1,8 @@
 package app.entity;
 
+
 import javax.persistence.*;
+import java.sql.Blob;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,15 +13,17 @@ public class Photo {
     private long id;
 
     private String name;
-    private byte[] body;
+
+    private Blob body;
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<Product> products = new ArrayList<>();
 
+
     public Photo() {
     }
 
-    public Photo(String name, byte[] body) {
+    public Photo(String name,Blob body) {
         this.name = name;
         this.body = body;
     }
@@ -40,11 +44,11 @@ public class Photo {
         this.name = name;
     }
 
-    public byte[] getBody() {
+    public Blob getBody() {
         return body;
     }
 
-    public void setBody(byte[] body) {
+    public void setBody(Blob body) {
         this.body = body;
     }
 

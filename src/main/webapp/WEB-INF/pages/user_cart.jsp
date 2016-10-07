@@ -178,7 +178,7 @@
                 <c:forEach items="${ords}" var="ord">
                     <tr>
                         <td class="cart_product">
-                            <a><img src="images/cable/${ord.product.filePhoto}" alt=""
+                            <a><img src="/photo/${ord.product.photo.id}" alt=""
                                                     style="height: 40px; width: 40px; margin: 0 auto"></a>
                         </td>
                         <td class="cart_description">

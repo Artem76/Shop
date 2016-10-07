@@ -255,7 +255,7 @@
                             <div class="product-image-wrapper">
                                 <div class="single-products">
                                     <div class="productinfo text-center">
-                                        <img src="images/cable/${product.filePhoto}" alt=""/>
+                                        <img src="/photo/${product.photo.id}"alt=""/>
                                         <h2>${product.price} грн.</h2>
                                         <p>${product.type}${product.numberOfWires}x${product.area}</p>
                                     </div>

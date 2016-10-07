@@ -4,7 +4,6 @@ import app.entity.CustomUser;
 import app.entity.Photo;
 import app.entity.Product;
 import app.entity.enums.UserRole;
-import app.entity.Box;
 import app.service.photo.PhotoService;
 import app.service.product.ProductService;
 import app.service.user.UserService;
@@ -15,9 +14,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import javax.sql.rowset.serial.SerialBlob;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.sql.Blob;
 import java.util.TimeZone;
 
 @SpringBootApplication
@@ -44,7 +45,8 @@ public class Application {
                         DataInputStream dis = new DataInputStream(new FileInputStream(new File("D:/photo/" + name + ".png" )));
                         byte[] bytes = new byte[dis.available()];
                         dis.read(bytes);
-                        Photo photo = new Photo(name,bytes);
+                        Blob blob = new SerialBlob(bytes);
+                        Photo photo = new Photo(name,blob);
                         photoService.addPhoto(photo);
                     } catch (Exception e){
                         System.out.println(e);

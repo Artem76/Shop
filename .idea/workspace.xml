@@ -7,40 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1608cc52-eac6-48e3-97a2-4ff57e309dc2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/entity/Photo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/service/photo/PhotoRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/service/photo/PhotoService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/service/photo/PhotoServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager_all_orders_work.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager_their_orders_work.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/cable/pvs2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/cable/pvs3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/cable/pvs4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/cable/pvs5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/cable/vvg2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/cable/vvg3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/cable/vvg4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/cable/vvg5.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/config/AppConfig.class" afterPath="$PROJECT_DIR$/target/classes/app/config/AppConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/config/SecurityConfig.class" afterPath="$PROJECT_DIR$/target/classes/app/config/SecurityConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/entity/Box.class" afterPath="$PROJECT_DIR$/target/classes/app/entity/Box.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/entity/Ord.class" afterPath="$PROJECT_DIR$/target/classes/app/entity/Ord.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/Application$1.class" afterPath="$PROJECT_DIR$/target/classes/app/Application$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/Application.class" afterPath="$PROJECT_DIR$/target/classes/app/Application.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/entity/Product.class" afterPath="$PROJECT_DIR$/target/classes/app/entity/Product.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/service/product/ProductServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/app/service/product/ProductServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/Application.java" afterPath="$PROJECT_DIR$/src/main/java/app/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/config/SecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/app/config/SecurityConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/controller/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/app/controller/MainController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/controller/ManagerController.java" afterPath="$PROJECT_DIR$/src/main/java/app/controller/ManagerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/app/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/entity/Box.java" afterPath="$PROJECT_DIR$/src/main/java/app/entity/Box.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/entity/Product.java" afterPath="$PROJECT_DIR$/src/main/java/app/entity/Product.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/service/box/BoxService.java" afterPath="$PROJECT_DIR$/src/main/java/app/service/box/BoxService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/service/box/BoxServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/app/service/box/BoxServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager_shop.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager_shop.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/entity/Photo.java" afterPath="$PROJECT_DIR$/src/main/java/app/entity/Photo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user_cart.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user_cart.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user_shop.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user_shop.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/pages/index.jsp" />
     </list>
     <ignored path="Shop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,24 +42,12 @@
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="150" column="50" selection-start-line="150" selection-start-column="50" selection-end-line="150" selection-end-column="50" />
+            <state relative-caret-position="175">
+              <caret line="153" column="41" selection-start-line="153" selection-start-column="41" selection-end-line="153" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1475833228884" expanded="false" signature="5464:5474" ph=" { " />
-                <marker date="1475833228884" expanded="false" signature="5489:5495" ph=" }" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoxService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/service/box/BoxService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1475840992674" expanded="false" signature="5516:5526" ph=" { " />
+                <marker date="1475840992674" expanded="false" signature="5541:5547" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -123,11 +87,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/service/user/UserService.java">
+      <file leaf-file-name="user_shop.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user_shop.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            <state relative-caret-position="221">
+              <caret line="259" column="62" selection-start-line="259" selection-start-column="62" selection-end-line="259" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_cart.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user_cart.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="181" column="72" selection-start-line="181" selection-start-column="72" selection-end-line="181" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -136,7 +110,7 @@
       <file leaf-file-name="PhotoServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/service/photo/PhotoServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
+            <state relative-caret-position="155">
               <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
               <folding>
                 <element signature="e#567#568#0" expanded="true" />
@@ -151,8 +125,8 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="430" column="75" selection-start-line="430" selection-start-column="75" selection-end-line="430" selection-end-column="75" />
+            <state relative-caret-position="187">
+              <caret line="431" column="76" selection-start-line="431" selection-start-column="76" selection-end-line="431" selection-end-column="76" />
               <folding>
                 <element signature="e#7819#7966#0#JSP" expanded="false" />
                 <element signature="e#16641#17923#0#JSP" expanded="false" />
@@ -167,11 +141,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Photo.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Photo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/entity/Photo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="272">
+              <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -182,8 +156,8 @@
       <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="58" column="83" selection-start-line="58" selection-start-column="83" selection-end-line="58" selection-end-column="83" />
+            <state relative-caret-position="134">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -221,7 +195,6 @@
         <option value="$PROJECT_DIR$/src/main/java/app/service/message/MessageService.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/message/MessageRepository.java" />
         <option value="$USER_HOME$/Desktop/Eshopper/js/jquery.scrollUp.min.js" />
-        <option value="$PROJECT_DIR$/src/main/java/app/entity/Photo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/product/ProductRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/product/ProductService.java" />
@@ -246,8 +219,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/main.css" />
         <option value="$PROJECT_DIR$/src/main/java/app/entity/Ord.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user_shop.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user_cart.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/app/entity/Box.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager_shop.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/box/BoxService.java" />
@@ -257,13 +228,16 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager_their_orders_work.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/app/entity/Product.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/photo/PhotoRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/photo/PhotoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/photo/PhotoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/config/AppConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/config/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/app/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/entity/Photo.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user_shop.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user_cart.jsp" />
       </list>
     </option>
   </component>
@@ -287,8 +261,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1370" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -1269,7 +1242,7 @@
       <workItem from="1474536607114" duration="26605000" />
       <workItem from="1474882620117" duration="5927000" />
       <workItem from="1474888959331" duration="72578000" />
-      <workItem from="1475406983857" duration="83242000" />
+      <workItem from="1475406983857" duration="89599000" />
     </task>
     <task id="LOCAL-00001" summary="Проект">
       <created>1473930874683</created>
@@ -1404,30 +1377,37 @@
       <option name="project" value="LOCAL" />
       <updated>1475698076636</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="photo">
+      <created>1475834119626</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1475834119626</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="319132000" />
+    <option name="totallyTimeSpent" value="325489000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="0" width="1370" height="744" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18611987" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20031546" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5252366" sideWeight="0.1068814" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22712934" sideWeight="0.8931186" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13564669" sideWeight="0.8931186" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24670571" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24889217" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1467,7 +1447,8 @@
     <MESSAGE value="Вход и регистрация" />
     <MESSAGE value="user_shop" />
     <MESSAGE value="сервисы для корзины" />
-    <option name="LAST_COMMIT_MESSAGE" value="сервисы для корзины" />
+    <MESSAGE value="photo" />
+    <option name="LAST_COMMIT_MESSAGE" value="photo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1696,14 +1677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user_shop.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/entity/CustomUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1738,14 +1711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user_cart.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1618">
-          <caret line="206" column="44" selection-start-line="206" selection-start-column="44" selection-end-line="206" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager_shop.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1759,11 +1724,11 @@
         <state relative-caret-position="133">
           <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2428#2429#0" expanded="true" />
-            <element signature="e#2476#2477#0" expanded="true" />
-            <element signature="e#3720#3721#0" expanded="true" />
-            <element signature="e#3759#3760#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2428#2429#0" expanded="false" />
+            <element signature="e#2476#2477#0" expanded="false" />
+            <element signature="e#3720#3721#0" expanded="false" />
+            <element signature="e#3759#3760#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1789,7 +1754,7 @@
         <state relative-caret-position="170">
           <caret line="34" column="38" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="38" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1799,8 +1764,8 @@
         <state relative-caret-position="187">
           <caret line="97" column="26" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
           <folding>
-            <element signature="e#2083#2084#0" expanded="true" />
-            <element signature="e#2111#2112#0" expanded="true" />
+            <element signature="e#2083#2084#0" expanded="false" />
+            <element signature="e#2111#2112#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1825,9 +1790,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1836,16 +1799,6 @@
         <state relative-caret-position="68">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="58" column="83" selection-start-line="58" selection-start-column="83" selection-end-line="58" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1869,19 +1822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/photo/PhotoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-          <folding>
-            <element signature="e#567#568#0" expanded="true" />
-            <element signature="e#622#623#0" expanded="true" />
-            <element signature="e#677#678#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/config/AppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
@@ -1900,10 +1840,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/photo/PhotoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+          <folding>
+            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#622#623#0" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/entity/Photo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="153" column="41" selection-start-line="153" selection-start-column="41" selection-end-line="153" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1475840992674" expanded="false" signature="5516:5526" ph=" { " />
+            <marker date="1475840992674" expanded="false" signature="5541:5547" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="430" column="75" selection-start-line="430" selection-start-column="75" selection-end-line="430" selection-end-column="75" />
+        <state relative-caret-position="187">
+          <caret line="431" column="76" selection-start-line="431" selection-start-column="76" selection-end-line="431" selection-end-column="76" />
           <folding>
             <element signature="e#7819#7966#0#JSP" expanded="false" />
             <element signature="e#16641#17923#0#JSP" expanded="false" />
@@ -1917,25 +1902,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/MainController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user_shop.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="150" column="50" selection-start-line="150" selection-start-column="50" selection-end-line="150" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1475833228884" expanded="false" signature="5464:5474" ph=" { " />
-            <marker date="1475833228884" expanded="false" signature="5489:5495" ph=" }" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="259" column="62" selection-start-line="259" selection-start-column="62" selection-end-line="259" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/entity/Photo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user_cart.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="117">
+          <caret line="181" column="72" selection-start-line="181" selection-start-column="72" selection-end-line="181" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
