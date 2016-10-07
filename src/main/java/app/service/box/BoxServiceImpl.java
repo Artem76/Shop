@@ -44,9 +44,10 @@ public class BoxServiceImpl implements BoxService {
     @Transactional(readOnly = true)
     public List<Box> getBoxesByManagerStatusSort(CustomUser customUser, Integer status) {
         List<Box> boxes = boxRepository.findByStatusSort(status);
-        List<Box> boxesFilter = null;
+        List<Box> boxesFilter = new ArrayList<>();
         for (Box b : boxes) {
-            if (b.getCustomUserManager().getLogin().equals(customUser.getLogin())) {
+            if ((customUser == null && b.getCustomUsers().size() == 1) ||
+                    (customUser != null && b.getCustomUsers().size() > 1 && b.getCustomUserManager().getLogin().equals(customUser.getLogin()))) {
                 boxesFilter.add(b);
             }
         }
@@ -60,12 +61,31 @@ public class BoxServiceImpl implements BoxService {
     }
 
     @Override
+    public List<Box> getBoxesAllWorkStatusSort(Integer status) {
+        List<Box> boxes = boxRepository.findByStatusSort(status);
+        List<Box> boxesFilter = new ArrayList<>();
+        for (Box b : boxes) {
+            if (b.getCustomUsers().size() > 1) {
+                boxesFilter.add(b);
+            }
+        }
+        return boxesFilter;
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Box getOne(long id) {
+        return boxRepository.findOne(id);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
     public Double getSum(CustomUser customUser) {
         Box box = addBox(customUser);
         double sum = 0.0;
         for (Ord ord :
                 ordService.getOrdByBoxSort(box)) {
-            sum = sum+(ord.getPriceOrd()*ord.getNumberProduct());
+            sum = sum + (ord.getPriceOrd() * ord.getNumberProduct());
         }
         return new BigDecimal(sum).setScale(2, RoundingMode.HALF_UP).doubleValue();
     }
@@ -86,16 +106,28 @@ public class BoxServiceImpl implements BoxService {
     @Transactional
     public void addProductInBox(CustomUser customUser, Product product, Integer numberProduct) {
         Box box = addBox(customUser);
+        List<Ord> ords = ordService.getOrdByBoxSort(box);
+        for (Ord o :
+                ords) {
+            if (o.getProduct().equals(product)) return;
+        }
         Ord ord = new Ord(box, product, numberProduct);
         ordService.addOrd(ord);
     }
 
-//    @Override
-//    @Transactional
-//    public void updateBox(Box box) { //доработать
-//        box.setDate(new Date(System.currentTimeMillis()));
-//        boxRepository.save(box);
-//    }
+    @Override
+    @Transactional
+    public void updateBox(Box box) {
+        boxRepository.save(box);
+    }
+
+    @Override
+    @Transactional
+    public void takeBox(long id, CustomUser customUser) {
+        Box box = getOne(id);
+        box.setCustomUserManager(customUser);
+        boxRepository.save(box);
+    }
 
 
     @Override
@@ -107,6 +139,7 @@ public class BoxServiceImpl implements BoxService {
     @Override
     public void orderBox(CustomUser customUser) {
         Box box = addBox(customUser);
+        box.setDate(new Date(System.currentTimeMillis()));
         box.setStatus(1);
         boxRepository.save(box);
     }

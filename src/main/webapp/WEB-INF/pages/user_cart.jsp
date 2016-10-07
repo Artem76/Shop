@@ -55,14 +55,14 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo pull-left">
-                        <a href="/user"><img src="images/logo.png" alt=""/></a>
+                        <a href="/shop"><img src="images/logo.png" alt=""/></a>
                     </div>
                 </div>
                 <div class="col-sm-8">
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
-                            <li><a <%--href="#"--%>><i class="fa fa-user"></i> ${login}</a></li>
-                            <li><a href="/user"><i class="fa fa-shopping-cart"></i> Магазин</a></li>
+                            <li><a><i class="fa fa-user"></i> ${login}</a></li>
+                            <li><a href="/shop"><i class="fa fa-shopping-cart"></i> Магазин</a></li>
                             <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Выход</a></li>
                         </ul>
                     </div>
@@ -70,6 +70,36 @@
             </div>
         </div>
     </div><!--/header-middle-->
+    <div class="header-bottom"><!--header-bottom-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="mainmenu pull-left">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li><a href="/shop">Главная</a></li>
+                            <li class="dropdown"><a <%--href="#"--%>>Заказы<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="/user_cart" class="active">Корзина</a></li>
+                                    <li><a <%--href="/user_box_1"--%>>В работе</a></li>
+                                    <li><a <%--href="/user_box_2"--%>>Выполненные</a></li>
+                                </ul>
+                            </li>
+                            <li><a <%--href="/message"--%>>Сообщения</a></li>
+                            <li><a <%--href="/contact"--%>>Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-bottom-->
 </header>
 
 <section id="slider"><!--slider-->
@@ -131,12 +161,6 @@
 
 <section id="cart_items">
     <div class="container">
-        <%--<div class="breadcrumbs">
-            <ol class="breadcrumb">
-                <li><a href="/user">Магазин</a></li>
-                <li class="active">Корзина</li>
-            </ol>
-        </div>--%>
         <div class="table-responsive cart_info">
             <table class="table table-condensed">
                 <thead>
@@ -154,14 +178,13 @@
                 <c:forEach items="${ords}" var="ord">
                     <tr>
                         <td class="cart_product">
-                            <a <%--href=""--%>><img src="images/cable/${ord.product.filePhoto}" alt=""
+                            <a><img src="images/cable/${ord.product.filePhoto}" alt=""
                                                     style="height: 40px; width: 40px; margin: 0 auto"></a>
                         </td>
                         <td class="cart_description">
                             <h4>
-                                <a <%--href=""--%> style="margin: 0 auto">${ord.product.type}${ord.product.numberOfWires}x${ord.product.area}</a>
+                                <a style="margin: 0 auto">${ord.product.type}${ord.product.numberOfWires}x${ord.product.area}</a>
                             </h4>
-                                <%--<p>${ord.product.description}</p>--%>
                         </td>
                         <td class="cart_price">
                             <p style="margin: 0 auto">${ord.priceOrd}</p>
@@ -175,7 +198,6 @@
                             </div>
                         </td>
                         <td >
-                            <%--<input name="ord_id" value="${ord.id}">--%>
                             <input type="submit" class="btn btn-default update" value="Обновить" style="margin: 0 auto">
                         </td>
                         </form>
@@ -196,72 +218,15 @@
 
 <section id="do_action">
     <div class="container">
-        <%--<div class="heading">
-            <h3>What would you like to do next?</h3>
-            <p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="chose_area">
-                    <ul class="user_option">
-                        <li>
-                            <input type="checkbox">
-                            <label>Use Coupon Code</label>
-                        </li>
-                        <li>
-                            <input type="checkbox">
-                            <label>Use Gift Voucher</label>
-                        </li>
-                        <li>
-                            <input type="checkbox">
-                            <label>Estimate Shipping & Taxes</label>
-                        </li>
-                    </ul>
-                    <ul class="user_info">
-                        <li class="single_field">
-                            <label>Country:</label>
-                            <select>
-                                <option>United States</option>
-                                <option>Bangladesh</option>
-                                <option>UK</option>
-                                <option>India</option>
-                                <option>Pakistan</option>
-                                <option>Ucrane</option>
-                                <option>Canada</option>
-                                <option>Dubai</option>
-                            </select>
-
-                        </li>
-                        <li class="single_field">
-                            <label>Region / State:</label>
-                            <select>
-                                <option>Select</option>
-                                <option>Dhaka</option>
-                                <option>London</option>
-                                <option>Dillih</option>
-                                <option>Lahore</option>
-                                <option>Alaska</option>
-                                <option>Canada</option>
-                                <option>Dubai</option>
-                            </select>
-
-                        </li>
-                        <li class="single_field zip-field">
-                            <label>Zip Code:</label>
-                            <input type="text">
-                        </li>
-                    </ul>
-                    <a class="btn btn-default update" href="">Get Quotes</a>
-                    <a class="btn btn-default check_out" href="">Continue</a>
-                </div>
-            </div>--%>
             <div class="col-sm-6">
                 <div class="total_area">
+                    <form action="/user_box_order" method="post">
                     <ul>
-
+                        <textarea name="description"  placeholder="Пояснения к заказую." rows="16"></textarea>
                         <li>Общая стоимость <span>${sum} грн.</span></li>
                     </ul>
-                    <a id="order" class="btn btn-default check_out" href="/user_box_order">Заказать</a>
+                    <input type="submit" id="order" class="btn btn-default check_out" value="Заказать">
+                    </form>
                 </div>
             </div>
         </div>
@@ -281,7 +246,7 @@
                 <div class="col-sm-7">
                     <div class="col-sm-3">
                         <div class="video-gallery text-center">
-                            <a <%--href="#"--%>>
+                            <a href="/shop">
                                 <div class="iframe-img" style="width: 60px; height: 60px; margin: 0 auto">
                                     <img src="images/purse.jpg" alt=""/>
                                 </div>
@@ -295,7 +260,7 @@
                     </div>
                     <div class="col-sm-3">
                         <div class="video-gallery text-center">
-                            <a <%--href="#"--%>>
+                            <a href="/shop">
                                 <div class="iframe-img" style="width: 60px; height: 60px; margin: 0 auto">
                                     <img src="images/car.png" alt=""/>
                                 </div>
@@ -309,7 +274,7 @@
                     </div>
                     <div class="col-sm-3">
                         <div class="video-gallery text-center">
-                            <a <%--href="#"--%>>
+                            <a href="/shop">
                                 <div class="iframe-img" style="width: 60px; height: 60px; margin: 0 auto">
                                     <img src="images/kachestvo.png" alt=""/>
                                 </div>

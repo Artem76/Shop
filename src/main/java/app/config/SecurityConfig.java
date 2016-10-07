@@ -36,6 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/box_delete_ord").hasRole("USER")
                 .antMatchers("/admin").hasRole("ADMIN")
                 .antMatchers("/manager").hasRole("MANAGER")
+                .antMatchers("/manager_take_box").hasRole("MANAGER")
                 .and()
         .exceptionHandling().accessDeniedPage("/shop")//страница в случае вызова недопустимой страницы
                 .and()

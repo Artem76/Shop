@@ -88,10 +88,13 @@ public class UserController {
     }
 
     @RequestMapping("/user_box_order")
-    public String boxOrd(Model model){
+    public String boxOrd(@RequestParam("description") String description, Model model){
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();//получение обьекта связанного с учегной записью под которой авторизировался пользователь
         String login = user.getUsername();
         CustomUser customUser = userService.getUserByLogin(login);
+        Box box = boxService.addBox(customUser);
+        box.setDescription(description);
+        boxService.updateBox(box);
         boxService.orderBox(customUser);
         return "redirect:/user_cart";
     }

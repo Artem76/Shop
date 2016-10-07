@@ -2,6 +2,7 @@ package app.controller;
 
 import app.entity.CustomUser;
 import app.entity.enums.UserRole;
+import app.service.photo.PhotoService;
 import app.service.product.ProductService;
 import app.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,10 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -21,6 +26,9 @@ public class MainController {
 
     @Autowired
     private ProductService productService;
+
+    @Autowired
+    private PhotoService photoService;
 
     @RequestMapping("/")
     public String index(Model model){
@@ -136,9 +144,8 @@ public class MainController {
         return "unauthorized";
     }*/
 
-  /*  @RequestMapping(value = "/images/{photo_id}", method=RequestMethod.GET)
+    @RequestMapping(value = "/photo/{photo_id}")
     public void getImage(HttpServletRequest request, HttpServletResponse response, @PathVariable("photo_id") long photoId){
-        PhotoService photoService=new PhotoServiceImpl();
         try {
             byte [] bytes = photoService.getPhotoOne(photoId).getBody();
             response.setContentType("images/png");
@@ -146,7 +153,7 @@ public class MainController {
         }catch (IOException e){
             System.out.println(e);
         }
-    }*/
+    }
 
 
 }

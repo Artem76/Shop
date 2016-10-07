@@ -20,19 +20,19 @@ public class Product {
     @OneToMany(cascade = CascadeType.ALL)
     private List<Ord> orders = new ArrayList<>();
 
-    /*@ManyToOne(fetch = FetchType.EAGER)*/
-    private String filePhoto;
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Photo photo;
 
     public Product() { }
 
-    public Product(String type, Integer numberOfWires, Double area, Integer number, Double price, String description, String filePhoto) {
+    public Product(String type, Integer numberOfWires, Double area, Integer number, Double price, String description, Photo photo) {
         this.type = type;
         this.numberOfWires = numberOfWires;
         this.area = area;
         this.number = number;
         this.price = price;
         this.description = description;
-        this.filePhoto = filePhoto;
+        this.photo = photo;
     }
 
     public long getId() {
@@ -90,12 +90,12 @@ public class Product {
         this.orders = ords;
     }
 
-    public String getFilePhoto() {
-        return filePhoto;
+    public Photo getPhoto() {
+        return photo;
     }
 
-    public void setFilePhoto(String filePhoto) {
-        this.filePhoto = filePhoto;
+    public void setPhoto(Photo photo) {
+        this.photo = photo;
     }
 
     public Double getPrice() {

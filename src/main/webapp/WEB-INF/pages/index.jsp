@@ -428,7 +428,7 @@
                             <div class="product-image-wrapper">
                                 <div class="single-products">
                                     <div class="productinfo text-center">
-                                        <img src="images/cable/${product.filePhoto}" <%--style="height: 150px; width: 150px"--%> alt=""/>
+                                        <img src="/photo/${product.photo.id}" <%--style="height: 150px; width: 150px"--%> alt=""/>
                                         <h2 data-reveal-id="myModal" >${product.price} грн.</h2>
                                         <p>${product.type}${product.numberOfWires}x${product.area}</p>
                                         <%--<a href="#" class="btn btn-default add-to-cart"><i

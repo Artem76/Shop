@@ -57,6 +57,10 @@ public class Box {
         this.customUsers.add(1,customUser);
     }
 
+    public List<CustomUser> getCustomUsers() {
+        return customUsers;
+    }
+
     public List<Ord> getOrds() {
         return ords;
     }

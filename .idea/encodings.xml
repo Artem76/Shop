@@ -12,7 +12,9 @@
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/images/shop" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin_shop.jsp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager_all_orders_work.jsp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager_shop.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager_their_orders_work.jsp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user_cart.jsp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user_shop.jsp" charset="UTF-8" />
     <file url="PROJECT" charset="windows-1251" />
