@@ -30,15 +30,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()//отключение защиты
                 .authorizeRequests()//все страницы авторизовать
                 .antMatchers("/shop").hasAnyRole("USER", "ADMIN", "MANAGER")//кого пускать в конкретный юрл по роли
-                .antMatchers("/user").hasRole("USER")
-                .antMatchers("/user_filter").hasRole("USER")
-                .antMatchers("/box_add_product").hasRole("USER")
-                .antMatchers("/box_delete_ord").hasRole("USER")
-                .antMatchers("/admin").hasRole("ADMIN")
-                .antMatchers("/manager").hasRole("MANAGER")
-                .antMatchers("/manager_take_box").hasRole("MANAGER")
+                .antMatchers("/user**").hasRole("USER")
+                .antMatchers("/admin**").hasRole("ADMIN")
+                .antMatchers("/manager**").hasRole("MANAGER")
                 .and()
-        .exceptionHandling().accessDeniedPage("/shop")//страница в случае вызова недопустимой страницы
+        .exceptionHandling().accessDeniedPage("/")//страница в случае вызова недопустимой страницы
                 .and()
         .formLogin()
                 .loginPage("/login")//страница ввода логина и пароля

@@ -78,12 +78,6 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     @Transactional(readOnly = true)
-    public List<Product> getProductByType(String type) {
-        return productRepository.findByType(type);
-    }
-
-    @Override
-    @Transactional(readOnly = true)
     public List<Product> getProductAll() {
         List<Product> products = new ArrayList<>(productRepository.findAll());
         products.sort((a,b) -> a.getType().compareTo(b.getType())!=0 ? a.getType().compareTo(b.getType()) :

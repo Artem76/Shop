@@ -8,7 +8,6 @@ import app.service.photo.PhotoService;
 import app.service.product.ProductService;
 import app.service.user.UserService;
 import app.service.box.BoxService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -23,8 +22,6 @@ import java.util.TimeZone;
 
 @SpringBootApplication
 public class Application {
-    @Autowired
-    PhotoService photoService;
 
     public static void main(String[] args) {
         TimeZone.setDefault(TimeZone.getTimeZone("Etc/UTC"));
@@ -32,7 +29,7 @@ public class Application {
     }
 
     @Bean
-    public CommandLineRunner demo(final UserService userService, final ProductService productService, final BoxService boxService) {
+    public CommandLineRunner demo(final UserService userService, final ProductService productService, final BoxService boxService, final PhotoService photoService) {
         return new CommandLineRunner() {
 
             @Override
@@ -52,8 +49,6 @@ public class Application {
                         System.out.println(e);
                     }
                 }
-
-
                 userService.addUser(new CustomUser("admin", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.ADMIN));
                 userService.addUser(new CustomUser("user", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.USER));
                 userService.addUser(new CustomUser("user1", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.USER));

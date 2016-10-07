@@ -8,7 +8,7 @@ public interface PhotoService {
     List<Photo> getPhotoAll();
     Photo getPhotoByName(String name);
     Photo getPhotoOne(long id);
-    void addPhoto(Photo photo);
+    void addPhoto(Photo photo);//добавить проверку
     void updatePhoto(Photo photo);
     void deletePhoto(Photo photo);
 }

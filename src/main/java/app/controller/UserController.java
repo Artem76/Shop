@@ -39,7 +39,7 @@ public class UserController {
         model.addAttribute("types",productService.getTypes());
         model.addAttribute("numberOfWireses", productService.getNumberOfWires());
         model.addAttribute("areas", productService.getAreas());
-        return "user_shop";
+        return "user/user_shop";
     }
 
     @RequestMapping("/user_filter")
@@ -54,7 +54,7 @@ public class UserController {
         model.addAttribute("types",productService.getTypes());
         model.addAttribute("numberOfWireses", productService.getNumberOfWires());
         model.addAttribute("areas", productService.getAreas());
-        return "user_shop";
+        return "user/user_shop";
     }
 
     @RequestMapping("/user_box_add_product")
@@ -108,6 +108,6 @@ public class UserController {
         model.addAttribute("login", login);
         model.addAttribute("ords", ordService.getOrdByBoxSort(box));
         model.addAttribute("sum", boxService.getSum(customUser));
-        return "user_cart";
+        return "user/user_cart";
     }
 }

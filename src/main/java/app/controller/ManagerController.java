@@ -29,7 +29,7 @@ public class ManagerController {
         model.addAttribute("boxes", boxService.getBoxesByManagerStatusSort(null,1));
         //передать новые заказы
 
-        return "manager_shop";
+        return "manager/manager_shop";
     }
 
     @RequestMapping("/manager_take_box")
@@ -48,7 +48,7 @@ public class ManagerController {
         CustomUser customUser = userService.getUserByLogin(login);
         model.addAttribute("login", login);
         model.addAttribute("boxes", boxService.getBoxesByManagerStatusSort(customUser,1));
-        return "manager_their_orders_work";
+        return "manager/manager_their_orders_work";
     }
 
     @RequestMapping("/manager_all_orders_work")
@@ -58,7 +58,7 @@ public class ManagerController {
         CustomUser customUser = userService.getUserByLogin(login);
         model.addAttribute("login", login);
         model.addAttribute("boxes", boxService.getBoxesAllWorkStatusSort(1));
-        return "manager_all_orders_work";
+        return "manager/manager_all_orders_work";
     }
 //    /manager_work_box
 }
