@@ -57,6 +57,8 @@ public class Box {
         this.customUsers.add(1,customUser);
     }
 
+    public void delManager(){this.customUsers.remove(1);}
+
     public List<CustomUser> getCustomUsers() {
         return customUsers;
     }

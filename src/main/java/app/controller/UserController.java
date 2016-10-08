@@ -67,20 +67,14 @@ public class UserController {
     }
 
     @RequestMapping("/user_box_delete_ord")
-    public String boxDeleteOrd(@RequestParam long ord_id, Model model){
-        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();//получение обьекта связанного с учегной записью под которой авторизировался пользователь
-        String login = user.getUsername();
-        CustomUser customUser = userService.getUserByLogin(login);
+    public String boxDeleteOrd(@RequestParam long ord_id){
         Ord ord = ordService.getOrdOne(ord_id);
         ordService.deleteOrd(ord);
         return "redirect:/user_cart";
     }
 
     @RequestMapping("/user_box_update_ord")
-    public String boxUpdateOrd(@RequestParam long ord_id, @RequestParam Integer numberProduct, Model model){
-        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();//получение обьекта связанного с учегной записью под которой авторизировался пользователь
-        String login = user.getUsername();
-        CustomUser customUser = userService.getUserByLogin(login);
+    public String boxUpdateOrd(@RequestParam long ord_id, @RequestParam Integer numberProduct){
         Ord ord = ordService.getOrdOne(ord_id);
         ord.setNumberProduct(numberProduct);
         ordService.updateOrd(ord);

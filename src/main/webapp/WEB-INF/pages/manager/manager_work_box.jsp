@@ -48,7 +48,6 @@
             </div>
         </div>
     </div><!--/header_top-->
-
     <div class="header-middle"><!--header-middle-->
         <div class="container">
             <div class="row">
@@ -83,7 +82,7 @@
                     </div>
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li><a href="/shop" class="active">Новые заказы</a></li>
+                            <li><a href="/shop">Новые заказы</a></li>
                             <li class="dropdown"><a <%--href="#"--%>>Свои заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/manager_their_orders_work">В работе</a></li>
@@ -121,7 +120,7 @@
 <section id="form" style="margin: 0"><!--form-->
     <div class="container">
         <div class="row">
-            <h2 style="color: orange; margin-left: 45%">Новые заказы.</h2>
+            <h2 style="color: orange; margin-left: 23%">Заказ клиента ${login_client} от ${date}.</h2>
         </div>
     </div>
 </section>
@@ -131,25 +130,64 @@
         <div class="table-responsive cart_info">
             <table class="table table-condensed">
                 <thead>
-                <tr class="cart_menu" style="text-align: center">
-                    <td class="description">Время</td>
-                    <td class="price">Клиент</td>
+                <tr class="cart_menu">
+                    <td class="image">Кабель</td>
                     <td class="description"></td>
+                    <td class="price">Цена за единицу, грн.</td>
+                    <td class="quantity">Количество, м.</td>
+                    <c:if test="${not empty edit}">
+                        <td class="description"></td>
+                    </c:if>
+                    <td class="total">Стоимость, грн.</td>
+                    <c:if test="${not empty edit}">
+                        <td></td>
+                    </c:if>
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${boxes}" var="box">
-                    <tr style="text-align: center">
+                <c:forEach items="${ords}" var="ord">
+                    <tr>
+                        <td class="cart_product">
+                            <a><img src="/photo/${ord.product.photo.id}" alt=""
+                                    style="height: 40px; width: 40px; margin: 0 auto"></a>
+                        </td>
                         <td class="cart_description">
                             <h4>
-                                <a style="margin: 0 auto">${box.date}</a>
+                                <a style="margin: 0 auto">${ord.product.type}${ord.product.numberOfWires}x${ord.product.area}</a>
                             </h4>
                         </td>
                         <td class="cart_price">
-                            <p style="margin: 0 auto">${box.customUsers[0].login}</p>
+                            <p style="margin: 0 auto">${ord.priceOrd}</p>
                         </td>
-                        <td>
-                            <a class="btn btn-default update" style="margin: 0 auto" href="/manager_take_box?box_id=${box.id}">Принять</a>
+                        <c:if test="${not empty edit}">
+                            <form action="/manager_box_update_ord?ord_id=${ord.id}" method="post">
+                                <td class="cart_quantity" style="vertical-align: middle">
+                                    <div class="cart_quantity_button">
+                                        <input class="cart_quantity_input" type="text" name="numberProduct"
+                                               value="${ord.numberProduct}"
+                                               autocomplete="off" size="8" style="margin: 0 auto">
+                                    </div>
+                                </td>
+                                <td>
+                                    <input type="submit" class="btn btn-default update" value="Обновить"
+                                           style="margin: 0 auto">
+                                </td>
+                            </form>
+                        </c:if>
+                        <c:if test="${empty edit}">
+                            <td>
+                                <a class="cart_quantity_input" size="8" style="margin: 0 auto">${ord.numberProduct}</a>
+                            </td>
+                        </c:if>
+                        <td class="cart_total">
+                            <p class="cart_total_price" style="margin: 0 auto">${ord.numberProduct*ord.priceOrd}</p>
+                        </td>
+                        <td class="cart_delete">
+                            <c:if test="${not empty edit}">
+                                <a class="cart_quantity_delete" href="/manager_box_delete_ord?ord_id=${ord.id}"
+                                   style="margin: 0 auto"><i
+                                        class="fa fa-times"></i></a>
+                            </c:if>
                         </td>
                     </tr>
                 </c:forEach>
@@ -158,6 +196,31 @@
         </div>
     </div>
 </section> <!--/#cart_items-->
+
+<section id="do_action">
+    <div class="container">
+        <div class="col-sm-6">
+            <div class="total_area">
+                <ul>
+                    <li>${description}</li>
+                    <li>Общая стоимость <span>${sum} грн.</span></li>
+                    <c:if test="${not empty edit}">
+                        <c:if test="${empty complete}">
+                            <a class="btn btn-default check_out"
+                               href="/manager_box_complete?box_id=${box_id}">Выполнить</a>
+                        </c:if>
+                        <c:if test="${not empty complete}">
+                            <a class="btn btn-default check_out" style="background-color: red">Недостаточно кабеля</a>
+                        </c:if>
+                    </c:if>
+                    <c:if test="${not empty closed}">
+                        <a class="btn btn-default check_out" style="background-color: red">Заказ уже выполнен</a>
+                    </c:if>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section><!--/#do_action-->
 
 <footer id="footer"><!--Footer-->
     <div class="header_top">

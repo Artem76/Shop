@@ -8,7 +8,7 @@ public class Ord {
     @GeneratedValue
     private long id;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Box box;
 
     @ManyToOne(fetch = FetchType.EAGER)

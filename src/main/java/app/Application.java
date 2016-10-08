@@ -53,6 +53,7 @@ public class Application {
                 userService.addUser(new CustomUser("user", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.USER));
                 userService.addUser(new CustomUser("user1", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.USER));
                 userService.addUser(new CustomUser("manager", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.MANAGER));
+                userService.addUser(new CustomUser("manager1", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.MANAGER));
                 productService.addProduct(new Product("ВВГ",3,6.0,750,38.40,"Медный силовой кабель для наружных и внутренних работ.",photoService.getPhotoByName("vvg3")));
                 productService.addProduct(new Product("ПВС",4,4.0,350,25.90,"Медный гибкий шнур для внутренних работ.",photoService.getPhotoByName("pvs4")));
                 productService.addProduct(new Product("ПВС",2,1.5,350,9.56,"Медный гибкий шнур для внутренних работ.",photoService.getPhotoByName("pvs2")));

@@ -6,6 +6,8 @@ import app.entity.Ord;
 import app.entity.Product;
 import app.service.ord.OrdService;
 //import app.service.product.ProductRepository;
+import app.service.photo.PhotoService;
+import app.service.product.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,8 +23,8 @@ public class BoxServiceImpl implements BoxService {
     @Autowired
     BoxRepository boxRepository;
 
-//    @Autowired
-//    ProductRepository productRepository;
+    @Autowired
+    ProductService productService;
 
     @Autowired
     OrdService ordService;
@@ -61,6 +63,7 @@ public class BoxServiceImpl implements BoxService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public List<Box> getBoxesAllWorkStatusSort(Integer status) {
         List<Box> boxes = boxRepository.findByStatusSort(status);
         List<Box> boxesFilter = new ArrayList<>();
@@ -82,6 +85,16 @@ public class BoxServiceImpl implements BoxService {
     @Transactional(readOnly = true)
     public Double getSum(CustomUser customUser) {
         Box box = addBox(customUser);
+        double sum = 0.0;
+        for (Ord ord :
+                ordService.getOrdByBoxSort(box)) {
+            sum = sum + (ord.getPriceOrd() * ord.getNumberProduct());
+        }
+        return new BigDecimal(sum).setScale(2, RoundingMode.HALF_UP).doubleValue();
+    }
+
+    @Override
+    public Double getSumBox(Box box) {
         double sum = 0.0;
         for (Ord ord :
                 ordService.getOrdByBoxSort(box)) {
@@ -129,6 +142,13 @@ public class BoxServiceImpl implements BoxService {
         boxRepository.save(box);
     }
 
+    @Override
+    public void outBox(long id) {
+        Box box = getOne(id);
+        box.delManager();
+        boxRepository.save(box);
+    }
+
 
     @Override
     @Transactional
@@ -144,25 +164,25 @@ public class BoxServiceImpl implements BoxService {
         boxRepository.save(box);
     }
 
-//    @Override
-//    @Transactional
-//    public boolean completeBox(Box box) {
-//        if (box.getStatus() == 1) {
-//            List<Ord> ords = box.getOrders();
-//            for (Ord ord : ords) {
-//                if (ord.getNumberProduct() > ord.getProduct().getNumber()) {
-//                    return false;
-//                }
-//            }
-//            for (Ord ord : ords) {
-//                Product product = ord.getProduct();
-//                product.setNumber(product.getNumber() - ord.getNumberProduct());
-//                productRepository.save(product);
-//            }
-//            box.setStatus(2);
-//            boxRepository.save(box);
-//            return true;
-//        }
-//        return false;
-//    }
+    @Override
+    @Transactional
+    public boolean completeBox(Box box) {
+        if (box.getStatus() == 1) {
+            List<Ord> ords = ordService.getOrdByBoxSort(box);
+            for (Ord ord : ords) {
+                if (ord.getNumberProduct() > ord.getProduct().getNumber()) {
+                    return false;
+                }
+            }
+            for (Ord ord : ords) {
+                Product product = ord.getProduct();
+                product.setNumber(product.getNumber() - ord.getNumberProduct());
+                productService.updateProduct(product);
+            }
+            box.setStatus(2);
+            boxRepository.save(box);
+            return true;
+        }
+        return false;
+    }
 }

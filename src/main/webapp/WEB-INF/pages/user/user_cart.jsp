@@ -75,7 +75,8 @@
             <div class="row">
                 <div class="col-sm-9">
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -179,7 +180,7 @@
                     <tr>
                         <td class="cart_product">
                             <a><img src="/photo/${ord.product.photo.id}" alt=""
-                                                    style="height: 40px; width: 40px; margin: 0 auto"></a>
+                                    style="height: 40px; width: 40px; margin: 0 auto"></a>
                         </td>
                         <td class="cart_description">
                             <h4>
@@ -190,22 +191,24 @@
                             <p style="margin: 0 auto">${ord.priceOrd}</p>
                         </td>
                         <form action="/user_box_update_ord?ord_id=${ord.id}" method="post">
-                        <td class="cart_quantity" style="vertical-align: middle">
-                            <div class="cart_quantity_button">
-                                <input class="cart_quantity_input" type="text" name="numberProduct"
-                                       value="${ord.numberProduct}"
-                                       autocomplete="off" size="8" style="margin: 0 auto">
-                            </div>
-                        </td>
-                        <td >
-                            <input type="submit" class="btn btn-default update" value="Обновить" style="margin: 0 auto">
-                        </td>
+                            <td class="cart_quantity" style="vertical-align: middle">
+                                <div class="cart_quantity_button">
+                                    <input class="cart_quantity_input" type="text" name="numberProduct"
+                                           value="${ord.numberProduct}"
+                                           autocomplete="off" size="8" style="margin: 0 auto">
+                                </div>
+                            </td>
+                            <td>
+                                <input type="submit" class="btn btn-default update" value="Обновить"
+                                       style="margin: 0 auto">
+                            </td>
                         </form>
-                        <td class="cart_total" >
+                        <td class="cart_total">
                             <p class="cart_total_price" style="margin: 0 auto">${ord.numberProduct*ord.priceOrd}</p>
                         </td>
                         <td class="cart_delete">
-                            <a class="cart_quantity_delete" href="/user_box_delete_ord?ord_id=${ord.id}" style="margin: 0 auto"><i
+                            <a class="cart_quantity_delete" href="/user_box_delete_ord?ord_id=${ord.id}"
+                               style="margin: 0 auto"><i
                                     class="fa fa-times"></i></a>
                         </td>
                     </tr>
@@ -218,18 +221,18 @@
 
 <section id="do_action">
     <div class="container">
-            <div class="col-sm-6">
-                <div class="total_area">
-                    <form action="/user_box_order" method="post">
+        <div class="col-sm-6">
+            <div class="total_area">
+                <form action="/user_box_order" method="post">
                     <ul>
-                        <textarea name="description"  placeholder="Пояснения к заказую." rows="16"></textarea>
+                        <textarea name="description" placeholder="Пояснения к заказу." rows="16"></textarea>
                         <li>Общая стоимость <span>${sum} грн.</span></li>
+                        <input type="submit" id="order" class="btn btn-default check_out" value="Заказать">
                     </ul>
-                    <input type="submit" id="order" class="btn btn-default check_out" value="Заказать">
-                    </form>
-                </div>
+                </form>
             </div>
         </div>
+    </div>
     </div>
 </section><!--/#do_action-->
 
@@ -334,6 +337,9 @@
 <script>
     $("#order").click(function (event) {
         alert("Заказ отправлен в обработку!");
+    });
+    $("#logout").click(function (event) {
+        alert("Выход из акаунта!");
     });
 </script>
 </body>

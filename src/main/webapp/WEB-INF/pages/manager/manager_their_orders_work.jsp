@@ -150,6 +150,8 @@
                         <td>
                             <a class="btn btn-default update" style="margin: 0 auto"
                                href="/manager_work_box?box_id=${box.id}">Открыть</a>
+                            <a class="btn btn-default update" style="margin: 0 auto"
+                               href="/manager_out_box?box_id=${box.id}">Отказаться</a>
                         </td>
                     </tr>
                 </c:forEach>
