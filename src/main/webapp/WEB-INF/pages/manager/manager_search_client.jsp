@@ -48,7 +48,6 @@
             </div>
         </div>
     </div><!--/header_top-->
-
     <div class="header-middle"><!--header-middle-->
         <div class="container">
             <div class="row">
@@ -83,7 +82,7 @@
                     </div>
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li><a href="/shop" class="active">Новые заказы</a></li>
+                            <li><a href="/shop">Новые заказы</a></li>
                             <li class="dropdown"><a <%--href="#"--%>>Свои заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/manager_their_orders_work">В работе</a></li>
@@ -93,7 +92,7 @@
                             <li class="dropdown"><a <%--href="#"--%>>Все заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/manager_all_orders_work">В работе</a></li>
-                                    <li><a href="/manager_all_orders_closed">Выполненные</a></li>
+                                    <li><a href="/manager_all_orders_closed" class="active">Выполненные</a></li>
                                 </ul>
                             </li>
                             <li><a href="/manager_search_client">Поиск клиента</a></li>
@@ -116,7 +115,15 @@
 <section id="form" style="margin: 0"><!--form-->
     <div class="container">
         <div class="row">
-            <h2 style="color: orange;text-align: center">Новые заказы.</h2>
+            <h2 style="color: orange; text-align: center">Поиск клиента.</h2>
+            <h3 style="color: orange; text-align: center">Введите часть логина или телефона клиента:
+                <form class="navbar-form" role="search" action="/manager_search_client_pattern" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="pattern" placeholder="Поиск клиента">
+                    </div>
+                    <button type="submit" class="btn btn-default check_out" style="margin: 0 auto">Найти</button>
+                </form>
+            </h3>
         </div>
     </div>
 </section>
@@ -127,24 +134,29 @@
             <table class="table table-condensed">
                 <thead>
                 <tr class="cart_menu" style="text-align: center">
-                    <td class="description">Время</td>
-                    <td class="price">Клиент</td>
-                    <td class="description"></td>
+                    <td class="description">Логин</td>
+                    <td class="description">Телефон</td>
+                    <td class="description">Email</td>
+                    <td></td>
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${boxes}" var="box">
+                <c:forEach items="${users}" var="user">
                     <tr style="text-align: center">
                         <td class="cart_description">
                             <h4>
-                                <a style="margin: 0 auto">GMT ${box.date}</a>
+                                <a style="margin: 0 auto">${user.login}</a>
                             </h4>
                         </td>
-                        <td class="cart_price">
-                            <p style="margin: 0 auto">${box.customUsers[0].login}</p>
+                        <td class="cart_description">
+                            <p style="margin: 0 auto">${user.phone}</p>
+                        </td>
+                        <td class="cart_description">
+                            <p style="margin: 0 auto">${user.email}</p>
                         </td>
                         <td>
-                            <a class="btn btn-default update" style="margin: 0 auto" href="/manager_take_box?box_id=${box.id}">Принять</a>
+                            <a class="btn btn-default update" style="margin: 0 auto"
+                               href="/manager_client?user_id=${user.id}">Открыть</a>
                         </td>
                     </tr>
                 </c:forEach>

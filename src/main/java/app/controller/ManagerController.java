@@ -3,6 +3,7 @@ package app.controller;
 import app.entity.Box;
 import app.entity.CustomUser;
 import app.entity.Ord;
+import app.entity.enums.UserRole;
 import app.service.box.BoxService;
 import app.service.ord.OrdService;
 import app.service.user.UserService;
@@ -64,6 +65,25 @@ public class ManagerController {
         return "manager/manager_all_orders_work";
     }
 
+    @RequestMapping("/manager_their_orders_closed")
+    public String managerTheirOrdersClosed(Model model) {
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        CustomUser customUser = userService.getUserByLogin(login);
+        model.addAttribute("login", login);
+        model.addAttribute("boxes", boxService.getBoxesByManagerStatusSort(customUser, 2));
+        return "manager/manager_their_orders_closed";
+    }
+
+    @RequestMapping("/manager_all_orders_closed")
+    public String managerAllOrdersClosed(Model model) {
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        model.addAttribute("login", login);
+        model.addAttribute("boxes", boxService.getBoxesAllStatusSort(2));
+        return "manager/manager_all_orders_closed";
+    }
+
     @RequestMapping("/manager_out_box")
     public String managerOutBox(@RequestParam long box_id) {
         boxService.outBox(box_id);
@@ -94,6 +114,7 @@ public class ManagerController {
         }
         model.addAttribute("login", login);
         model.addAttribute("login_client", box.getCustomUserClient().getLogin());
+        model.addAttribute("login_manager", box.getCustomUserManager().getLogin());
         model.addAttribute("date", box.getDate());
         model.addAttribute("description", box.getDescription());
         model.addAttribute("ords", ords);
@@ -122,4 +143,24 @@ public class ManagerController {
         boxService.completeBox(box);
         return "redirect:/manager";
     }
+
+    @RequestMapping("/manager_search_client")
+    public String searchClient(Model model){
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        model.addAttribute("login", login);
+        model.addAttribute("users", userService.getUserByPatternSort("%%", UserRole.USER));
+        return "manager/manager_search_client";
+    }
+
+    @RequestMapping("/manager_search_client_pattern")
+    public String searchClientPattern(@RequestParam String pattern, Model model){
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        model.addAttribute("login", login);
+        model.addAttribute("users", userService.getUserByPatternSort("%"+pattern+"%", UserRole.USER));
+        return "manager/manager_search_client";
+    }
+
+//    /manager_client
 }

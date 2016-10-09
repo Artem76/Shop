@@ -86,21 +86,16 @@
                             <li class="dropdown"><a <%--href="#"--%>>Свои заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/manager_their_orders_work">В работе</a></li>
-                                    <li><a <%--href="/user_box_2"--%>>Выполненные</a></li>
+                                    <li><a href="/manager_their_orders_closed">Выполненные</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown"><a <%--href="#"--%>>Все заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/manager_all_orders_work">В работе</a></li>
-                                    <li><a <%--href="/user_box_2"--%>>Выполненные</a></li>
+                                    <li><a href="/manager_all_orders_closed">Выполненные</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a <%--href="#"--%>>Поиск клиента<i class="fa fa-angle-down"></i></a>
-                                <ul role="menu" class="sub-menu">
-                                    <li><a <%--href="/user_box_1"--%>>Логин</a></li>
-                                    <li><a <%--href="/user_box_2"--%>>Телефон</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="/manager_search_client">Поиск клиента</a></li>
                             <li class="dropdown"><a <%--href="#"--%>>Продукция<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a <%--href="/user_box_1"--%>>Добавить кабель</a></li>
@@ -120,7 +115,8 @@
 <section id="form" style="margin: 0"><!--form-->
     <div class="container">
         <div class="row">
-            <h2 style="color: orange; margin-left: 23%">Заказ клиента ${login_client} от ${date}.</h2>
+            <h2 style="color: orange; text-align: center">Заказ от GMT ${date}.</h2>
+            <h2 style="color: orange; text-align: center">Клиент ${login_client}. Менеджер ${login_manager}.</h2>
         </div>
     </div>
 </section>

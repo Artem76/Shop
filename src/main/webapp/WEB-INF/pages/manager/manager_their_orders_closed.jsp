@@ -48,7 +48,6 @@
             </div>
         </div>
     </div><!--/header_top-->
-
     <div class="header-middle"><!--header-middle-->
         <div class="container">
             <div class="row">
@@ -83,10 +82,10 @@
                     </div>
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li><a href="/shop" class="active">Новые заказы</a></li>
+                            <li><a href="/shop">Новые заказы</a></li>
                             <li class="dropdown"><a <%--href="#"--%>>Свои заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="/manager_their_orders_work">В работе</a></li>
+                                    <li><a href="/manager_their_orders_work" class="active">В работе</a></li>
                                     <li><a href="/manager_their_orders_closed">Выполненные</a></li>
                                 </ul>
                             </li>
@@ -116,7 +115,7 @@
 <section id="form" style="margin: 0"><!--form-->
     <div class="container">
         <div class="row">
-            <h2 style="color: orange;text-align: center">Новые заказы.</h2>
+            <h2 style="color: orange; text-align: center">Свои выполненные заказы.</h2>
         </div>
     </div>
 </section>
@@ -144,7 +143,8 @@
                             <p style="margin: 0 auto">${box.customUsers[0].login}</p>
                         </td>
                         <td>
-                            <a class="btn btn-default update" style="margin: 0 auto" href="/manager_take_box?box_id=${box.id}">Принять</a>
+                            <a class="btn btn-default update" style="margin: 0 auto"
+                               href="/manager_work_box?box_id=${box.id}">Открыть</a>
                         </td>
                     </tr>
                 </c:forEach>
