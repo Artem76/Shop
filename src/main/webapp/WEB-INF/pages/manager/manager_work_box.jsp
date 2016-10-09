@@ -161,13 +161,24 @@
                         </td>
                         <c:if test="${not empty edit}">
                             <form action="/manager_box_update_ord?ord_id=${ord.id}" method="post">
-                                <td class="cart_quantity" style="vertical-align: middle">
-                                    <div class="cart_quantity_button">
-                                        <input class="cart_quantity_input" type="text" name="numberProduct"
-                                               value="${ord.numberProduct}"
-                                               autocomplete="off" size="8" style="margin: 0 auto">
-                                    </div>
-                                </td>
+                                <c:if test="${ord.numberProduct <= ord.product.number}">
+                                    <td class="cart_quantity" style="vertical-align: middle">
+                                        <div class="cart_quantity_button">
+                                            <input class="cart_quantity_input" type="text" name="numberProduct"
+                                                   value="${ord.numberProduct}"
+                                                   autocomplete="off" size="8" style="margin: 0 auto">
+                                        </div>
+                                    </td>
+                                </c:if>
+                                <c:if test="${ord.numberProduct > ord.product.number}">
+                                    <td class="cart_quantity" style="vertical-align: middle">
+                                        <div class="cart_quantity_button">
+                                            <input class="cart_quantity_input" type="text" name="numberProduct"
+                                                   value="${ord.numberProduct}"
+                                                   autocomplete="off" size="8" style="margin: 0 auto; background-color: red">
+                                        </div>
+                                    </td>
+                                </c:if>
                                 <td>
                                     <input type="submit" class="btn btn-default update" value="Обновить"
                                            style="margin: 0 auto">
