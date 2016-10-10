@@ -9,6 +9,7 @@ import java.util.List;
 
 public interface BoxService {
     List<Box> getBoxesByClientStatusSort(CustomUser customUser, Integer status);
+    List<Box> getBoxesByClientStatus12Sort(CustomUser customUser);
     List<Box> getBoxesByManagerStatusSort(CustomUser customUser, Integer status);
     List<Box> getBoxesAllStatusSort(Integer status);
     List<Box> getBoxesAllWorkStatusSort(Integer status);
@@ -21,6 +22,6 @@ public interface BoxService {
     void takeBox(long id, CustomUser customUser);
     void outBox(long id);
     void deleteBox(Box box);
-    void orderBox(CustomUser customUser);
+    void orderBox(CustomUser customUser, String description);
     boolean completeBox(Box box);
 }

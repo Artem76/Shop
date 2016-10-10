@@ -116,7 +116,9 @@
     <div class="container">
         <div class="row">
             <h2 style="color: orange; text-align: center">Заказ от GMT ${date}.</h2>
-            <h2 style="color: orange; text-align: center">Клиент ${login_client}. Менеджер ${login_manager}.</h2>
+            <h2 style="color: orange; text-align: center">Клиент
+                <a href="/manager_client?login_client=${login_client}" style="color: orange; text-decoration: underline">${login_client}</a>
+                . Менеджер ${login_manager}.</h2>
         </div>
     </div>
 </section>
@@ -171,7 +173,8 @@
                                         <div class="cart_quantity_button">
                                             <input class="cart_quantity_input" type="text" name="numberProduct"
                                                    value="${ord.numberProduct}"
-                                                   autocomplete="off" size="8" style="margin: 0 auto; background-color: red">
+                                                   autocomplete="off" size="8"
+                                                   style="margin: 0 auto; background-color: red">
                                         </div>
                                     </td>
                                 </c:if>
@@ -206,24 +209,40 @@
 
 <section id="do_action">
     <div class="container">
-        <div class="col-sm-6">
-            <div class="total_area">
-                <ul>
-                    <li>${description}</li>
-                    <li>Общая стоимость <span>${sum} грн.</span></li>
-                    <c:if test="${not empty edit}">
-                        <c:if test="${empty complete}">
-                            <a class="btn btn-default check_out"
-                               href="/manager_box_complete?box_id=${box_id}">Выполнить</a>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="total_area">
+                    <ul>
+                        <label style="margin: 0 auto">Сообщение:</label>
+                        <li>${description}</li>
+                        <li>Общая стоимость <span>${sum} грн.</span></li>
+                        <c:if test="${not empty edit}">
+                            <c:if test="${empty complete}">
+                                <a class="btn btn-default check_out"
+                                   href="/manager_box_complete?box_id=${box_id}">Выполнить</a>
+                            </c:if>
+                            <c:if test="${not empty complete}">
+                                <a class="btn btn-default check_out" style="background-color: red">Недостаточно
+                                    кабеля</a>
+                            </c:if>
                         </c:if>
-                        <c:if test="${not empty complete}">
-                            <a class="btn btn-default check_out" style="background-color: red">Недостаточно кабеля</a>
+                        <c:if test="${not empty closed}">
+                            <a class="btn btn-default check_out" style="background-color: red">Заказ уже выполнен</a>
                         </c:if>
-                    </c:if>
-                    <c:if test="${not empty closed}">
-                        <a class="btn btn-default check_out" style="background-color: red">Заказ уже выполнен</a>
-                    </c:if>
-                </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="total_area">
+                    <ul>
+                        <label style="margin: 0 auto">Телефон:</label>
+                        <li style="margin: 0 auto">${phone}</li>
+                        <label style="margin: 0 auto">Email:</label>
+                        <li style="margin: 0 auto">${email}</li>
+                        <label style="margin: 0 auto">Адрес доставки:</label>
+                        <li style="margin: 0 auto">${address}</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

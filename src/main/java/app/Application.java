@@ -50,8 +50,8 @@ public class Application {
                     }
                 }
                 userService.addUser(new CustomUser("admin", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.ADMIN));
-                userService.addUser(new CustomUser("user", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.USER));
-                userService.addUser(new CustomUser("user1", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.USER));
+                userService.addUser(new CustomUser("user", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.USER, "cmua76@outlook.com", "+380979468925", "г.Киев, ул. Кукурузная 48"));
+                userService.addUser(new CustomUser("user1", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.USER, "inset@live.ru", "+380950138166", "г.Киев, ул. Кукурузная 50"));
                 userService.addUser(new CustomUser("manager", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.MANAGER));
                 userService.addUser(new CustomUser("manager1", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.MANAGER));
                 productService.addProduct(new Product("ВВГ",3,6.0,750,38.40,"Медный силовой кабель для наружных и внутренних работ.",photoService.getPhotoByName("vvg3")));

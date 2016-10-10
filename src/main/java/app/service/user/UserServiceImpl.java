@@ -20,6 +20,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public CustomUser getOne(long id) {
+        return userRepository.findOne(id);
+    }
+
+    @Override
     public List<CustomUser> getUserByPatternSort(String pattern, UserRole role) {
         return userRepository.findByPatternSort(pattern, role);
     }

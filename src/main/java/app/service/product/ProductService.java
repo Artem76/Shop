@@ -11,7 +11,7 @@ public interface ProductService {
     List<String> getTypes();
     List<Integer> getNumberOfWires();
     List<Double> getAreas();
-    void addProduct(Product product);//добавить проверку
+    void addProduct(Product product);//добавить проверку такого же продукта
     void updateProduct(Product product);
     void deleteProduct(Product product);
 }

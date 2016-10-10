@@ -218,23 +218,24 @@
         </div>
     </div>
 </section> <!--/#cart_items-->
-
-<section id="do_action">
-    <div class="container">
-        <div class="col-sm-6">
-            <div class="total_area">
-                <form action="/user_box_order" method="post">
-                    <ul>
-                        <textarea name="description" placeholder="Пояснения к заказу." rows="16"></textarea>
-                        <li>Общая стоимость <span>${sum} грн.</span></li>
-                        <input type="submit" id="order" class="btn btn-default check_out" value="Заказать">
-                    </ul>
-                </form>
+<c:if test="${not empty edit}">
+    <section id="do_action">
+        <div class="container">
+            <div class="col-sm-6">
+                <div class="total_area">
+                    <form action="/user_box_order" method="post">
+                        <ul>
+                            <textarea name="description" placeholder="Пояснения к заказу." rows="16"></textarea>
+                            <li>Общая стоимость <span>${sum} грн.</span></li>
+                            <input type="submit" id="order" class="btn btn-default check_out" value="Заказать">
+                        </ul>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    </div>
-</section><!--/#do_action-->
+        </div>
+    </section>
+</c:if><!--/#do_action-->
 
 <footer id="footer"><!--Footer-->
     <div class="footer-top">

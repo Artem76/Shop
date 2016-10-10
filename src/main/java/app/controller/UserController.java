@@ -32,8 +32,8 @@ public class UserController {
 
     @RequestMapping("/user")
     public String userShop(Model model){
-        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();//получение обьекта связанного с учегной записью под которой авторизировался пользователь
-        String login = user.getUsername();//получение логина пользователя
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
         model.addAttribute("login", login);
         model.addAttribute("products", productService.getProductAll());
         model.addAttribute("types",productService.getTypes());
@@ -47,8 +47,8 @@ public class UserController {
                            @RequestParam Integer numberOfWires_cable,
                            @RequestParam Double area_cable,
                            Model model){
-        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();//получение обьекта связанного с учегной записью под которой авторизировался пользователь
-        String login = user.getUsername();//получение логина пользователя
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
         model.addAttribute("login", login);
         model.addAttribute("products", productService.getProductByTypeAndNumberOfWiresAndAreaSort(type_cable,numberOfWires_cable,area_cable));
         model.addAttribute("types",productService.getTypes());
@@ -82,26 +82,26 @@ public class UserController {
     }
 
     @RequestMapping("/user_box_order")
-    public String boxOrd(@RequestParam("description") String description, Model model){
-        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();//получение обьекта связанного с учегной записью под которой авторизировался пользователь
+    public String boxOrd(@RequestParam("description") String description){
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String login = user.getUsername();
         CustomUser customUser = userService.getUserByLogin(login);
-        Box box = boxService.addBox(customUser);
-        box.setDescription(description);
-        boxService.updateBox(box);
-        boxService.orderBox(customUser);
+        boxService.orderBox(customUser,description);
         return "redirect:/user_cart";
     }
 
     @RequestMapping("/user_cart")
     public String userCart(Model model){
-        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();//получение обьекта связанного с учегной записью под которой авторизировался пользователь
-        String login = user.getUsername();//получение логина пользователя
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
         CustomUser customUser = userService.getUserByLogin(login);
         Box box = boxService.addBox(customUser);
         model.addAttribute("login", login);
         model.addAttribute("ords", ordService.getOrdByBoxSort(box));
-        model.addAttribute("sum", boxService.getSum(customUser));
+        if (ordService.getOrdByBoxSort(box).size()!=0){
+            model.addAttribute("edit", "ok");
+            model.addAttribute("sum", boxService.getSum(customUser));
+        }
         return "user/user_cart";
     }
 }

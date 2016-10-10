@@ -156,7 +156,7 @@
                         </td>
                         <td>
                             <a class="btn btn-default update" style="margin: 0 auto"
-                               href="/manager_client?user_id=${user.id}">Открыть</a>
+                               href="/manager_client?login_client=${user.login}">Открыть</a>
                         </td>
                     </tr>
                 </c:forEach>

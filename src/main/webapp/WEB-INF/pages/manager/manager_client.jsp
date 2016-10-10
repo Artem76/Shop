@@ -85,14 +85,14 @@
                             <li><a href="/shop">Новые заказы</a></li>
                             <li class="dropdown"><a <%--href="#"--%>>Свои заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="/manager_their_orders_work" class="active">В работе</a></li>
+                                    <li><a href="/manager_their_orders_work">В работе</a></li>
                                     <li><a href="/manager_their_orders_closed">Выполненные</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown"><a <%--href="#"--%>>Все заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/manager_all_orders_work">В работе</a></li>
-                                    <li><a href="/manager_all_orders_closed">Выполненные</a></li>
+                                    <li><a href="/manager_all_orders_closed" class="active">Выполненные</a></li>
                                 </ul>
                             </li>
                             <li><a href="/manager_search_client">Поиск клиента</a></li>
@@ -115,7 +115,7 @@
 <section id="form" style="margin: 0"><!--form-->
     <div class="container">
         <div class="row">
-            <h2 style="color: orange; text-align: center">Свои выполненные заказы.</h2>
+            <h2 style="color: orange; text-align: center">Все заказы клиента ${login_client}.</h2>
         </div>
     </div>
 </section>
@@ -127,7 +127,8 @@
                 <thead>
                 <tr class="cart_menu" style="text-align: center">
                     <td class="description">Время</td>
-                    <td class="price">Клиент</td>
+                    <td class="description">Менеджер</td>
+                    <td class="description">Состояние</td>
                     <td class="description"></td>
                 </tr>
                 </thead>
@@ -140,12 +141,15 @@
                             </h4>
                         </td>
                         <td class="cart_price">
-                            <p style="margin: 0 auto">
-                                <a href="/manager_client?login_client=${box.customUsers[0].login}"
-                                   style="text-decoration: underline; color: grey">
-                                        ${box.customUsers[0].login}
-                                </a>
-                            </p>
+                            <p style="margin: 0 auto">${box.customUsers[1].login}</p>
+                        </td>
+                        <td class="cart_total_price">
+                            <c:if test="${box.status == 1}">
+                                <p style="margin: 0 auto">В работе</p>
+                            </c:if>
+                            <c:if test="${box.status == 2}">
+                                <p style="margin: 0 auto">Выполнен</p>
+                            </c:if>
                         </td>
                         <td>
                             <a class="btn btn-default update" style="margin: 0 auto"

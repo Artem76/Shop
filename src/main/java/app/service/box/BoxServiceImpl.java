@@ -44,6 +44,21 @@ public class BoxServiceImpl implements BoxService {
 
     @Override
     @Transactional(readOnly = true)
+    public List<Box> getBoxesByClientStatus12Sort(CustomUser customUser) {
+        List<Box> boxes = boxRepository.findByStatusSort(1);
+        boxes.sort((a,b) -> a.getCustomUsers().size()-b.getCustomUsers().size());
+        boxes.addAll(boxRepository.findByStatusSort(2));
+        List<Box> boxesFilter = new ArrayList<>();
+        for (Box b : boxes) {
+            if (b.getCustomUserClient().getLogin().equals(customUser.getLogin())) {
+                boxesFilter.add(b);
+            }
+        }
+        return boxesFilter;
+    }
+
+    @Override
+    @Transactional(readOnly = true)
     public List<Box> getBoxesByManagerStatusSort(CustomUser customUser, Integer status) {
         List<Box> boxes = boxRepository.findByStatusSort(status);
         List<Box> boxesFilter = new ArrayList<>();
@@ -94,6 +109,7 @@ public class BoxServiceImpl implements BoxService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Double getSumBox(Box box) {
         double sum = 0.0;
         for (Ord ord :
@@ -143,6 +159,7 @@ public class BoxServiceImpl implements BoxService {
     }
 
     @Override
+    @Transactional
     public void outBox(long id) {
         Box box = getOne(id);
         box.delManager();
@@ -157,8 +174,10 @@ public class BoxServiceImpl implements BoxService {
     }
 
     @Override
-    public void orderBox(CustomUser customUser) {
+    public void orderBox(CustomUser customUser, String description) {
         Box box = addBox(customUser);
+        if (ordService.getOrdByBoxSort(box).size()==0) return;
+        box.setDescription(description);
         box.setDate(new Date(System.currentTimeMillis()));
         box.setStatus(1);
         boxRepository.save(box);

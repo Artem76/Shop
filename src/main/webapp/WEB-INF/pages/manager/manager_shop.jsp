@@ -141,10 +141,16 @@
                             </h4>
                         </td>
                         <td class="cart_price">
-                            <p style="margin: 0 auto">${box.customUsers[0].login}</p>
+                            <p style="margin: 0 auto">
+                                <a href="/manager_client?login_client=${box.customUsers[0].login}"
+                                   style="text-decoration: underline; color: grey">
+                                        ${box.customUsers[0].login}
+                                </a>
+                            </p>
                         </td>
                         <td>
-                            <a class="btn btn-default update" style="margin: 0 auto" href="/manager_take_box?box_id=${box.id}">Принять</a>
+                            <a class="btn btn-default update" style="margin: 0 auto"
+                               href="/manager_take_box?box_id=${box.id}">Принять</a>
                         </td>
                     </tr>
                 </c:forEach>
