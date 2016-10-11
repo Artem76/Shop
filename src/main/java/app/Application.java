@@ -42,9 +42,7 @@ public class Application {
                         DataInputStream dis = new DataInputStream(new FileInputStream(new File("D:/photo/" + name + ".png" )));
                         byte[] bytes = new byte[dis.available()];
                         dis.read(bytes);
-                        Blob blob = new SerialBlob(bytes);
-                        Photo photo = new Photo(name,blob);
-                        photoService.addPhoto(photo);
+                        photoService.addPhoto(name,bytes);
                     } catch (Exception e){
                         System.out.println(e);
                     }

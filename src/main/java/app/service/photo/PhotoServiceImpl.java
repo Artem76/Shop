@@ -5,6 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.sql.rowset.serial.SerialBlob;
+import java.sql.Blob;
+import java.sql.SQLException;
 import java.util.List;
 
 @Service
@@ -30,8 +33,18 @@ public class PhotoServiceImpl implements PhotoService{
 
     @Override
     @Transactional
-    public void addPhoto(Photo photo) {
+    public boolean addPhoto(String name, byte[] bytes) {
+        if (photoRepository.findByName(name) != null) return false;
+        Blob blob = null;
+        try {
+            blob = new SerialBlob(bytes);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+        Photo photo = new Photo(name,blob);
         photoRepository.save(photo);
+        return true;
     }
 
     @Override

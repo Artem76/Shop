@@ -88,8 +88,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     @Transactional
-    public void addProduct(Product product) {
+    public boolean addProduct(Product product) {
+        if (getProductByTypeAndNumberOfWiresAndAreaSort(product.getType(),product.getNumberOfWires(),product.getArea()).size() > 0) return false;
         productRepository.save(product);
+        return true;
     }
 
     @Override

@@ -118,7 +118,14 @@
             <h2 style="color: orange; text-align: center">Заказ от GMT ${date}.</h2>
             <h2 style="color: orange; text-align: center">Клиент
                 <a href="/manager_client?login_client=${login_client}" style="color: orange; text-decoration: underline">${login_client}</a>
-                . Менеджер ${login_manager}.</h2>
+                . Менеджер
+                <c:if test="${not empty login_manager}">
+                    ${login_manager}
+                </c:if>
+                <c:if test="${empty login_manager}">
+                    еще не назначен
+                </c:if>
+                .</h2>
         </div>
     </div>
 </section>

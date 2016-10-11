@@ -98,7 +98,7 @@ public class ManagerController {
         Box box = boxService.getOne(box_id);
         List<Ord> ords = ordService.getOrdByBoxSort(box);
         if (box.getStatus() < 2) {
-            if (box.getCustomUserManager().equals(customUser)) {
+            if (box.getCustomUsers().size() == 2 && box.getCustomUserManager().equals(customUser)) {
                 model.addAttribute("edit", "ok");
                 model.addAttribute("box_id", box_id);
             }
@@ -114,7 +114,7 @@ public class ManagerController {
         }
         model.addAttribute("login", login);
         model.addAttribute("login_client", box.getCustomUserClient().getLogin());
-        model.addAttribute("login_manager", box.getCustomUserManager().getLogin());
+        if (box.getCustomUsers().size() == 2) model.addAttribute("login_manager", box.getCustomUserManager().getLogin());
         model.addAttribute("date", box.getDate());
         model.addAttribute("description", box.getDescription());
         model.addAttribute("phone", box.getCustomUserClient().getPhone());
