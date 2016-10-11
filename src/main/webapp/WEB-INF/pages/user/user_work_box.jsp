@@ -88,7 +88,7 @@
                             <li><a href="/shop">Главная</a></li>
                             <li class="dropdown"><a <%--href="#"--%>>Заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="/user_cart" class="active">Корзина</a></li>
+                                    <li><a href="/user_cart">Корзина</a></li>
                                     <li><a href="/user_orders_work">В работе</a></li>
                                     <li><a href="/user_orders_closed">Выполненные</a></li>
                                 </ul>
@@ -160,6 +160,23 @@
     </div>
 </section><!--/slider-->
 
+<section id="form" style="margin: 0"><!--form-->
+    <div class="container">
+        <div class="row">
+            <h2 style="color: orange; text-align: center">Заказ от GMT ${date}.</h2>
+            <h2 style="color: orange; text-align: center">Менеджер
+                <c:if test="${not empty login_manager}">
+                    ${login_manager}
+                </c:if>
+                <c:if test="${empty login_manager}">
+                    еще не назначен
+                </c:if>
+                .
+            </h2>
+        </div>
+    </div>
+</section>
+
 <section id="cart_items">
     <div class="container">
         <div class="table-responsive cart_info">
@@ -170,9 +187,7 @@
                     <td class="description"></td>
                     <td class="price">Цена за единицу, грн.</td>
                     <td class="quantity">Количество, м.</td>
-                    <td class="description"></td>
                     <td class="total">Стоимость, грн.</td>
-                    <td></td>
                 </tr>
                 </thead>
                 <tbody>
@@ -190,26 +205,11 @@
                         <td class="cart_price">
                             <p style="margin: 0 auto">${ord.priceOrd}</p>
                         </td>
-                        <form action="/user_box_update_ord?ord_id=${ord.id}" method="post">
-                            <td class="cart_quantity" style="vertical-align: middle">
-                                <div class="cart_quantity_button">
-                                    <input class="cart_quantity_input" type="text" name="numberProduct"
-                                           value="${ord.numberProduct}"
-                                           autocomplete="off" size="8" style="margin: 0 auto">
-                                </div>
-                            </td>
-                            <td>
-                                <input type="submit" class="btn btn-default update" value="Обновить"
-                                       style="margin: 0 auto">
-                            </td>
-                        </form>
+                        <td>
+                            <a class="cart_quantity_input" size="8" style="margin: 0 auto">${ord.numberProduct}</a>
+                        </td>
                         <td class="cart_total">
                             <p class="cart_total_price" style="margin: 0 auto">${ord.numberProduct*ord.priceOrd}</p>
-                        </td>
-                        <td class="cart_delete">
-                            <a class="cart_quantity_delete" href="/user_box_delete_ord?ord_id=${ord.id}"
-                               style="margin: 0 auto"><i
-                                    class="fa fa-times"></i></a>
                         </td>
                     </tr>
                 </c:forEach>
@@ -218,24 +218,28 @@
         </div>
     </div>
 </section> <!--/#cart_items-->
-<c:if test="${not empty edit}">
-    <section id="do_action">
-        <div class="container">
+
+<section id="do_action">
+    <div class="container">
+        <div class="row">
             <div class="col-sm-6">
                 <div class="total_area">
-                    <form action="/user_box_order" method="post">
-                        <ul>
-                            <textarea name="description" placeholder="Пояснения к заказу." rows="16"></textarea>
-                            <li>Общая стоимость <span>${sum} грн.</span></li>
-                            <input type="submit" id="order" class="btn btn-default check_out" value="Заказать">
-                        </ul>
-                    </form>
+                    <ul>
+                        <label style="margin: 0 auto">Сообщение:</label>
+                        <li>${description}</li>
+                        <li>Общая стоимость <span>${sum} грн.</span></li>
+                        <c:if test="${empty closed}">
+                            <a class="btn btn-default check_out" style="background-color: red">Заказ в работе</a>
+                        </c:if>
+                        <c:if test="${not empty closed}">
+                            <a class="btn btn-default check_out" style="background-color: red">Заказ уже выполнен</a>
+                        </c:if>
+                    </ul>
                 </div>
             </div>
         </div>
-        </div>
-    </section>
-</c:if><!--/#do_action-->
+    </div>
+</section><!--/#do_action-->
 
 <footer id="footer"><!--Footer-->
     <div class="footer-top">
@@ -336,9 +340,6 @@
 <script src="js/jquery.prettyPhoto.js"></script>
 <script src="js/main.js"></script>
 <script>
-    $("#order").click(function (event) {
-        alert("Заказ отправлен в обработку!");
-    });
     $("#logout").click(function (event) {
         alert("Выход из акаунта!");
     });

@@ -11,7 +11,7 @@ import java.util.*;
 @Service
 public class MessageServiceImpl implements MessageService{
     @Autowired
-    MessageRepository massageRepository;
+    private MessageRepository massageRepository;
 
     @Override
     @Transactional(readOnly = true)

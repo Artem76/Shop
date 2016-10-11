@@ -88,8 +88,8 @@
                             <li><a href="/shop">Главная</a></li>
                             <li class="dropdown"><a <%--href="#"--%>>Заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="/user_cart" class="active">Корзина</a></li>
-                                    <li><a href="/user_orders_work">В работе</a></li>
+                                    <li><a href="/user_cart">Корзина</a></li>
+                                    <li><a href="/user_orders_work" class="active">В работе</a></li>
                                     <li><a href="/user_orders_closed">Выполненные</a></li>
                                 </ul>
                             </li>
@@ -160,56 +160,39 @@
     </div>
 </section><!--/slider-->
 
+<section id="form" style="margin: 0"><!--form-->
+    <div class="container">
+        <div class="row">
+            <h2 style="color: orange; text-align: center">Свои заказы находящиеся в работе.</h2>
+        </div>
+    </div>
+</section>
+
 <section id="cart_items">
     <div class="container">
         <div class="table-responsive cart_info">
             <table class="table table-condensed">
                 <thead>
-                <tr class="cart_menu">
-                    <td class="image">Кабель</td>
+                <tr class="cart_menu" style="text-align: center">
+                    <td class="description">Время</td>
+                    <td class="price">Менеджер</td>
                     <td class="description"></td>
-                    <td class="price">Цена за единицу, грн.</td>
-                    <td class="quantity">Количество, м.</td>
-                    <td class="description"></td>
-                    <td class="total">Стоимость, грн.</td>
-                    <td></td>
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${ords}" var="ord">
-                    <tr>
-                        <td class="cart_product">
-                            <a><img src="/photo/${ord.product.photo.id}" alt=""
-                                    style="height: 40px; width: 40px; margin: 0 auto"></a>
-                        </td>
+                <c:forEach items="${boxes}" var="box">
+                    <tr style="text-align: center">
                         <td class="cart_description">
                             <h4>
-                                <a style="margin: 0 auto">${ord.product.type}${ord.product.numberOfWires}x${ord.product.area}</a>
+                                <a style="margin: 0 auto">GMT ${box.date}</a>
                             </h4>
                         </td>
                         <td class="cart_price">
-                            <p style="margin: 0 auto">${ord.priceOrd}</p>
+                            <p style="margin: 0 auto">${box.customUsers[1].login}</p>
                         </td>
-                        <form action="/user_box_update_ord?ord_id=${ord.id}" method="post">
-                            <td class="cart_quantity" style="vertical-align: middle">
-                                <div class="cart_quantity_button">
-                                    <input class="cart_quantity_input" type="text" name="numberProduct"
-                                           value="${ord.numberProduct}"
-                                           autocomplete="off" size="8" style="margin: 0 auto">
-                                </div>
-                            </td>
-                            <td>
-                                <input type="submit" class="btn btn-default update" value="Обновить"
-                                       style="margin: 0 auto">
-                            </td>
-                        </form>
-                        <td class="cart_total">
-                            <p class="cart_total_price" style="margin: 0 auto">${ord.numberProduct*ord.priceOrd}</p>
-                        </td>
-                        <td class="cart_delete">
-                            <a class="cart_quantity_delete" href="/user_box_delete_ord?ord_id=${ord.id}"
-                               style="margin: 0 auto"><i
-                                    class="fa fa-times"></i></a>
+                        <td>
+                            <a class="btn btn-default update" style="margin: 0 auto"
+                               href="/user_work_box?box_id=${box.id}">Открыть</a>
                         </td>
                     </tr>
                 </c:forEach>
@@ -218,24 +201,6 @@
         </div>
     </div>
 </section> <!--/#cart_items-->
-<c:if test="${not empty edit}">
-    <section id="do_action">
-        <div class="container">
-            <div class="col-sm-6">
-                <div class="total_area">
-                    <form action="/user_box_order" method="post">
-                        <ul>
-                            <textarea name="description" placeholder="Пояснения к заказу." rows="16"></textarea>
-                            <li>Общая стоимость <span>${sum} грн.</span></li>
-                            <input type="submit" id="order" class="btn btn-default check_out" value="Заказать">
-                        </ul>
-                    </form>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-</c:if><!--/#do_action-->
 
 <footer id="footer"><!--Footer-->
     <div class="footer-top">
@@ -336,9 +301,6 @@
 <script src="js/jquery.prettyPhoto.js"></script>
 <script src="js/main.js"></script>
 <script>
-    $("#order").click(function (event) {
-        alert("Заказ отправлен в обработку!");
-    });
     $("#logout").click(function (event) {
         alert("Выход из акаунта!");
     });

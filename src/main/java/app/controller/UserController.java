@@ -16,19 +16,21 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @Controller
 public class UserController {
     @Autowired
-    UserService userService;
+    private UserService userService;
 
     @Autowired
-    ProductService productService;
+    private ProductService productService;
 
     @Autowired
-    BoxService boxService;
+    private BoxService boxService;
 
     @Autowired
-    OrdService ordService;
+    private OrdService ordService;
 
     @RequestMapping("/user")
     public String userShop(Model model){
@@ -103,5 +105,43 @@ public class UserController {
             model.addAttribute("sum", boxService.getSum(customUser));
         }
         return "user/user_cart";
+    }
+
+    @RequestMapping("/user_orders_work")
+    public String userOrdersWork(Model model){
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        CustomUser customUser = userService.getUserByLogin(login);
+        model.addAttribute("login", login);
+        model.addAttribute("boxes", boxService.getBoxesByClientStatusSort(customUser, 1));
+        return "user/user_orders_work";
+    }
+
+    @RequestMapping("/user_orders_closed")
+    public String userOrdersClosed(Model model){
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        CustomUser customUser = userService.getUserByLogin(login);
+        model.addAttribute("login", login);
+        model.addAttribute("boxes", boxService.getBoxesByClientStatusSort(customUser, 2));
+        return "user/user_orders_closed";
+    }
+
+    @RequestMapping("/user_work_box")
+    public String userWorkBox(@RequestParam long box_id, Model model){
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        CustomUser customUser = userService.getUserByLogin(login);
+        Box box = boxService.getOne(box_id);
+        if (!box.getCustomUserClient().equals(customUser))return "redirect:/user";
+        List<Ord> ords = ordService.getOrdByBoxSort(box);
+        if (box.getStatus() == 2) model.addAttribute("closed", "closed");
+        model.addAttribute("login", login);
+        if (box.getCustomUsers().size() == 2) model.addAttribute("login_manager", box.getCustomUserManager().getLogin());
+        model.addAttribute("date", box.getDate());
+        model.addAttribute("description", box.getDescription());
+        model.addAttribute("ords", ords);
+        model.addAttribute("sum", boxService.getSumBox(box));
+        return "user/user_work_box";
     }
 }

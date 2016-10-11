@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class PhotoServiceImpl implements PhotoService{
     @Autowired
-    PhotoRepository photoRepository;
+    private PhotoRepository photoRepository;
 
     @Override
     @Transactional(readOnly = true)

@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class OrdServiceImpl implements OrdService{
     @Autowired
-    OrdRepository ordRepository;
+    private OrdRepository ordRepository;
 
     @Override
     @Transactional(readOnly = true)

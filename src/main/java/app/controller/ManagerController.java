@@ -20,13 +20,13 @@ import java.util.List;
 @Controller
 public class ManagerController {
     @Autowired
-    UserService userService;
+    private UserService userService;
 
     @Autowired
-    BoxService boxService;
+    private BoxService boxService;
 
     @Autowired
-    OrdService ordService;
+    private OrdService ordService;
 
     @RequestMapping("/manager")
     public String managerShop(Model model) {

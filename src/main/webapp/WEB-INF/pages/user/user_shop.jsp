@@ -88,8 +88,8 @@
                             <li class="dropdown"><a <%--href="#"--%>>Заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/user_cart">Корзина</a></li>
-                                    <li><a <%--href="/user_box_1"--%>>В работе</a></li>
-                                    <li><a <%--href="/user_box_2"--%>>Выполненные</a></li>
+                                    <li><a href="/user_orders_work">В работе</a></li>
+                                    <li><a href="/user_orders_closed">Выполненные</a></li>
                                 </ul>
                             </li>
                             <li><a <%--href="/message"--%>>Сообщения</a></li>

@@ -21,18 +21,19 @@ import java.util.List;
 @Service
 public class BoxServiceImpl implements BoxService {
     @Autowired
-    BoxRepository boxRepository;
+    private BoxRepository boxRepository;
 
     @Autowired
-    ProductService productService;
+    private ProductService productService;
 
     @Autowired
-    OrdService ordService;
+    private OrdService ordService;
 
     @Override
     @Transactional(readOnly = true)
     public List<Box> getBoxesByClientStatusSort(CustomUser customUser, Integer status) {
         List<Box> boxes = boxRepository.findByStatusSort(status);
+        boxes.sort((a,b) -> a.getCustomUsers().size()-b.getCustomUsers().size());
         List<Box> boxesFilter = new ArrayList<>();
         for (Box b : boxes) {
             if (b.getCustomUserClient().getLogin().equals(customUser.getLogin())) {

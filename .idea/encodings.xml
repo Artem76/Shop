@@ -21,7 +21,10 @@
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_their_orders_work.jsp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_work_box.jsp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_cart.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_orders_closed.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_orders_work.jsp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_shop.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_work_box.jsp" charset="UTF-8" />
     <file url="PROJECT" charset="windows-1251" />
   </component>
 </project>

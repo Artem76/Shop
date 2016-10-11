@@ -7,31 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1608cc52-eac6-48e3-97a2-4ff57e309dc2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_client.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/Application$1.class" afterPath="$PROJECT_DIR$/target/classes/app/Application$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/service/user/UserRepository.class" afterPath="$PROJECT_DIR$/target/classes/app/service/user/UserRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/service/user/UserService.class" afterPath="$PROJECT_DIR$/target/classes/app/service/user/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/service/user/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/app/service/user/UserServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_orders_closed.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_orders_work.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_work_box.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/Application.java" afterPath="$PROJECT_DIR$/src/main/java/app/Application.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/controller/ManagerController.java" afterPath="$PROJECT_DIR$/src/main/java/app/controller/ManagerController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/app/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/service/box/BoxService.java" afterPath="$PROJECT_DIR$/src/main/java/app/service/box/BoxService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/service/box/BoxServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/app/service/box/BoxServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/service/photo/PhotoService.java" afterPath="$PROJECT_DIR$/src/main/java/app/service/photo/PhotoService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/service/product/ProductService.java" afterPath="$PROJECT_DIR$/src/main/java/app/service/product/ProductService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/service/user/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/app/service/user/UserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/service/user/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/app/service/user/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/service/user/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/app/service/user/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_all_orders_closed.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_all_orders_closed.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_all_orders_work.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_all_orders_work.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_search_client.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_search_client.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_shop.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_shop.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_their_orders_closed.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_their_orders_closed.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_their_orders_work.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_their_orders_work.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_work_box.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_work_box.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/service/message/MessageServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/app/service/message/MessageServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/service/ord/OrdServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/app/service/ord/OrdServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/service/photo/PhotoServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/app/service/photo/PhotoServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_cart.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_cart.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_shop.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_shop.jsp" />
     </list>
     <ignored path="Shop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,91 +42,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BoxServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/service/box/BoxServiceImpl.java">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="48" column="79" selection-start-line="48" selection-start-column="79" selection-end-line="48" selection-end-column="79" />
+            <state relative-caret-position="120">
+              <caret line="139" column="34" selection-start-line="139" selection-start-column="34" selection-end-line="139" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/service/product/ProductServiceImpl.java">
+      <file leaf-file-name="OrdServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/service/ord/OrdServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="81" column="58" selection-start-line="81" selection-start-column="58" selection-end-line="81" selection-end-column="58" />
+            <state relative-caret-position="17">
+              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManagerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/ManagerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="171" column="28" selection-start-line="171" selection-start-column="28" selection-end-line="171" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manager_all_orders_closed.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_all_orders_closed.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="144" column="36" selection-start-line="144" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manager_all_orders_work.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_all_orders_work.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="147" column="36" selection-start-line="147" selection-start-column="36" selection-end-line="147" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manager_shop.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_shop.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="147" column="36" selection-start-line="147" selection-start-column="36" selection-end-line="147" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manager_their_orders_closed.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_their_orders_closed.jsp">
+      <file leaf-file-name="user_work_box.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_work_box.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="146" column="36" selection-start-line="146" selection-start-column="36" selection-end-line="146" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manager_their_orders_work.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_their_orders_work.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="146" column="36" selection-start-line="146" selection-start-column="36" selection-end-line="146" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manager_client.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_client.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="149" column="55" selection-start-line="149" selection-start-column="55" selection-end-line="149" selection-end-column="55" />
+              <caret line="174" column="17" selection-start-line="174" selection-start-column="17" selection-end-line="174" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -147,8 +75,68 @@
       <file leaf-file-name="manager_work_box.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_work_box.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="117" column="54" selection-start-line="117" selection-start-column="54" selection-end-line="117" selection-end-column="54" />
+            <state relative-caret-position="253">
+              <caret line="248" column="28" selection-start-line="114" selection-start-column="0" selection-end-line="248" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_orders_closed.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_orders_closed.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="92" column="87" selection-start-line="92" selection-start-column="87" selection-end-line="92" selection-end-column="87" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manager_their_orders_closed.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_their_orders_closed.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="117" column="82" selection-start-line="117" selection-start-column="58" selection-end-line="117" selection-end-column="82" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManagerController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/ManagerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="114" column="19" selection-start-line="114" selection-start-column="19" selection-end-line="114" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_orders_work.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_orders_work.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="303" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="309" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoxServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/service/box/BoxServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrdRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/service/ord/OrdRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -176,26 +164,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/app/entity/enums/UserRole.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/controller/MyController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/shop_user.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/reveal.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin_shop.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/app/controller/AdminController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/app/service/message/MessageServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/entity/CustomUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/box/BoxRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/ord/OrdRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/ord/OrdService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/service/ord/OrdServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager_shop.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager_all_orders_work.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager_their_orders_work.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/app/entity/Product.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/photo/PhotoRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/service/photo/PhotoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/config/AppConfig.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/app/entity/Photo.java" />
@@ -212,21 +193,28 @@
         <option value="$PROJECT_DIR$/src/main/java/app/service/user/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/product/ProductService.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/photo/PhotoService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_cart.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/app/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/user/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/user/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_search_client.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/box/BoxService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/controller/ManagerController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_client.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/app/service/box/BoxServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_work_box.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_all_orders_closed.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_all_orders_work.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_shop.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_their_orders_closed.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_their_orders_work.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_shop.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_cart.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/app/controller/ManagerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/service/message/MessageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/service/ord/OrdServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/service/photo/PhotoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/service/box/BoxServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_orders_work.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_orders_closed.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_work_box.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/app/controller/UserController.java" />
       </list>
     </option>
   </component>
@@ -611,7 +599,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
+              <option name="myItemId" value="ord" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -675,67 +663,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ShopBoot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ShopBoot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ShopBoot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ShopBoot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -769,11 +697,11 @@
       <recent name="app.entity.enums" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OneDrive\Java\Pro\ShopBoot\src\main\webapp\WEB-INF\pages\user" />
       <recent name="D:\OneDrive\Java\Pro\ShopBoot\src\main\webapp\WEB-INF\pages\manager" />
       <recent name="D:\OneDrive\Java\Pro\ShopBoot\src\main\java\app\service" />
       <recent name="D:\OneDrive\Java\Pro\ShopBoot\src\main\java\app\entity" />
       <recent name="D:\OneDrive\Java\Pro\ShopBoot\src\main\webapp\WEB-INF\pages" />
-      <recent name="D:\OneDrive\Java\Pro\ShopBoot\src\main\webapp\WEB-INF\images" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
@@ -1240,7 +1168,7 @@
       <workItem from="1474536607114" duration="26605000" />
       <workItem from="1474882620117" duration="5927000" />
       <workItem from="1474888959331" duration="72578000" />
-      <workItem from="1475406983857" duration="134405000" />
+      <workItem from="1475406983857" duration="141018000" />
     </task>
     <task id="LOCAL-00001" summary="Проект">
       <created>1473930874683</created>
@@ -1417,11 +1345,18 @@
       <option name="project" value="LOCAL" />
       <updated>1476025280586</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Работа с клиентом">
+      <created>1476103425113</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1476103425113</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="370295000" />
+    <option name="totallyTimeSpent" value="376908000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1497,64 +1432,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/entity/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/product/ProductRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/message/MessageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/service/message/MessageService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/ord/OrdRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1618,19 +1499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/photo/PhotoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-          <folding>
-            <element signature="e#567#568#0" expanded="false" />
-            <element signature="e#622#623#0" expanded="false" />
-            <element signature="e#677#678#0" expanded="false" />
-            <element signature="e#727#728#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/entity/Photo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1679,22 +1547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/ord/OrdServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1790,57 +1642,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1475840992674" expanded="false" signature="5516:5526" ph=" { " />
-            <marker date="1475840992674" expanded="false" signature="5541:5547" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_shop.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="385" column="7" selection-start-line="383" selection-start-column="4" selection-end-line="385" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_cart.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="231" column="12" selection-start-line="231" selection-start-column="12" selection-end-line="231" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/service/user/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/user/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding>
-            <element signature="e#625#626#0" expanded="true" />
-            <element signature="e#674#675#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1869,50 +1674,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/ManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="171" column="28" selection-start-line="171" selection-start-column="28" selection-end-line="171" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/product/ProductServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="81" column="58" selection-start-line="81" selection-start-column="58" selection-end-line="81" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/box/BoxServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="48" column="79" selection-start-line="48" selection-start-column="79" selection-end-line="48" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_work_box.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="117" column="54" selection-start-line="117" selection-start-column="54" selection-end-line="117" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_all_orders_closed.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
           <caret line="144" column="36" selection-start-line="144" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_all_orders_work.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="147" column="36" selection-start-line="147" selection-start-column="36" selection-end-line="147" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -1925,18 +1690,180 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_their_orders_closed.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_shop.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="146" column="36" selection-start-line="146" selection-start-column="36" selection-end-line="146" selection-end-column="36" />
+        <state relative-caret-position="202">
+          <caret line="91" column="90" selection-start-line="90" selection-start-column="36" selection-end-line="91" selection-end-column="90" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_cart.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="95" column="45" selection-start-line="0" selection-start-column="0" selection-end-line="347" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_all_orders_work.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="163" column="30" selection-start-line="114" selection-start-column="0" selection-end-line="163" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1475840992674" expanded="false" signature="5516:5526" ph=" { " />
+            <marker date="1475840992674" expanded="false" signature="5541:5547" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/message/MessageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/photo/PhotoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <folding>
+            <element signature="e#685#686#0" expanded="false" />
+            <element signature="e#735#736#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/product/ProductServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="81" column="58" selection-start-line="81" selection-start-column="58" selection-end-line="81" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/user/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+          <folding>
+            <element signature="e#625#626#0" expanded="false" />
+            <element signature="e#674#675#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_their_orders_work.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="146" column="36" selection-start-line="146" selection-start-column="36" selection-end-line="146" selection-end-column="36" />
+        <state relative-caret-position="134">
+          <caret line="155" column="23" selection-start-line="155" selection-start-column="23" selection-end-line="155" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/ord/OrdRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/box/BoxServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_their_orders_closed.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="117" column="82" selection-start-line="117" selection-start-column="58" selection-end-line="117" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_orders_closed.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="92" column="87" selection-start-line="92" selection-start-column="87" selection-end-line="92" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_orders_work.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="303" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="309" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_work_box.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="248" column="28" selection-start-line="114" selection-start-column="0" selection-end-line="248" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_work_box.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="174" column="17" selection-start-line="174" selection-start-column="17" selection-end-line="174" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/ManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="114" column="19" selection-start-line="114" selection-start-column="19" selection-end-line="114" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="139" column="34" selection-start-line="139" selection-start-column="34" selection-end-line="139" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/ord/OrdServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
           <folding />
         </state>
       </provider>
