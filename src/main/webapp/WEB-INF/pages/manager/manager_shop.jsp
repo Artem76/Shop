@@ -142,7 +142,7 @@
                         </td>
                         <td class="cart_price">
                             <p style="margin: 0 auto">
-                                <a href="/manager_client?login_client=${box.customUsers[0].login}"
+                                <a href="/manager_client?id_client=${box.customUsers[0].id}"
                                    style="text-decoration: underline; color: grey">
                                         ${box.customUsers[0].login}
                                 </a>
@@ -197,6 +197,7 @@
 <script src="js/jquery.prettyPhoto.js"></script>
 <script src="js/main.js"></script>
 <script>
+
     $("#logout").click(function (event) {
         alert("Выход из акаунта!");
     });

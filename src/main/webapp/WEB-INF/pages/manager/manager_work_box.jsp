@@ -117,7 +117,7 @@
         <div class="row">
             <h2 style="color: orange; text-align: center">Заказ от GMT ${date}.</h2>
             <h2 style="color: orange; text-align: center">Клиент
-                <a href="/manager_client?login_client=${login_client}" style="color: orange; text-decoration: underline">${login_client}</a>
+                <a href="/manager_client?id_client=${id_client}" style="color: orange; text-decoration: underline">${login_client}</a>
                 . Менеджер
                 <c:if test="${not empty login_manager}">
                     ${login_manager}

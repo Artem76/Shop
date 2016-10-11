@@ -114,6 +114,7 @@ public class ManagerController {
         }
         model.addAttribute("login", login);
         model.addAttribute("login_client", box.getCustomUserClient().getLogin());
+        model.addAttribute("id_client", box.getCustomUserClient().getId());
         if (box.getCustomUsers().size() == 2) model.addAttribute("login_manager", box.getCustomUserManager().getLogin());
         model.addAttribute("date", box.getDate());
         model.addAttribute("description", box.getDescription());
@@ -166,12 +167,12 @@ public class ManagerController {
     }
 
     @RequestMapping("/manager_client")
-    public String managerClient(@RequestParam String login_client, Model model){
+    public String managerClient(@RequestParam long id_client, Model model){
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String login = user.getUsername();
-        CustomUser userClient = userService.getUserByLogin(login_client);
+        CustomUser userClient = userService.getOne(id_client);
         model.addAttribute("login", login);
-        model.addAttribute("login_client", login_client);
+        model.addAttribute("login_client", userClient.getLogin());
         model.addAttribute("boxes", boxService.getBoxesByClientStatus12Sort(userClient));
         return "manager/manager_client";
     }
