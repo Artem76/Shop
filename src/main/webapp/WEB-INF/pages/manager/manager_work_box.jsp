@@ -84,24 +84,24 @@
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
                             <li><a href="/shop">Новые заказы</a></li>
-                            <li class="dropdown"><a <%--href="#"--%>>Свои заказы<i class="fa fa-angle-down"></i></a>
+                            <li class="dropdown"><a>Свои заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/manager_their_orders_work">В работе</a></li>
                                     <li><a href="/manager_their_orders_closed">Выполненные</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a <%--href="#"--%>>Все заказы<i class="fa fa-angle-down"></i></a>
+                            <li class="dropdown"><a>Все заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/manager_all_orders_work">В работе</a></li>
                                     <li><a href="/manager_all_orders_closed">Выполненные</a></li>
                                 </ul>
                             </li>
                             <li><a href="/manager_search_client">Поиск клиента</a></li>
-                            <li class="dropdown"><a <%--href="#"--%>>Продукция<i class="fa fa-angle-down"></i></a>
+                            <li class="dropdown"><a>Продукция<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a <%--href="/user_box_1"--%>>Добавить кабель</a></li>
-                                    <li><a <%--href="/user_box_2"--%>>Добавить фото</a></li>
-                                    <li><a <%--href="/user_box_2"--%>>Колличество кабеля</a></li>
+                                    <li><a href="/manager_product_add">Добавить кабель</a></li>
+                                    <li><a href="/manager_photo_add">Добавить фото</a></li>
+                                    <li><a href="/manager_product_number_update">Колличество кабеля</a></li>
                                 </ul>
                             </li>
                             <li><a <%--href="/message"--%>>Сообщения</a></li>
