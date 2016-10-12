@@ -7,11 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1608cc52-eac6-48e3-97a2-4ff57e309dc2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/Application$1.class" afterPath="$PROJECT_DIR$/target/classes/app/Application$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/service/product/ProductService.class" afterPath="$PROJECT_DIR$/target/classes/app/service/product/ProductService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/service/product/ProductServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/app/service/product/ProductServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config.properties" afterPath="$PROJECT_DIR$/target/classes/config.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_work_box.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_work_box.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_cart.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_cart.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_work_box.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_work_box.jsp" />
     </list>
     <ignored path="Shop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -104,31 +103,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manager_shop.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_shop.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="144" column="59" selection-start-line="144" selection-start-column="59" selection-end-line="144" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manager_work_box.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manager_work_box.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_work_box.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="119" column="43" selection-start-line="119" selection-start-column="43" selection-end-line="119" selection-end-column="43" />
+            <state relative-caret-position="102">
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_shop.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_shop.jsp">
+      <file leaf-file-name="user_cart.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_cart.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="378" column="22" selection-start-line="378" selection-start-column="22" selection-end-line="378" selection-end-column="22" />
+            <state relative-caret-position="51">
+              <caret line="3" column="28" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_work_box.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_work_box.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-119">
+              <caret line="212" column="33" selection-start-line="212" selection-start-column="33" selection-end-line="212" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -184,12 +183,10 @@
         <option value="$PROJECT_DIR$/src/main/java/app/service/user/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/box/BoxService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_shop.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_cart.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/message/MessageServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/ord/OrdServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_orders_work.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_orders_closed.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_work_box.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/app/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/photo/PhotoService.java" />
@@ -207,6 +204,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_their_orders_work.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_client.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_work_box.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_cart.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_work_box.jsp" />
       </list>
     </option>
   </component>
@@ -1262,7 +1261,7 @@
       <workItem from="1474536607114" duration="26605000" />
       <workItem from="1474882620117" duration="5927000" />
       <workItem from="1474888959331" duration="72578000" />
-      <workItem from="1475406983857" duration="148835000" />
+      <workItem from="1475406983857" duration="154011000" />
     </task>
     <task id="LOCAL-00001" summary="Проект">
       <created>1473930874683</created>
@@ -1467,11 +1466,18 @@
       <option name="project" value="LOCAL" />
       <updated>1476208294315</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="клиент свои заказы">
+      <created>1476208306332</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1476208306332</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="384725000" />
+    <option name="totallyTimeSpent" value="389901000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1485,7 +1491,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5252366" sideWeight="0.1068814" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2192429" sideWeight="0.8931186" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4274448" sideWeight="0.8931186" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1841,21 +1847,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_work_box.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="173" column="17" selection-start-line="167" selection-start-column="16" selection-end-line="173" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/service/user/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-187">
           <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
           <folding>
-            <element signature="e#625#626#0" expanded="true" />
-            <element signature="e#674#675#0" expanded="true" />
+            <element signature="e#625#626#0" expanded="false" />
+            <element signature="e#674#675#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1889,14 +1887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2075">
           <caret line="70" column="48" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_cart.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3826">
-          <caret line="102" column="27" selection-start-line="102" selection-start-column="27" selection-end-line="102" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1975,8 +1965,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manager/manager_work_box.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="119" column="43" selection-start-line="119" selection-start-column="43" selection-end-line="119" selection-end-column="43" />
+        <state relative-caret-position="102">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_cart.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/user_work_box.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="212" column="33" selection-start-line="212" selection-start-column="33" selection-end-line="212" selection-end-column="33" />
           <folding />
         </state>
       </provider>

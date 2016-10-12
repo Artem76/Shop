@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="cp1251"?>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html;charset=cp1251" %>
 <%@ page import="java.net.URLEncoder" %>
@@ -209,7 +210,8 @@
                             <a class="cart_quantity_input" size="8" style="margin: 0 auto">${ord.numberProduct}</a>
                         </td>
                         <td class="cart_total">
-                            <p class="cart_total_price" style="margin: 0 auto">${ord.numberProduct*ord.priceOrd}</p>
+                            <fmt:formatNumber var="pr" maxFractionDigits="2" value="${ord.numberProduct*ord.priceOrd}"/>
+                            <p class="cart_total_price" style="margin: 0 auto">${pr}</p>
                         </td>
                     </tr>
                 </c:forEach>
