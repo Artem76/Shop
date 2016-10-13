@@ -8,7 +8,9 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.sql.rowset.serial.SerialBlob;
 import java.sql.Blob;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.TreeSet;
 
 @Service
 public class PhotoServiceImpl implements PhotoService{
@@ -29,6 +31,18 @@ public class PhotoServiceImpl implements PhotoService{
     @Override
     public Photo getPhotoOne(long id) {
         return photoRepository.findOne(id);
+    }
+
+    @Override
+    public List<String> getNames() {
+        TreeSet<String> nameSet = new TreeSet<String>();
+        for (Photo photo:
+                photoRepository.findAll()) {
+            nameSet.add(photo.getName());
+        }
+        List<String> nameList = new ArrayList<>();
+        nameList.addAll(nameSet);
+        return nameList;
     }
 
     @Override

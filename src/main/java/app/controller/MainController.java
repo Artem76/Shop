@@ -159,5 +159,16 @@ public class MainController {
         }
     }
 
-
+    @RequestMapping(value = "/photo_name/{photo_name}")
+    public void getImageByName(HttpServletRequest request, HttpServletResponse response, @PathVariable("photo_name") String photoName){
+        try {
+            Blob blob = photoService.getPhotoByName(photoName).getBody();
+            response.setContentType("images/png");
+            response.getOutputStream().write(blob.getBytes(1,(int)blob.length()));
+        }catch (IOException e){
+            System.out.println(e);
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
 }

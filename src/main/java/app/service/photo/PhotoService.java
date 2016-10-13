@@ -8,7 +8,8 @@ public interface PhotoService {
     List<Photo> getPhotoAll();
     Photo getPhotoByName(String name);
     Photo getPhotoOne(long id);
-    boolean addPhoto(String name, byte[] bytes);//добавить проверку такойже фотографии
+    List<String> getNames();
+    boolean addPhoto(String name, byte[] bytes);
     void updatePhoto(Photo photo);
     void deletePhoto(Photo photo);
 }

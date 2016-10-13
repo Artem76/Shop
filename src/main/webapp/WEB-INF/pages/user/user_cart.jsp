@@ -160,7 +160,16 @@
         </div>
     </div>
 </section><!--/slider-->
-
+<section id="form" style="margin: 0"><!--form-->
+    <div class="container">
+        <div class="row">
+            <c:if test="${not empty data_error}">
+                <h2 style="color: red; text-align: center">Ошибочые данные.</h2>
+            </c:if>
+            <h2 style="color: orange; text-align: center">Корзина.</h2>
+        </div>
+    </div>
+</section>
 <section id="cart_items">
     <div class="container">
         <div class="table-responsive cart_info">
@@ -173,7 +182,7 @@
                     <td class="quantity">Количество, м.</td>
                     <td class="description"></td>
                     <td class="total">Стоимость, грн.</td>
-                    <td></td>
+                    <td style="width: 38px"></td>
                 </tr>
                 </thead>
                 <tbody>

@@ -48,7 +48,6 @@
             </div>
         </div>
     </div><!--/header_top-->
-
     <div class="header-middle"><!--header-middle-->
         <div class="container">
             <div class="row">
@@ -60,8 +59,7 @@
                 <div class="col-sm-8">
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
-                            <li><a><i class="fa fa-user"></i> ${login}</a></li>
-                            <li><a href="/user_cart"><i class="fa fa-shopping-cart"></i> Корзина</a></li>
+                            <li><a <%--href="#"--%>><i class="fa fa-user"></i> ${login}</a></li>
                             <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Выход</a></li>
                         </ul>
                     </div>
@@ -69,13 +67,13 @@
             </div>
         </div>
     </div><!--/header-middle-->
-
     <div class="header-bottom"><!--header-bottom-->
         <div class="container">
             <div class="row">
                 <div class="col-sm-9">
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -84,16 +82,28 @@
                     </div>
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li><a href="/shop" class="active">Главная</a></li>
-                            <li class="dropdown"><a <%--href="#"--%>>Заказы<i class="fa fa-angle-down"></i></a>
+                            <li><a href="/shop">Новые заказы</a></li>
+                            <li class="dropdown"><a>Свои заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="/user_cart">Корзина</a></li>
-                                    <li><a href="/user_orders_work">В работе</a></li>
-                                    <li><a href="/user_orders_closed">Выполненные</a></li>
+                                    <li><a href="/manager_their_orders_work">В работе</a></li>
+                                    <li><a href="/manager_their_orders_closed">Выполненные</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a>Все заказы<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="/manager_all_orders_work">В работе</a></li>
+                                    <li><a href="/manager_all_orders_closed">Выполненные</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/manager_search_client">Поиск клиента</a></li>
+                            <li class="dropdown"><a>Продукция<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="/manager_product_all" class="active">Весь кабель</a></li>
+                                    <li><a href="/manager_product_add">Добавить кабель</a></li>
+                                    <li><a href="/manager_photo_add">Добавить фото</a></li>
                                 </ul>
                             </li>
                             <li><a <%--href="/message"--%>>Сообщения</a></li>
-                            <li><a <%--href="/contact"--%>>Контакты</a></li>
                         </ul>
                     </div>
                 </div>
@@ -102,63 +112,19 @@
     </div><!--/header-bottom-->
 </header>
 
-<section id="slider"><!--slider-->
+<section id="form" style="margin: 0"><!--form-->
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
-                <div id="slider-carousel" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#slider-carousel" data-slide-to="1"></li>
-                        <li data-target="#slider-carousel" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <div class="col-sm-6">
-                                <h1><span>КАБЕЛЬ</span>.ЕСТЬ</h1>
-                                <h2>Лучшие цены</h2>
-                                <p>Мы работаем напрямую с производителями, что позволяет нам обеспечить самые низкие
-                                    цены на рынке. </p>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="images/purse.jpg" class="girl img-responsive" alt=""/>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="col-sm-6">
-                                <h1><span>КАБЕЛЬ</span>.ЕСТЬ</h1>
-                                <h2>Быстрая доставка</h2>
-                                <p>В нашем распоряжении огромный парк автомобилей, мы гарантируем поставку товара в
-                                    течении одного дня после совершения покупки. </p>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="images/car.png" class="girl img-responsive" alt=""/>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="col-sm-6">
-                                <h1><span>КАБЕЛЬ</span>.ЕСТЬ</h1>
-                                <h2>Отличное качество</h2>
-                                <p>Мы работаем только с теми произодителями которые заслужили общее признание и
-                                    доверие. </p>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="images/kachestvo.png" class="girl img-responsive" alt=""/>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
-                    <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                </div>
-            </div>
+            <c:if test="${not empty data_error}">
+                <h2 style="color: red; text-align: center">Ошибочые данные.</h2>
+            </c:if>
+            <c:if test="${not empty update}">
+                <h2 style="color: greenyellow; text-align: center">Данные успешно изменены.</h2>
+            </c:if>
+            <h2 style="color: orange; text-align: center">Весь кабель.</h2>
         </div>
     </div>
-</section><!--/slider-->
-
+</section>
 
 <section>
     <div class="container">
@@ -167,7 +133,7 @@
                 <div class="left-sidebar">
                     <h2>Фильтр</h2>
                     <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-                        <form action="/user_filter" method="post">
+                        <form action="/manager_product_all_filter" method="post">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
@@ -248,98 +214,76 @@
                 </div>
             </div>
             <div class="col-sm-9 padding-right">
-                <div class="features_items"><!--features_items-->
-                    <h2 class="title text-center">Кабельнопроводниковая продукция</h2>
-                    <c:forEach items="${products}" var="product">
-                        <div class="col-sm-4">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="/photo/${product.photo.id}"alt=""/>
-                                        <h2>${product.price} грн.</h2>
-                                        <p>${product.type}${product.numberOfWires}x${product.area}</p>
-                                    </div>
-                                    <div class="product-overlay">
-                                        <div class="overlay-content">
-                                            <h2>${product.price} грн.</h2>
-                                            <p>${product.type}${product.numberOfWires}x${product.area}</p>
-                                            <p>${product.description}</p>
-                                            <a class="btn btn-default add-to-cart" data="${product.id}">
-                                                <i class="fa fa-shopping-cart"></i>Добавить в корзину</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </c:forEach>
-                </div><!--features_items-->
+                <div id="cart_items">
+                    <div class="table-responsive cart_info">
+                        <table class="table table-condensed">
+                            <thead>
+                            <tr class="cart_menu">
+                                <td class="image">Кабель</td>
+                                <td class="description"></td>
+                                <td class="price">Цена за единицу, грн.</td>
+                                <td class="quantity">Количество, м.</td>
+                                <td class="description"></td>
+                                <td class="quantity">Описание</td>
+                                <td style="width: 38px"></td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <c:forEach items="${products}" var="product">
+                                <tr>
+                                    <td class="cart_product">
+                                        <a><img src="/photo/${product.photo.id}" alt=""
+                                                style="height: 40px; width: 40px; margin: 0 auto"></a>
+                                    </td>
+                                    <td class="cart_description">
+                                        <h4>
+                                            <a style="margin: 0 auto">${product.type}${product.numberOfWires}x${product.area}</a>
+                                        </h4>
+                                    </td>
+                                    <form action="/manager_product_update?product_id=${product.id}" method="post">
+                                        <td class="cart_quantity" style="vertical-align: middle">
+                                            <div class="cart_quantity_button">
+                                                <input class="cart_quantity_input" type="text" name="product_price"
+                                                       value="${product.price}"
+                                                       autocomplete="off" size="8" style="margin: 0 auto">
+                                            </div>
+                                        </td>
+                                        <td class="cart_quantity" style="vertical-align: middle">
+                                            <div class="cart_quantity_button">
+                                                <input class="cart_quantity_input" type="text" name="product_number"
+                                                       value="${product.number}"
+                                                       autocomplete="off" size="8" style="margin: 0 auto">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="submit" class="btn btn-default update" value="Обновить"
+                                                   style="margin: 0 auto">
+                                        </td>
+                                    </form>
+                                    <td class="cart_description">
+                                        <h4>
+                                            <a style="margin: 0 auto">${product.description}</a>
+                                        </h4>
+                                    </td>
+                                    <td class="cart_delete" <%--style="alignment: left"--%>>
+                                        <a class="cart_quantity_delete"
+                                           href="/manager_product_delete?product_id=${product.id}"
+                                           style="margin: 0 auto"><i
+                                                class="fa fa-times"></i></a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
+<!--/#cart_items-->
+
 <footer id="footer"><!--Footer-->
-    <div class="footer-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-2">
-                    <div class="companyinfo">
-                        <h2><span>Кабель</span>.Есть</h2>
-                        <p>Пользуйтесь услугами нашего магазина и все будет ОТЛИЧНО!!!</p>
-                    </div>
-                </div>
-                <div class="col-sm-7">
-                    <div class="col-sm-3">
-                        <div class="video-gallery text-center">
-                            <a href="/shop">
-                                <div class="iframe-img" style="width: 60px; height: 60px; margin: 0 auto">
-                                    <img src="images/purse.jpg" alt=""/>
-                                </div>
-                                <div class="overlay-icon">
-                                    <i style="margin: auto" <%--class="fa fa-play-circle-o"--%>>ЦЕНА</i>
-                                </div>
-                            </a>
-                            <p>Низкие цены</p>
-                            <h2>Дешевле не найдете</h2>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="video-gallery text-center">
-                            <a href="/shop">
-                                <div class="iframe-img" style="width: 60px; height: 60px; margin: 0 auto">
-                                    <img src="images/car.png" alt=""/>
-                                </div>
-                                <div class="overlay-icon">
-                                    <i style="margin: auto" <%--class="fa fa-play-circle-o"--%>>СКОРОСТЬ</i>
-                                </div>
-                            </a>
-                            <p>Быстрая доставка</p>
-                            <h2>Быстрее всех</h2>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="video-gallery text-center">
-                            <a href="/shop">
-                                <div class="iframe-img" style="width: 60px; height: 60px; margin: 0 auto">
-                                    <img src="images/kachestvo.png" alt=""/>
-                                </div>
-                                <div class="overlay-icon">
-                                    <i style="margin: auto" <%--class="fa fa-play-circle-o"--%>>КАЧЕСТВО</i>
-                                </div>
-                            </a>
-                            <p>Высокое качество</p>
-                            <h2>Только лучшее</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="address">
-                        <img src="images/home/map.png" alt=""/>
-                        <p>Мы находимся в Украине.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="header_top">
         <div class="container">
             <div class="row">
@@ -376,11 +320,6 @@
 <script src="js/jquery.prettyPhoto.js"></script>
 <script src="js/main.js"></script>
 <script>
-    $(".btn.btn-default.add-to-cart").click(function () {
-        var d = $(this).attr("data");
-        $.post("/user_box_add_product", {product_id: d});
-        alert("Товар добавлен в корзину!");
-    });
     $("#logout").click(function (event) {
         alert("Выход из акаунта!");
     });

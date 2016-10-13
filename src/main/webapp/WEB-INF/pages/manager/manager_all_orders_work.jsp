@@ -98,9 +98,9 @@
                             <li><a href="/manager_search_client">Поиск клиента</a></li>
                             <li class="dropdown"><a <%--href="#"--%>>Продукция<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
+                                    <li><a href="/manager_product_all">Весь кабель</a></li>
                                     <li><a href="/manager_product_add">Добавить кабель</a></li>
                                     <li><a href="/manager_photo_add">Добавить фото</a></li>
-                                    <li><a href="/manager_product_number_update">Колличество кабеля</a></li>
                                 </ul>
                             </li>
                             <li><a <%--href="/message"--%>>Сообщения</a></li>

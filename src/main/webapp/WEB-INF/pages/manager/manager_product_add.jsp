@@ -100,7 +100,7 @@
                             <li class="dropdown"><a>Продукция<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/manager_product_all">Весь кабель</a></li>
-                                    <li><a href="/manager_product_add">Добавить кабель</a></li>
+                                    <li><a href="/manager_product_add" class="active">Добавить кабель</a></li>
                                     <li><a href="/manager_photo_add">Добавить фото</a></li>
                                 </ul>
                             </li>
@@ -113,152 +113,147 @@
     </div><!--/header-bottom-->
 </header>
 
+
 <section id="form" style="margin: 0"><!--form-->
     <div class="container">
         <div class="row">
             <c:if test="${not empty data_error}">
                 <h2 style="color: red; text-align: center">Ошибочые данные.</h2>
             </c:if>
-            <h2 style="color: orange; text-align: center">Заказ от GMT ${date}.</h2>
-            <h2 style="color: orange; text-align: center">Клиент
-                <a href="/manager_client?id_client=${id_client}" style="color: orange; text-decoration: underline">${login_client}</a>
-                . Менеджер
-                <c:if test="${not empty login_manager}">
-                    ${login_manager}
-                </c:if>
-                <c:if test="${empty login_manager}">
-                    еще не назначен
-                </c:if>
-                .</h2>
+            <c:if test="${not empty type_erorr}">
+                <h2 style="color: red; text-align: center">Такой кабель уже существует.</h2>
+            </c:if>
+            <c:if test="${not empty add}">
+                <h2 style="color: greenyellow; text-align: center">Кабель успешно добавлен.</h2>
+            </c:if>
+            <h2 style="color: orange; text-align: center">Добавление кабеля.</h2>
         </div>
     </div>
 </section>
 
-<section id="cart_items">
-    <div class="container">
-        <div class="table-responsive cart_info">
-        <table class="table table-condensed">
-            <thead>
-            <tr class="cart_menu">
-                <td class="image">Кабель</td>
-                <td class="description"></td>
-                <td class="price">Цена за единицу, грн.</td>
-                <td class="quantity">Количество, м.</td>
-                <c:if test="${not empty edit}">
-                    <td class="description"></td>
-                </c:if>
-                <td class="total">Стоимость, грн.</td>
-                <c:if test="${not empty edit}">
-                    <td style="width: 38px"></td>
-                </c:if>
-            </tr>
-            </thead>
-            <tbody>
-            <c:forEach items="${ords}" var="ord">
-                <tr>
-                    <td class="cart_product">
-                        <a><img src="/photo/${ord.product.photo.id}" alt=""
-                                style="height: 40px; width: 40px; margin: 0 auto"></a>
-                    </td>
-                    <td class="cart_description">
-                        <h4>
-                            <a style="margin: 0 auto">${ord.product.type}${ord.product.numberOfWires}x${ord.product.area}</a>
-                        </h4>
-                    </td>
-                    <td class="cart_price">
-                        <p style="margin: 0 auto">${ord.priceOrd}</p>
-                    </td>
-                    <c:if test="${not empty edit}">
-                        <form action="/manager_box_update_ord?ord_id=${ord.id}&box_id=${box_id}" method="post">
-                            <c:if test="${ord.numberProduct <= ord.product.number}">
-                                <td class="cart_quantity" style="vertical-align: middle">
-                                    <div class="cart_quantity_button">
-                                        <input class="cart_quantity_input" type="text" name="numberProduct"
-                                               value="${ord.numberProduct}"
-                                               autocomplete="off" size="8" style="margin: 0 auto">
-                                    </div>
-                                </td>
-                            </c:if>
-                            <c:if test="${ord.numberProduct > ord.product.number}">
-                                <td class="cart_quantity" style="vertical-align: middle">
-                                    <div class="cart_quantity_button">
-                                        <input class="cart_quantity_input" type="text" name="numberProduct"
-                                               value="${ord.numberProduct}"
-                                               autocomplete="off" size="8"
-                                               style="margin: 0 auto; background-color: red">
-                                    </div>
-                                </td>
-                            </c:if>
-                            <td>
-                                <input type="submit" class="btn btn-default update" value="Обновить"
-                                       style="margin: 0 auto">
-                            </td>
-                        </form>
-                    </c:if>
-                    <c:if test="${empty edit}">
-                        <td>
-                            <a class="cart_quantity_input" size="8" style="margin: 0 auto">${ord.numberProduct}</a>
-                        </td>
-                    </c:if>
-                    <td class="cart_total">
-                        <fmt:formatNumber var="pr" maxFractionDigits="2" value="${ord.numberProduct*ord.priceOrd}"/>
-                        <p class="cart_total_price" style="margin: 0 auto">${pr}</p>
-                    </td>
-                    <td class="cart_delete">
-                        <c:if test="${not empty edit}">
-                            <a class="cart_quantity_delete" href="/manager_box_delete_ord?ord_id=${ord.id}"
-                               style="margin: 0 auto"><i
-                                    class="fa fa-times"></i></a>
-                        </c:if>
-                    </td>
-                </tr>
-            </c:forEach>
-            </tbody>
-        </table>
-    </div>
-    </div>
-</section> <!--/#cart_items-->
-
-<section id="do_action">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="total_area">
-                    <ul>
-                        <label style="margin: 0 auto">Сообщение:</label>
-                        <li>${description}</li>
-                        <li>Общая стоимость <span>${sum} грн.</span></li>
-                        <c:if test="${not empty edit}">
-                            <c:if test="${empty complete}">
-                                <a class="btn btn-default check_out"
-                                   href="/manager_box_complete?box_id=${box_id}">Выполнить</a>
-                            </c:if>
-                            <c:if test="${not empty complete}">
-                                <a class="btn btn-default check_out" style="background-color: red">Недостаточно
-                                    кабеля</a>
-                            </c:if>
-                        </c:if>
-                        <c:if test="${not empty closed}">
-                            <a class="btn btn-default check_out" style="background-color: red">Заказ уже выполнен</a>
-                        </c:if>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="total_area">
-                    <ul>
-                        <label style="margin: 0 auto">Телефон:</label>
-                        <li style="margin: 0 auto">${phone}</li>
-                        <label style="margin: 0 auto">Email:</label>
-                        <li style="margin: 0 auto">${email}</li>
-                        <label style="margin: 0 auto">Адрес доставки:</label>
-                        <li style="margin: 0 auto">${address}</li>
-                    </ul>
+<form action="/manager_product_add_post" method="post">
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color: orange; color: white">
+                            <h4 class="panel-title">
+                                <input type="text" name="type_cable">
+                                <a data-toggle="collapse" data-parent="#accordian" href="#type">
+                                    Введите тип кабеля
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color: orange; color: white">
+                            <h4 class="panel-title">
+                                <input type="text" name="numberOfWires_cable">
+                                <a data-toggle="collapse" data-parent="#accordian" href="#numberOfWires">
+                                    Введите количество жил кабеля
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color: orange; color: white">
+                            <h4 class="panel-title">
+                                <input type="text" name="area_cable">
+                                <a data-toggle="collapse" data-parent="#accordian" href="#area">
+                                    Введите площадь поперечного сечения жили кабеля
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color: orange; color: white">
+                            <h4 class="panel-title">
+                                <input type="text" name="price_cable">
+                                <a data-toggle="collapse" data-parent="#accordian" href="#area">
+                                    Введите стоимость кабеля
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color: orange; color: white">
+                            <h4 class="panel-title">
+                                <input type="text" name="number_cable">
+                                <a data-toggle="collapse" data-parent="#accordian" href="#area">
+                                    Введите количество кабеля
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color: orange; color: white">
+                            <h4 class="panel-title">
+                                <input type="text" name="description_cable">
+                                <a data-toggle="collapse" data-parent="#accordian" href="#area">
+                                    Введите описание кабеля
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section><!--/#do_action-->
+    </section>
+    <section id="cart_items">
+        <div class="container">
+            <div class="table-responsive cart_info">
+                <table class="table table-condensed">
+                    <thead>
+                    <tr class="cart_menu" style="text-align: center">
+                        <td></td>
+                        <td class="image">Фото</td>
+                        <td class="description">Название</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr style="text-align: center">
+                        <td class="cart_description">
+                            <input type="radio" name="photo_name"
+                                   value="" checked>
+                        </td>
+                        <td class="cart_description">
+                            <h4>
+                                <a style="margin: 0 auto">Ничего не выбрано!!!</a>
+                            </h4>
+                        </td>
+                        <td class="cart_description">
+                        </td>
+                    </tr>
+                    <c:forEach items="${photoNames}" var="name">
+                        <tr style="text-align: center">
+                            <td class="cart_description">
+                                <input type="radio" name="photo_name"
+                                       value="${name}">
+                            </td>
+                            <td class="cart_product">
+                                <a><img src="/photo_name/${name}" alt=""
+                                        style="height: 40px; width: 40px; margin: 0 auto"></a>
+                            </td>
+                            <td class="cart_description">
+                                <h4>
+                                    <a style="margin: 0 auto">${name}</a>
+                                </h4>
+                            </td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <input type="submit" class="btn btn-default update" value="Добавить"
+                   style="margin: 0 auto">
+        </div>
+    </section>
+</form>
 
 <footer id="footer"><!--Footer-->
     <div class="header_top">

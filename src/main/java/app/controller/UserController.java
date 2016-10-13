@@ -76,11 +76,30 @@ public class UserController {
     }
 
     @RequestMapping("/user_box_update_ord")
-    public String boxUpdateOrd(@RequestParam long ord_id, @RequestParam Integer numberProduct){
-        Ord ord = ordService.getOrdOne(ord_id);
-        ord.setNumberProduct(numberProduct);
-        ordService.updateOrd(ord);
-        return "redirect:/user_cart";
+    public String boxUpdateOrd(@RequestParam long ord_id,
+                               @RequestParam String numberProduct,
+                               Model model){
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        CustomUser customUser = userService.getUserByLogin(login);
+        Box box = boxService.addBox(customUser);
+        int numberProductInt = 0;
+        try {
+            numberProductInt = Integer.parseInt(numberProduct);
+            Ord ord = ordService.getOrdOne(ord_id);
+            ord.setNumberProduct(numberProductInt);
+            ordService.updateOrd(ord);
+        } catch (NumberFormatException e) {
+            System.out.println(e);
+            model.addAttribute("data_error", "error");
+        }
+        model.addAttribute("login", login);
+        model.addAttribute("ords", ordService.getOrdByBoxSort(box));
+        if (ordService.getOrdByBoxSort(box).size()!=0){
+            model.addAttribute("edit", "ok");
+            model.addAttribute("sum", boxService.getSum(customUser));
+        }
+        return "user/user_cart";
     }
 
     @RequestMapping("/user_box_order")
