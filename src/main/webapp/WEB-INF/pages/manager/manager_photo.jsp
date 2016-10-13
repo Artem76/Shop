@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="cp1251"?>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html;charset=cp1251" %>
 <%@ page import="java.net.URLEncoder" %>
 
@@ -83,24 +84,24 @@
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
                             <li><a href="/shop">Новые заказы</a></li>
-                            <li class="dropdown"><a <%--href="#"--%>>Свои заказы<i class="fa fa-angle-down"></i></a>
+                            <li class="dropdown"><a>Свои заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/manager_their_orders_work">В работе</a></li>
                                     <li><a href="/manager_their_orders_closed">Выполненные</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a <%--href="#"--%>>Все заказы<i class="fa fa-angle-down"></i></a>
+                            <li class="dropdown"><a>Все заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/manager_all_orders_work">В работе</a></li>
                                     <li><a href="/manager_all_orders_closed">Выполненные</a></li>
                                 </ul>
                             </li>
                             <li><a href="/manager_search_client">Поиск клиента</a></li>
-                            <li class="dropdown"><a <%--href="#"--%>>Продукция<i class="fa fa-angle-down"></i></a>
+                            <li class="dropdown"><a>Продукция<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/manager_product_all">Весь кабель</a></li>
                                     <li><a href="/manager_product_add">Добавить кабель</a></li>
-                                    <li><a href="/manager_photo">Фото</a></li>
+                                    <li><a href="/manager_photo" class="active">Фото</a></li>
                                 </ul>
                             </li>
                             <li><a <%--href="/message"--%>>Сообщения</a></li>
@@ -112,56 +113,67 @@
     </div><!--/header-bottom-->
 </header>
 
+
 <section id="form" style="margin: 0"><!--form-->
     <div class="container">
         <div class="row">
-            <h2 style="color: orange; text-align: center">Все заказы клиента ${login_client}.</h2>
+            <c:if test="${not empty data_error}">
+                <h2 style="color: red; text-align: center">Ошибочые данные.</h2>
+            </c:if>
+            <h2 style="color: orange; text-align: center">Фото</h2>
+            <p></p>
         </div>
     </div>
 </section>
 
-<section id="cart_items">
+<section style="margin-top: 30px">
     <div class="container">
-        <div class="table-responsive cart_info">
-            <table class="table table-condensed">
-                <thead>
-                <tr class="cart_menu" style="text-align: center">
-                    <td class="description">Время</td>
-                    <td class="description">Менеджер</td>
-                    <td class="description">Состояние</td>
-                    <td class="description"></td>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach items="${boxes}" var="box">
-                    <tr style="text-align: center">
-                        <td class="cart_description">
-                            <h4>
-                                <a style="margin: 0 auto">GMT ${box.date}</a>
-                            </h4>
-                        </td>
-                        <td class="cart_price">
-                            <p style="margin: 0 auto">${box.customUsers[1].login}</p>
-                        </td>
-                        <td class="cart_total_price">
-                            <c:if test="${box.status == 1}">
-                                <p style="margin: 0 auto">В работе</p>
-                            </c:if>
-                            <c:if test="${box.status == 2}">
-                                <p style="margin: 0 auto">Выполнен</p>
-                            </c:if>
-                        </td>
-                        <td>
-                            <a class="btn btn-default update" style="margin: 0 auto"
-                               href="/manager_work_box?box_id=${box.id}">Открыть</a>
-                        </td>
-                    </tr>
-                </c:forEach>
-                </tbody>
-            </table>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="left-sidebar">
+                    <h2>Добавление</h2>
+                    <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+                        <form action="/manager_photo_add"  enctype="multipart/form-data" method="post">
+                            <section>
+                                <div class="container">
+                                    <h4 class="panel-title">
+                                        <input type="text" name="name" placeholder="Название фото">
+                                        <p></p>
+                                        <input type="file" name="file" accept=".png">
+                                        <p></p>
+                                    </h4>
+                                </div>
+                            </section>
+                            <section>
+                                <div class="container">
+                                    <input type="submit" class="btn btn-default update" value="Добавить"
+                                           style="margin: 0 auto">
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8 padding-right">
+                <div class="features_items"><!--features_items-->
+                    <h2 class="title text-center">В наличии</h2>
+                    <c:forEach items="${photoNames}" var="photoName">
+                        <div class="col-sm-3">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+                                        <img src="/photo_name/${photoName}"alt=""/>
+                                        <h2>${photoName}</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </c:forEach>
+                </div><!--features_items-->
+            </div>
         </div>
     </div>
-</section> <!--/#cart_items-->
+</section>
 
 <footer id="footer"><!--Footer-->
     <div class="header_top">
@@ -171,10 +183,13 @@
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
                             <li><a href="/contact">Артем Хиргий </a></li>
-                            <li><a href="/contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
-                            <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
+                            <li><a href="/contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a>
+                            </li>
+                            <li><a href="mailto:cmua76@outlook.com"><i
+                                    class="fa fa-envelope"></i>
                                 cmua76@outlook.com</a></li>
-                            <li><a href="https://www.facebook.com/artem.khirgii"><i class="fa fa-facebook"></i>
+                            <li><a href="https://www.facebook.com/artem.khirgii"><i
+                                    class="fa fa-facebook"></i>
                                 artem.khirgii</a></li>
                         </ul>
                     </div>
@@ -187,7 +202,8 @@
             <div class="row">
                 <p class="pull-left">Copyright © 2013 E-Shopper. All rights reserved.</p>
                 <p class="pull-right">Designed by <span><a target="_blank"
-                                                           href="http://www.themeum.com">Themeum</a></span></p>
+                                                           href="http://www.themeum.com">Themeum</a></span>
+                </p>
             </div>
         </div>
     </div>

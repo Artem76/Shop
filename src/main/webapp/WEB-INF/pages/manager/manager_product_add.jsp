@@ -101,7 +101,7 @@
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/manager_product_all">Весь кабель</a></li>
                                     <li><a href="/manager_product_add" class="active">Добавить кабель</a></li>
-                                    <li><a href="/manager_photo_add">Добавить фото</a></li>
+                                    <li><a href="/manager_photo">Фото</a></li>
                                 </ul>
                             </li>
                             <li><a <%--href="/message"--%>>Сообщения</a></li>

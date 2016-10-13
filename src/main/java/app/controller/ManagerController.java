@@ -1,9 +1,6 @@
 package app.controller;
 
-import app.entity.Box;
-import app.entity.CustomUser;
-import app.entity.Ord;
-import app.entity.Product;
+import app.entity.*;
 import app.entity.enums.UserRole;
 import app.service.box.BoxService;
 import app.service.ord.OrdService;
@@ -15,9 +12,12 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -352,5 +352,34 @@ public class ManagerController {
         model.addAttribute("update", "ok");
         return "manager/manager_product_all";
     }
-//    /manager_photo_add
+
+    @RequestMapping("/manager_photo")
+    public String managerPhoto(Model model) {
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        model.addAttribute("login", login);
+        model.addAttribute("photoNames", photoService.getNames());
+        return "manager/manager_photo";
+    }
+
+    @RequestMapping("/manager_photo_add")
+    public String managerPhotoAdd(@RequestParam MultipartFile file,
+                                  @RequestParam String name,
+                                  Model model){
+        if (file.isEmpty() || name.equals("")) {
+            model.addAttribute("data_error", "error");
+        }else {
+            try {
+                photoService.addPhoto(name,file.getBytes());
+            } catch (IOException e) {
+                e.printStackTrace();
+                model.addAttribute("data_error", "error");
+            }
+        }
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        model.addAttribute("login", login);
+        model.addAttribute("photoNames", photoService.getNames());
+        return "manager/manager_photo";
+    }
 }
