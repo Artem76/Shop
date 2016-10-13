@@ -118,139 +118,93 @@
     <div class="container">
         <div class="row">
             <c:if test="${not empty data_error}">
-                <h2 style="color: red; text-align: center">Ошибочые данные.</h2>
+                <h2 style="color: red; text-align: center">Ошибочые данные</h2>
+            </c:if>
+            <c:if test="${not empty photo_error}">
+                <h2 style="color: red; text-align: center">Не выбрано фото</h2>
             </c:if>
             <c:if test="${not empty type_erorr}">
-                <h2 style="color: red; text-align: center">Такой кабель уже существует.</h2>
+                <h2 style="color: red; text-align: center">Такой кабель уже существует</h2>
             </c:if>
             <c:if test="${not empty add}">
-                <h2 style="color: greenyellow; text-align: center">Кабель успешно добавлен.</h2>
+                <h2 style="color: greenyellow; text-align: center">Кабель успешно добавлен</h2>
             </c:if>
-            <h2 style="color: orange; text-align: center">Добавление кабеля.</h2>
+            <h2 style="color: orange; text-align: center">Добавление кабеля</h2>
         </div>
     </div>
 </section>
 
 <form action="/manager_product_add_post" method="post">
-    <section>
+    <section style="margin-top: 30px">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading" style="background-color: orange; color: white">
-                            <h4 class="panel-title">
-                                <input type="text" name="type_cable">
-                                <a data-toggle="collapse" data-parent="#accordian" href="#type">
-                                    Введите тип кабеля
-                                </a>
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" style="background-color: orange; color: white">
-                            <h4 class="panel-title">
-                                <input type="text" name="numberOfWires_cable">
-                                <a data-toggle="collapse" data-parent="#accordian" href="#numberOfWires">
-                                    Введите количество жил кабеля
-                                </a>
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" style="background-color: orange; color: white">
-                            <h4 class="panel-title">
-                                <input type="text" name="area_cable">
-                                <a data-toggle="collapse" data-parent="#accordian" href="#area">
-                                    Введите площадь поперечного сечения жили кабеля
-                                </a>
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" style="background-color: orange; color: white">
-                            <h4 class="panel-title">
-                                <input type="text" name="price_cable">
-                                <a data-toggle="collapse" data-parent="#accordian" href="#area">
-                                    Введите стоимость кабеля
-                                </a>
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" style="background-color: orange; color: white">
-                            <h4 class="panel-title">
-                                <input type="text" name="number_cable">
-                                <a data-toggle="collapse" data-parent="#accordian" href="#area">
-                                    Введите количество кабеля
-                                </a>
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" style="background-color: orange; color: white">
-                            <h4 class="panel-title">
-                                <input type="text" name="description_cable">
-                                <a data-toggle="collapse" data-parent="#accordian" href="#area">
-                                    Введите описание кабеля
-                                </a>
-                            </h4>
+                <div class="col-sm-4">
+                    <div class="left-sidebar">
+                        <h2>Параметры</h2>
+                        <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+                            <section>
+                                <div class="container">
+                                    <h4 class="panel-title">
+                                        <p>Тип кабеля</p>
+                                        <input type="text" name="type_cable" placeholder="Тип">
+                                        <p></p>
+                                        <p>Количество жил кабеля</p>
+                                        <input type="text" name="numberOfWires_cable" placeholder="Количество жил">
+                                        <p></p>
+                                        <p>Площадь поперечного сечения жилы</p>
+                                        <input type="text" name="area_cable" placeholder="Сечение">
+                                        <p></p>
+                                        <p>Стоимость кабеля, грн.</p>
+                                        <input type="text" name="price_cable" placeholder="Цена">
+                                        <p></p>
+                                        <p>Количество кабеля, м.</p>
+                                        <input type="text" name="number_cable" placeholder="Количество">
+                                        <p></p>
+                                        <p>Описание кабеля</p>
+                                        <input type="text" name="description_cable" placeholder="Описание">
+                                        <p></p>
+                                    </h4>
+                                </div>
+                            </section>
+                            <section>
+                                <div class="container">
+                                    <input type="submit" class="btn btn-default update" value="Добавить"
+                                           style="margin: 0 auto">
+                                </div>
+                            </section>
                         </div>
                     </div>
                 </div>
+                <div class="col-sm-8 padding-right">
+                    <div class="features_items"><!--features_items-->
+                        <h2 class="title text-center">Фото для кабеля</h2>
+                        <div class="col-sm-2">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+                                        <img src="images/not.png" alt=""/>
+                                        <h4><input type="radio" name="photo_name"
+                                                   value="" checked> пусто</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <c:forEach items="${photoNames}" var="name">
+                            <div class="col-sm-2">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="/photo_name/${name}" alt=""/>
+                                            <h4><input type="radio" name="photo_name"
+                                                       value="${name}"> ${name}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </c:forEach>
+                    </div><!--features_items-->
+                </div>
             </div>
-        </div>
-    </section>
-    <section id="cart_items">
-        <div class="container">
-            <div class="table-responsive cart_info">
-                <table class="table table-condensed">
-                    <thead>
-                    <tr class="cart_menu" style="text-align: center">
-                        <td></td>
-                        <td class="image">Фото</td>
-                        <td class="description">Название</td>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr style="text-align: center">
-                        <td class="cart_description">
-                            <input type="radio" name="photo_name"
-                                   value="" checked>
-                        </td>
-                        <td class="cart_description">
-                            <h4>
-                                <a style="margin: 0 auto">Ничего не выбрано!!!</a>
-                            </h4>
-                        </td>
-                        <td class="cart_description">
-                        </td>
-                    </tr>
-                    <c:forEach items="${photoNames}" var="name">
-                        <tr style="text-align: center">
-                            <td class="cart_description">
-                                <input type="radio" name="photo_name"
-                                       value="${name}">
-                            </td>
-                            <td class="cart_product">
-                                <a><img src="/photo_name/${name}" alt=""
-                                        style="height: 40px; width: 40px; margin: 0 auto"></a>
-                            </td>
-                            <td class="cart_description">
-                                <h4>
-                                    <a style="margin: 0 auto">${name}</a>
-                                </h4>
-                            </td>
-                        </tr>
-                    </c:forEach>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container">
-            <input type="submit" class="btn btn-default update" value="Добавить"
-                   style="margin: 0 auto">
         </div>
     </section>
 </form>

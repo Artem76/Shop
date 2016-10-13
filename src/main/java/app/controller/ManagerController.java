@@ -265,12 +265,15 @@ public class ManagerController {
             model.addAttribute("data_error", "error");
             return "manager/manager_product_add";
         }
+        if (photo_name.equals("")){
+            model.addAttribute("photo_error", "error");
+            return "manager/manager_product_add";
+        }
         if (type_cable.equals("") ||
                 numberOfWires == 0 ||
                 area == 0.0 ||
                 price == 0.0 ||
-                description_cable.equals("") ||
-                photo_name.equals("")) {
+                description_cable.equals("")) {
             model.addAttribute("data_error", "error");
             return "manager/manager_product_add";
         }
