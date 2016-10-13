@@ -120,6 +120,9 @@
             <c:if test="${not empty data_error}">
                 <h2 style="color: red; text-align: center">Ошибочые данные.</h2>
             </c:if>
+            <c:if test="${not empty del_error}">
+                <h2 style="color: red; text-align: center">Удаление не возможно (фото используется)</h2>
+            </c:if>
             <h2 style="color: orange; text-align: center">Фото</h2>
             <p></p>
         </div>
@@ -133,7 +136,7 @@
                 <div class="left-sidebar">
                     <h2>Добавление</h2>
                     <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-                        <form action="/manager_photo_add"  enctype="multipart/form-data" method="post">
+                        <form action="/manager_photo_add" enctype="multipart/form-data" method="post">
                             <section>
                                 <div class="container">
                                     <h4 class="panel-title">
@@ -158,12 +161,18 @@
                 <div class="features_items"><!--features_items-->
                     <h2 class="title text-center">В наличии</h2>
                     <c:forEach items="${photoNames}" var="photoName">
-                        <div class="col-sm-3">
+                        <div class="col-sm-2">
                             <div class="product-image-wrapper">
                                 <div class="single-products">
                                     <div class="productinfo text-center">
-                                        <img src="/photo_name/${photoName}"alt=""/>
-                                        <h2>${photoName}</h2>
+                                        <img src="/photo_name/${photoName}" alt=""/>
+                                        <h4>${photoName}</h4>
+                                        <h4 class="cart_delete" style="margin: auto">
+                                            <a class="cart_quantity_delete"
+                                               href="/manager_photo_delete?photo_name=${photoName}"
+                                               style="margin: 0 auto" title="Удаление"><i class="fa fa-times"></i>
+                                            </a>
+                                        </h4>
                                     </div>
                                 </div>
                             </div>

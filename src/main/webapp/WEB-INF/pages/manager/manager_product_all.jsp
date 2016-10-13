@@ -116,12 +116,15 @@
     <div class="container">
         <div class="row">
             <c:if test="${not empty data_error}">
-                <h2 style="color: red; text-align: center">Ошибочые данные.</h2>
+                <h2 style="color: red; text-align: center">Ошибочые данные</h2>
+            </c:if>
+            <c:if test="${not empty del_error}">
+                <h2 style="color: red; text-align: center">Удаление не возможно (кабель в заказе)</h2>
             </c:if>
             <c:if test="${not empty update}">
-                <h2 style="color: greenyellow; text-align: center">Данные успешно изменены.</h2>
+                <h2 style="color: greenyellow; text-align: center">Данные успешно изменены</h2>
             </c:if>
-            <h2 style="color: orange; text-align: center">Весь кабель.</h2>
+            <h2 style="color: orange; text-align: center">Весь кабель</h2>
         </div>
     </div>
 </section>

@@ -8,6 +8,7 @@ import app.service.photo.PhotoService;
 import app.service.product.ProductService;
 import app.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
@@ -265,7 +266,7 @@ public class ManagerController {
             model.addAttribute("data_error", "error");
             return "manager/manager_product_add";
         }
-        if (photo_name.equals("")){
+        if (photo_name.equals("")) {
             model.addAttribute("photo_error", "error");
             return "manager/manager_product_add";
         }
@@ -314,10 +315,22 @@ public class ManagerController {
     }
 
     @RequestMapping("/manager_product_delete")
-    public String managerProductDelete(@RequestParam long product_id) {
+    public String managerProductDelete(@RequestParam long product_id, Model model) {
         Product product = productService.getProductOne(product_id);
-        productService.deleteProduct(product);
-        return "redirect:/manager_product_all";
+        try {
+            productService.deleteProduct(product);
+        } catch (DataIntegrityViolationException e) {
+            System.out.println(e);
+            model.addAttribute("del_error", "error");
+        }
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        model.addAttribute("login", login);
+        model.addAttribute("products", productService.getProductAll());
+        model.addAttribute("types", productService.getTypes());
+        model.addAttribute("numberOfWireses", productService.getNumberOfWires());
+        model.addAttribute("areas", productService.getAreas());
+        return "manager/manager_product_all";
     }
 
     @RequestMapping("/manager_product_update")
@@ -368,16 +381,32 @@ public class ManagerController {
     @RequestMapping("/manager_photo_add")
     public String managerPhotoAdd(@RequestParam MultipartFile file,
                                   @RequestParam String name,
-                                  Model model){
+                                  Model model) {
         if (file.isEmpty() || name.equals("")) {
             model.addAttribute("data_error", "error");
-        }else {
+        } else {
             try {
-                photoService.addPhoto(name,file.getBytes());
+                photoService.addPhoto(name, file.getBytes());
             } catch (IOException e) {
                 e.printStackTrace();
                 model.addAttribute("data_error", "error");
             }
+        }
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        model.addAttribute("login", login);
+        model.addAttribute("photoNames", photoService.getNames());
+        return "manager/manager_photo";
+    }
+
+    @RequestMapping("/manager_photo_delete")
+    public String managerPhotoDelete(@RequestParam String photo_name,
+                                     Model model) {
+        try {
+            photoService.deletePhoto(photoService.getPhotoByName(photo_name));
+        } catch (DataIntegrityViolationException e) {
+            e.printStackTrace();
+            model.addAttribute("del_error", "error");
         }
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String login = user.getUsername();
