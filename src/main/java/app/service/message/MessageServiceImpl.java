@@ -26,9 +26,19 @@ public class MessageServiceImpl implements MessageService{
     }
 
     @Override
+    public Message detOne(long id) {
+        return massageRepository.findOne(id);
+    }
+
+    @Override
     @Transactional
     public void addMessage(Message message) {
         message.setDate(new Date(System.currentTimeMillis()));
+        massageRepository.save(message);
+    }
+
+    @Override
+    public void updateMessage(Message message) {
         massageRepository.save(message);
     }
 

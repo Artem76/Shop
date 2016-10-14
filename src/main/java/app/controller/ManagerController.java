@@ -3,6 +3,7 @@ package app.controller;
 import app.entity.*;
 import app.entity.enums.UserRole;
 import app.service.box.BoxService;
+import app.service.message.MessageService;
 import app.service.ord.OrdService;
 import app.service.photo.PhotoService;
 import app.service.product.ProductService;
@@ -13,7 +14,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -37,6 +37,9 @@ public class ManagerController {
 
     @Autowired
     private PhotoService photoService;
+
+    @Autowired
+    private MessageService messageService;
 
     @RequestMapping("/manager")
     public String managerShop(Model model) {
@@ -413,5 +416,51 @@ public class ManagerController {
         model.addAttribute("login", login);
         model.addAttribute("photoNames", photoService.getNames());
         return "manager/manager_photo";
+    }
+
+    @RequestMapping("/manager_message")
+    public String managerMessage(Model model) {
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        model.addAttribute("login", login);
+        model.addAttribute("messages", messageService.getMessageAllSort());
+        return "manager/manager_message";
+    }
+
+    @RequestMapping("/manager_message_delete")
+    public String managerMessageDelete(@RequestParam long message_id, Model model) {
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        model.addAttribute("login", login);
+        messageService.deleteMessage(messageService.detOne(message_id));
+        model.addAttribute("messages", messageService.getMessageAllSort());
+        return "manager/manager_message";
+    }
+
+    @RequestMapping("/manager_message_open")
+    public String managerMessageOpen(@RequestParam long message_id, Model model) {
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        model.addAttribute("login", login);
+        model.addAttribute("message", messageService.detOne(message_id));
+        return "manager/manager_message_open";
+    }
+
+    @RequestMapping("/manager_message_response")
+    public String managerMessageResponse(@RequestParam long message_id,
+                                         @RequestParam String manager_response) {
+        if (!manager_response.equals("")) {
+            User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+            String login = user.getUsername();
+            Message message = messageService.detOne(message_id);
+            String s = message.getMessage();
+            StringBuffer sb = new StringBuffer();
+            sb.append(message.getMessage());
+            sb.append("<br><br><strong>Ответ от менеджера " + login + ":</strong>");
+            sb.append("<br>"  + manager_response);
+            message.setMessage(sb.toString());
+            messageService.updateMessage(message);
+        }
+        return "redirect:/manager_message";
     }
 }

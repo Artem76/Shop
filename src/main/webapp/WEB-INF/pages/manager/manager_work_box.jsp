@@ -71,7 +71,7 @@
     <div class="header-bottom"><!--header-bottom-->
         <div class="container">
             <div class="row">
-                <div class="col-sm-9">
+                <div class="col-sm-12">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse"
                                 data-target=".navbar-collapse">
@@ -104,7 +104,7 @@
                                     <li><a href="/manager_photo">Фото</a></li>
                                 </ul>
                             </li>
-                            <li><a <%--href="/message"--%>>Сообщения</a></li>
+                            <li><a href="/manager_message">Отзывы и предложения</a></li>
                         </ul>
                     </div>
                 </div>

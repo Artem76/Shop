@@ -70,7 +70,7 @@
     <div class="header-bottom"><!--header-bottom-->
         <div class="container">
             <div class="row">
-                <div class="col-sm-9">
+                <div class="col-sm-12">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse"
                                 data-target=".navbar-collapse">
@@ -92,10 +92,10 @@
                             <li class="dropdown"><a <%--href="#"--%>>Все заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/manager_all_orders_work">В работе</a></li>
-                                    <li><a href="/manager_all_orders_closed" class="active">Выполненные</a></li>
+                                    <li><a href="/manager_all_orders_closed">Выполненные</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/manager_search_client">Поиск клиента</a></li>
+                            <li><a href="/manager_search_client" class="active">Поиск клиента</a></li>
                             <li class="dropdown"><a <%--href="#"--%>>Продукция<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/manager_product_all">Весь кабель</a></li>

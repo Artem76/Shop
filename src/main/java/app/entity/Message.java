@@ -11,6 +11,7 @@ public class Message {
     @GeneratedValue
     private long id;
 
+    @Column(length = 10000)
     private String message;
 
     @Temporal(value = TemporalType.TIMESTAMP)

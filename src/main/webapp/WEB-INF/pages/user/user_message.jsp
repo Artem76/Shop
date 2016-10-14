@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="cp1251"?>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html;charset=cp1251" %>
 <%@ page import="java.net.URLEncoder" %>
 
@@ -31,6 +31,7 @@
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 </head>
 <body>
+
 <header id="header"><!--header-->
     <div class="header_top"><!--header_top-->
         <div class="container">
@@ -94,7 +95,7 @@
                                     <li><a href="/user_orders_closed">Выполненные</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/user_message">Отзывы и предложения</a></li>
+                            <li><a href="/user_message" class="active">Отзывы и предложения</a></li>
                             <li><a <%--href="/contact"--%>>Контакты</a></li>
                         </ul>
                     </div>
@@ -164,84 +165,51 @@
 <section id="form" style="margin: 0"><!--form-->
     <div class="container">
         <div class="row">
-            <h2 style="color: orange; text-align: center">Заказ от GMT ${date}.</h2>
-            <h2 style="color: orange; text-align: center">Менеджер
-                <c:if test="${not empty login_manager}">
-                    ${login_manager}
-                </c:if>
-                <c:if test="${empty login_manager}">
-                    еще не назначен
-                </c:if>
-                .
-            </h2>
+            <h2 style="color: orange; text-align: center">Отзывы и предложения</h2>
         </div>
     </div>
 </section>
 
-<section id="cart_items">
-    <div class="container">
-        <div class="table-responsive cart_info">
-            <table class="table table-condensed">
-                <thead>
-                <tr class="cart_menu">
-                    <td class="image">Кабель</td>
-                    <td class="description"></td>
-                    <td class="price">Цена за единицу, грн.</td>
-                    <td class="quantity">Количество, м.</td>
-                    <td class="total">Стоимость, грн.</td>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach items="${ords}" var="ord">
-                    <tr>
-                        <td class="cart_product">
-                            <a><img src="/photo/${ord.product.photo.id}" alt=""
-                                    style="height: 40px; width: 40px; margin: 0 auto"></a>
-                        </td>
-                        <td class="cart_description">
-                            <h4>
-                                <a style="margin: 0 auto">${ord.product.type}${ord.product.numberOfWires}x${ord.product.area}</a>
-                            </h4>
-                        </td>
-                        <td class="cart_price">
-                            <p style="margin: 0 auto">${ord.priceOrd}</p>
-                        </td>
-                        <td>
-                            <a class="cart_quantity_input" size="8" style="margin: 0 auto">${ord.numberProduct}</a>
-                        </td>
-                        <td class="cart_total">
-                            <fmt:formatNumber var="pr" maxFractionDigits="2" value="${ord.numberProduct*ord.priceOrd}"/>
-                            <p class="cart_total_price" style="margin: 0 auto">${pr}</p>
-                        </td>
-                    </tr>
-                </c:forEach>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</section> <!--/#cart_items-->
-
-<section id="do_action">
+<section style="margin-top: 30px">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-12">
                 <div class="total_area">
-                    <ul>
-                        <label style="margin: 0 auto">Сообщение:</label>
-                        <li>${description}</li>
-                        <li>Общая стоимость <span>${sum} грн.</span></li>
-                        <c:if test="${empty closed}">
-                            <a class="btn btn-default check_out" style="background-color: red">Заказ в работе</a>
-                        </c:if>
-                        <c:if test="${not empty closed}">
-                            <a class="btn btn-default check_out" style="background-color: red">Заказ уже выполнен</a>
-                        </c:if>
-                    </ul>
+                    <form action="/user_message_post" method="post">
+                        <ul style="margin-left: -2%">
+                            <label style="margin: 0 auto">Новое сообщение от клиента ${login}:</label>
+                            <textarea name="user_messages" placeholder="Отзыв или предложение." rows="3"></textarea>
+                            <input type="submit" id="message" class="btn btn-default check_out" value="Отправить">
+                        </ul>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-</section><!--/#do_action-->
+</section>
+
+<section style="margin-top: 20px">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="features_items"><!--features_items-->
+                    <h2 class="title text-center">Все сообщения</h2>
+                    <c:forEach items="${messages}" var="message">
+                        <div class="col-sm-12">
+                            <div class="total_area">
+                                <ul style="margin-left: -3%">
+                                    <label style="margin: 0 auto">Сообщение от клиента ${message.user.login}</label>
+                                    <label style="margin: 0 auto">GMT ${message.date}</label>
+                                    <li>${message.message}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </c:forEach>
+                </div><!--features_items-->
+            </div>
+        </div>
+    </div>
+</section>
 
 <footer id="footer"><!--Footer-->
     <div class="footer-top">
@@ -342,6 +310,9 @@
 <script src="js/jquery.prettyPhoto.js"></script>
 <script src="js/main.js"></script>
 <script>
+    $("#message").click(function (event) {
+        alert("Сообщение отправлено!");
+    });
     $("#logout").click(function (event) {
         alert("Выход из акаунта!");
     });

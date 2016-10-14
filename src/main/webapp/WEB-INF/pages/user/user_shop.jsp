@@ -92,7 +92,7 @@
                                     <li><a href="/user_orders_closed">Выполненные</a></li>
                                 </ul>
                             </li>
-                            <li><a <%--href="/message"--%>>Сообщения</a></li>
+                            <li><a href="/user_message">Отзывы и предложения</a></li>
                             <li><a <%--href="/contact"--%>>Контакты</a></li>
                         </ul>
                     </div>

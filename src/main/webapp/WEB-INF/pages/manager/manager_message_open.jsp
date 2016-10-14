@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="cp1251"?>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html;charset=cp1251" %>
 <%@ page import="java.net.URLEncoder" %>
 
@@ -83,20 +84,20 @@
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
                             <li><a href="/shop">Новые заказы</a></li>
-                            <li class="dropdown"><a <%--href="#"--%>>Свои заказы<i class="fa fa-angle-down"></i></a>
+                            <li class="dropdown"><a>Свои заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/manager_their_orders_work">В работе</a></li>
                                     <li><a href="/manager_their_orders_closed">Выполненные</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a <%--href="#"--%>>Все заказы<i class="fa fa-angle-down"></i></a>
+                            <li class="dropdown"><a>Все заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/manager_all_orders_work">В работе</a></li>
-                                    <li><a href="/manager_all_orders_closed" class="active">Выполненные</a></li>
+                                    <li><a href="/manager_all_orders_closed">Выполненные</a></li>
                                 </ul>
                             </li>
                             <li><a href="/manager_search_client">Поиск клиента</a></li>
-                            <li class="dropdown"><a <%--href="#"--%>>Продукция<i class="fa fa-angle-down"></i></a>
+                            <li class="dropdown"><a>Продукция<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="/manager_product_all">Весь кабель</a></li>
                                     <li><a href="/manager_product_add">Добавить кабель</a></li>
@@ -115,52 +116,30 @@
 <section id="form" style="margin: 0"><!--form-->
     <div class="container">
         <div class="row">
-            <h2 style="color: orange; text-align: center">Все выполненные заказы.</h2>
+            <h2 style="color: orange; text-align: center">Отзыв или предложение клиента ${message.user.login}</h2>
+            <h2 style="color: orange; text-align: center">от ${message.date}</h2>
         </div>
     </div>
 </section>
 
-<section id="cart_items">
+<section style="margin-top: 30px">
     <div class="container">
-        <div class="table-responsive cart_info">
-            <table class="table table-condensed">
-                <thead>
-                <tr class="cart_menu" style="text-align: center">
-                    <td class="description">Время</td>
-                    <td class="price">Клиент</td>
-                    <td class="price">Менеджер</td>
-                    <td class="description"></td>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach items="${boxes}" var="box">
-                    <tr style="text-align: center">
-                        <td class="cart_description">
-                            <h4>
-                                <a style="margin: 0 auto">GMT ${box.date}</a>
-                            </h4>
-                        </td>
-                        <td class="cart_price">
-                            <p style="margin: 0 auto">
-                                <a href="/manager_client?id_client=${box.customUsers[0].id}" style="text-decoration: underline; color: grey">
-                                ${box.customUsers[0].login}
-                                </a>
-                            </p>
-                        </td>
-                        <td class="cart_price">
-                            <p style="margin: 0 auto">${box.customUsers[1].login}</p>
-                        </td>
-                        <td>
-                            <a class="btn btn-default update" style="margin: 0 auto"
-                               href="/manager_work_box?box_id=${box.id}">Открыть</a>
-                        </td>
-                    </tr>
-                </c:forEach>
-                </tbody>
-            </table>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="total_area">
+                    <form action="/manager_message_response?message_id=${message.id}" method="post">
+                        <ul style="margin-left: -2%">
+                            <li style="margin: 0 auto">${message.message}</li>
+                            <label style="margin-top: 15px">Ответ от менеджера ${login}:</label>
+                            <textarea name="manager_response" placeholder="Ответ." rows="3"></textarea>
+                            <input type="submit" id="message" class="btn btn-default check_out" value="Ответить">
+                        </ul>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-</section> <!--/#cart_items-->
+</section>
 
 <footer id="footer"><!--Footer-->
     <div class="header_top">

@@ -1,10 +1,8 @@
 package app.controller;
 
-import app.entity.Box;
-import app.entity.CustomUser;
-import app.entity.Ord;
-import app.entity.Product;
+import app.entity.*;
 import app.service.box.BoxService;
+import app.service.message.MessageService;
 import app.service.ord.OrdService;
 import app.service.product.ProductService;
 import app.service.user.UserService;
@@ -31,6 +29,9 @@ public class UserController {
 
     @Autowired
     private OrdService ordService;
+
+    @Autowired
+    private MessageService messageService;
 
     @RequestMapping("/user")
     public String userShop(Model model){
@@ -162,5 +163,27 @@ public class UserController {
         model.addAttribute("ords", ords);
         model.addAttribute("sum", boxService.getSumBox(box));
         return "user/user_work_box";
+    }
+
+    @RequestMapping("/user_message")
+    public String userMessage(Model model){
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        model.addAttribute("login", login);
+        model.addAttribute("messages", messageService.getMessageAllSort());
+        return "user/user_message";
+    }
+
+    @RequestMapping("/user_message_post")
+    public String userMessage(@RequestParam String user_messages, Model model){
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        model.addAttribute("login", login);
+        if (!user_messages.equals("")){
+            Message message = new Message(user_messages, userService.getUserByLogin(login));
+            messageService.addMessage(message);
+        }
+        model.addAttribute("messages", messageService.getMessageAllSort());
+        return "user/user_message";
     }
 }
