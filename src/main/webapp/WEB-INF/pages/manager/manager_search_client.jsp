@@ -103,7 +103,7 @@
                                     <li><a href="/manager_photo">Фото</a></li>
                                 </ul>
                             </li>
-                            <li><a <%--href="/message"--%>>Сообщения</a></li>
+                            <li><a href="/manager_message">Отзывы и предложения</a></li>
                         </ul>
                     </div>
                 </div>

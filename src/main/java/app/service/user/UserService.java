@@ -8,6 +8,7 @@ import java.util.List;
 public interface UserService {
     CustomUser getUserByLogin(String login);
     CustomUser getOne(long id);
+    List<CustomUser> getUserByRoleSort(UserRole role);
     List<CustomUser> getUserByPatternSort(String pattern, UserRole role);
     CustomUser getUserByLogin(String login, UserRole role);
     CustomUser getUserByPhone(String phone, UserRole role);

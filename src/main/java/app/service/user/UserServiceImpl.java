@@ -25,6 +25,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public List<CustomUser> getUserByRoleSort(UserRole role) {
+        return userRepository.findByRole(role);
+    }
+
+    @Override
     public List<CustomUser> getUserByPatternSort(String pattern, UserRole role) {
         return userRepository.findByPatternSort(pattern, role);
     }

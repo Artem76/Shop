@@ -70,13 +70,106 @@
     </div><!--/header-middle-->
 </header>
 
-<section id="form" style="margin: 3%"><!--form-->
+<section id="form" style="margin: 0%"><!--form-->
     <div class="container">
         <div class="row">
-            <h2 style="color: orange; margin-left: 28%">Страница администратора! Пока все :-)</h2>
+            <c:if test="${not empty data_error}">
+                <h2 style="color: red; text-align: center">Данные введены с ошибками!</h2>
+            </c:if>
+            <c:if test="${not empty reg}">
+                <h2 style="color: greenyellow; text-align: center">Регистрация прошла успешно!</h2>
+            </c:if>
+            <c:if test="${not empty update}">
+                <h2 style="color: greenyellow; text-align: center">Изменение пароля прошло успешно!</h2>
+            </c:if>
+            <c:if test="${not empty log_error}">
+                <h2 style="color: red; text-align: center">Такой логин уже существует!</h2>
+            </c:if>
+            <c:if test="${not empty del_error}">
+                <h2 style="color: red; text-align: center">Удаление не возможно (менеджер задействован в заказе)!</h2>
+            </c:if>
+            <h2 style="color: orange; text-align: center">Страница администратора!</h2>
         </div>
     </div>
 </section>
+
+<section id="form" style="margin: 3%; margin-left: 11%"><!--form-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-1">
+                <div class="login-form"><!--login form-->
+                    <h2>Регистрация менеджера!</h2>
+                    <form action="/admin_reg_manager" method="post">
+                        <input type="text" placeholder="Логин" name="login_manager"/>
+                        <input type="password" placeholder="Пароль" name="password1"/>
+                        <input type="password" placeholder="Повторите пароль" name="password2"/>
+                        <button type="submit" class="btn btn-default">Зарегистрировать</button>
+                    </form>
+                </div><!--/login form-->
+            </div>
+            <div class="col-sm-1">
+                <h2 class="or">ИЛИ</h2>
+            </div>
+            <div class="col-sm-4">
+                <div class="signup-form"><!--sign up form-->
+                    <h2>Изменение пароля менеджера!</h2>
+                    <form action="/admin_update_pas_manager" method="post">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordian" href="#type">
+                                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                                        Выбор менеджера
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="type" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li><input type="radio" name="id_manager" value="0" style="height: auto; width: auto; display: inline-block"
+                                                   checked><a> Не выбран</a></li>
+                                        <c:forEach items="${customUsers}" var="customUser">
+                                            <li><input type="radio" name="id_manager"
+                                                       value="${customUser.id}" style="height: auto; width: auto; display: inline-block"><a> ${customUser.login}</a></li>
+                                        </c:forEach>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="password" placeholder="Пароль" name="password1"/>
+                        <input type="password" placeholder="Повторите пароль" name="password2"/>
+                        <button type="submit" class="btn btn-default">Изменить</button>
+                    </form>
+                </div><!--/sign up form-->
+            </div>
+        </div>
+    </div>
+</section><!--/form-->
+
+<section style="margin-top: 20px">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="features_items"><!--features_items-->
+                    <h2 class="title text-center">Все менеджеры</h2>
+                    <c:forEach items="${customUsers}" var="customUser">
+                        <div class="col-sm-4" style="margin-top: 15px">
+                            <div class="total_area">
+                                <ul style="margin-left: -3%">
+                                    <li>${customUser.login}</li>
+                                    <a class="btn btn-default check_out" href="/admin_delete_manager?id_manager=${customUser.id}">
+                                        Удалить
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </c:forEach>
+                </div><!--features_items-->
+            </div>
+        </div>
+    </div>
+</section>
+
 <footer id="footer"><!--Footer-->
     <div class="header_top">
         <div class="container">

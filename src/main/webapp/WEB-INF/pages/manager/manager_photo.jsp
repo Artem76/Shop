@@ -117,10 +117,10 @@
     <div class="container">
         <div class="row">
             <c:if test="${not empty data_error}">
-                <h2 style="color: red; text-align: center">Ошибочые данные.</h2>
+                <h2 style="color: red; text-align: center">Ошибочые данные!</h2>
             </c:if>
             <c:if test="${not empty del_error}">
-                <h2 style="color: red; text-align: center">Удаление не возможно (фото используется)</h2>
+                <h2 style="color: red; text-align: center">Удаление не возможно (фото используется)!</h2>
             </c:if>
             <h2 style="color: orange; text-align: center">Фото</h2>
             <p></p>

@@ -97,18 +97,7 @@ public class MainController {
             model.addAttribute("error", "error");
             return "redirect:/login";
         }
-        MessageDigest mDigest = null;
-        try {
-            mDigest = MessageDigest.getInstance("SHA1");
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-        byte[] result = mDigest.digest(password1.getBytes());
-        StringBuffer sb = new StringBuffer();
-        for (int i = 0; i < result.length; i++) {
-            sb.append(Integer.toString((result[i] & 0xff) + 0x100, 16).substring(1));
-        }
-        String passwordSHA1 = sb.toString();
+        String passwordSHA1 = SHA.coderSHA1(password1).toString();
         CustomUser customUser = new CustomUser(login, passwordSHA1, UserRole.USER, email, phone ,address);
 
         if(!userService.addUser(customUser)){

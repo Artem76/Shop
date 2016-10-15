@@ -81,10 +81,8 @@
                 <br><br><br>
             </c:if>
             <div class="col-sm-4 col-sm-offset-1">
-
                 <div class="login-form"><!--login form-->
                     <h2>¬ход</h2>
-
                     <c:url value="/j_spring_security_check" var="loginUrl" />
                     <form action="${loginUrl}" method="post">
                         <input type="text" placeholder="Ћогин" name="j_login"/>
