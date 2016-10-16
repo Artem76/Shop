@@ -114,7 +114,7 @@
                                 <div class="item active">
                                     <div class="col-sm-6 text-center">
                                         <h2 style="margin-top: 60px">Обучаемость</h2>
-                                        <p>Умею быстро и эфективно учиться. </p>
+                                        <p>Умею быстро и эффективно учиться. </p>
                                     </div>
                                     <div class="col-sm-6">
                                         <img src="images/study.png" class="girl img-responsive" alt=""/>
@@ -123,7 +123,7 @@
                                 <div class="item">
                                     <div class="col-sm-6 text-center">
                                         <h2 style="margin-top: 60px">Стрессоустойчивость</h2>
-                                        <p>Багатый опыт работы с разными людьми.</p>
+                                        <p>Богатый опыт работы с разными людьми.</p>
                                     </div>
                                     <div class="col-sm-6">
                                         <img src="images/cat.png" class="girl img-responsive" alt=""/>
