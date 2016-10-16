@@ -83,7 +83,7 @@
                     </div>
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li><a href="/">Главная</a></li>
+                            <li><a href="/shop">Главная</a></li>
                             <li><a href="/admin_contact" class="active">Контакты</a></li>
                         </ul>
                     </div>
@@ -108,7 +108,6 @@
                             <ol class="carousel-indicators">
                                 <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
                                 <li data-target="#slider-carousel" data-slide-to="1"></li>
-                                <li data-target="#slider-carousel" data-slide-to="2"></li>
                             </ol>
 
                             <div class="carousel-inner">
@@ -130,17 +129,6 @@
                                         <img src="images/cat.png" class="girl img-responsive" alt=""/>
                                     </div>
                                 </div>
-
-                                <div class="item">
-                                    <div class="col-sm-6 text-center">
-                                        <h2 style="margin-top: 60px">Компанейский</h2>
-                                        <p>Быстро и легко вписываюсь в коллектив.</p>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <img src="images/leo.png" class="girl img-responsive" alt=""/>
-                                    </div>
-                                </div>
-
                             </div>
 
                             <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
@@ -164,12 +152,6 @@
                             <div class="productinfo text-center">
                                 <img src="images/myPhoto1.png" alt=""
                                      style="height: 180px; width: auto; margin: 10px"/>
-                            </div>
-                            <div class="product-overlay">
-                                <div class="overlay-content">
-                                    <img src="images/myPhoto.png" alt=""
-                                         style="height: 180px; width: auto; margin: 10px"/>
-                                </div>
                             </div>
                         </div>
                     </div>
