@@ -123,7 +123,7 @@
                                 <div class="item active">
                                     <div class="col-sm-6 text-center">
                                         <h2 style="margin-top: 60px">Обучаемость</h2>
-                                        <p>Умею быстро и эфективно учится. </p>
+                                        <p>Умею быстро и эфективно учиться. </p>
                                     </div>
                                     <div class="col-sm-6">
                                         <img src="images/study.png" class="girl img-responsive" alt=""/>
