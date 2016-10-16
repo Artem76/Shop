@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="cp1251"?>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html;charset=cp1251" %>
 <%@ page import="java.net.URLEncoder" %>
 
@@ -48,19 +49,18 @@
             </div>
         </div>
     </div><!--/header_top-->
-
     <div class="header-middle"><!--header-middle-->
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo pull-left">
-                        <a href="/"><img src="images/logo.png" alt=""/></a>
+                        <a href="/shop"><img src="images/logo.png" alt=""/></a>
                     </div>
                 </div>
                 <div class="col-sm-8">
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
-                            <li><a <%--href="#"--%>><i class="fa fa-user"></i> ${login}</a></li>
+                            <li><a><i class="fa fa-user"></i> ${login}</a></li>
                             <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Выход</a></li>
                         </ul>
                     </div>
@@ -83,8 +83,8 @@
                     </div>
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li><a href="/" class="active">Главная</a></li>
-                            <li><a href="/admin_contact">Контакты</a></li>
+                            <li><a href="/">Главная</a></li>
+                            <li><a href="/admin_contact" class="active">Контакты</a></li>
                         </ul>
                     </div>
                 </div>
@@ -93,107 +93,115 @@
     </div><!--/header-bottom-->
 </header>
 
-<section id="form" style="margin: 0%"><!--form-->
-    <div class="container">
+<div id="contact-page" class="container" style="margin-top: 40px">
+    <div class="bg">
         <div class="row">
-            <c:if test="${not empty data_error}">
-                <h2 style="color: red; text-align: center">Данные введены с ошибками!</h2>
-            </c:if>
-            <c:if test="${not empty reg}">
-                <h2 style="color: greenyellow; text-align: center">Регистрация прошла успешно!</h2>
-            </c:if>
-            <c:if test="${not empty update}">
-                <h2 style="color: greenyellow; text-align: center">Изменение пароля прошло успешно!</h2>
-            </c:if>
-            <c:if test="${not empty log_error}">
-                <h2 style="color: red; text-align: center">Такой логин уже существует!</h2>
-            </c:if>
-            <c:if test="${not empty del_error}">
-                <h2 style="color: red; text-align: center">Удаление не возможно (менеджер задействован в заказе)!</h2>
-            </c:if>
-            <h2 style="color: orange; text-align: center">Страница администратора!</h2>
+            <div class="col-sm-12">
+                <h2 class="title text-center">Разработчик</h2>
+            </div>
         </div>
-    </div>
-</section>
+        <section id="slider"><!--slider-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#slider-carousel" data-slide-to="1"></li>
+                                <li data-target="#slider-carousel" data-slide-to="2"></li>
+                            </ol>
 
-<section id="form" style="margin: 3%; margin-left: 11%"><!--form-->
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4 col-sm-offset-1">
-                <div class="login-form"><!--login form-->
-                    <h2>Регистрация менеджера!</h2>
-                    <form action="/admin_reg_manager" method="post">
-                        <input type="text" placeholder="Логин" name="login_manager"/>
-                        <input type="password" placeholder="Пароль" name="password1"/>
-                        <input type="password" placeholder="Повторите пароль" name="password2"/>
-                        <button type="submit" class="btn btn-default">Зарегистрировать</button>
-                    </form>
-                </div><!--/login form-->
-            </div>
-            <div class="col-sm-1">
-                <h2 class="or">ИЛИ</h2>
-            </div>
-            <div class="col-sm-4">
-                <div class="signup-form"><!--sign up form-->
-                    <h2>Изменение пароля менеджера!</h2>
-                    <form action="/admin_update_pas_manager" method="post">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordian" href="#type">
-                                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                        Выбор менеджера
-                                    </a>
-                                </h4>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="col-sm-6 text-center">
+                                        <h2 style="margin-top: 60px">Обучаемость</h2>
+                                        <p>Умею быстро и эфективно учится. </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <img src="images/study.png" class="girl img-responsive" alt=""/>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-sm-6 text-center">
+                                        <h2 style="margin-top: 60px">Стрессоустойчивость</h2>
+                                        <p>Багатый опыт работы с разными людьми.</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <img src="images/cat.png" class="girl img-responsive" alt=""/>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="col-sm-6 text-center">
+                                        <h2 style="margin-top: 60px">Компанейский</h2>
+                                        <p>Быстро и легко вписываюсь в коллектив.</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <img src="images/leo.png" class="girl img-responsive" alt=""/>
+                                    </div>
+                                </div>
+
                             </div>
-                            <div id="type" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul>
-                                        <li><input type="radio" name="id_manager" value="0" style="height: auto; width: auto; display: inline-block"
-                                                   checked><a> Не выбран</a></li>
-                                        <c:forEach items="${customUsers}" var="customUser">
-                                            <li><input type="radio" name="id_manager"
-                                                       value="${customUser.id}" style="height: auto; width: auto; display: inline-block"><a> ${customUser.login}</a></li>
-                                        </c:forEach>
-                                    </ul>
+
+                            <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!--/slider-->
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="contact-info" style="text-align: center">
+                    <h2 class="title text-center">Фото</h2>
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="images/myPhoto1.png" alt=""
+                                     style="height: 180px; width: auto; margin: 10px"/>
+                            </div>
+                            <div class="product-overlay">
+                                <div class="overlay-content">
+                                    <img src="images/myPhoto.png" alt=""
+                                         style="height: 180px; width: auto; margin: 10px"/>
                                 </div>
                             </div>
                         </div>
-                        <input type="password" placeholder="Пароль" name="password1"/>
-                        <input type="password" placeholder="Повторите пароль" name="password2"/>
-                        <button type="submit" class="btn btn-default">Изменить</button>
-                    </form>
-                </div><!--/sign up form-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="contact-form">
+                    <h2 class="title text-center">Контакты</h2>
+                    <div class="status alert alert-success" style="display: none"></div>
+                    <div class="form-group col-md-12">
+                        <a type="text" class="form-control" required="required"
+                           style="height: auto; margin-top: 10px">Артем Геннадьевич
+                            Хиргий</a>
+                        <a type="text" class="form-control" required="required"
+                           style="height: auto; margin-top: 10px"><i
+                                class="fa fa-phone"></i> +38(097)946 89 25</a>
+                        <a type="text" class="form-control" required="required"
+                           style="height: auto; margin-top: 10px"
+                           href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
+                            cmua76@outlook.com</a>
+                        <a type="text" class="form-control" required="required"
+                           style="height: auto; margin-top: 10px"
+                           href="https://www.facebook.com/artem.khirgii"><i class="fa fa-facebook"></i>
+                            artem.khirgii</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</section><!--/form-->
+</div><!--/#contact-page-->
 
-<section style="margin-top: 20px">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="features_items"><!--features_items-->
-                    <h2 class="title text-center">Все менеджеры</h2>
-                    <c:forEach items="${customUsers}" var="customUser">
-                        <div class="col-sm-4" style="margin-top: 15px">
-                            <div class="total_area">
-                                <ul style="margin-left: -3%">
-                                    <li>${customUser.login}</li>
-                                    <a class="btn btn-default check_out" href="/admin_delete_manager?id_manager=${customUser.id}">
-                                        Удалить
-                                    </a>
-                                </ul>
-                            </div>
-                        </div>
-                    </c:forEach>
-                </div><!--features_items-->
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer id="footer"><!--Footer-->
+<footer id="footer" style="margin-top: 40px"><!--Footer-->
     <div class="header_top">
         <div class="container">
             <div class="row">

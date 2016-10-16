@@ -36,8 +36,8 @@
                 <div class="col-sm-6 ">
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
-                            <li><a href="/contact">Артем Хиргий </a></li>
-                            <li><a href="/contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
+                            <li><a href="/manager_contact">Артем Хиргий </a></li>
+                            <li><a href="/manager_contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
                             <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
                                 cmua76@outlook.com</a></li>
                             <li><a href="https://www.facebook.com/artem.khirgii"><i class="fa fa-facebook"></i>
@@ -104,6 +104,7 @@
                                 </ul>
                             </li>
                             <li><a href="/manager_message">Отзывы и предложения</a></li>
+                            <li><a href="/manager_contact">Контакты</a></li>
                         </ul>
                     </div>
                 </div>
@@ -169,8 +170,8 @@
                 <div class="col-sm-6 ">
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
-                            <li><a href="/contact">Артем Хиргий </a></li>
-                            <li><a href="/contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
+                            <li><a href="/manager_contact">Артем Хиргий </a></li>
+                            <li><a href="/manager_contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
                             <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
                                 cmua76@outlook.com</a></li>
                             <li><a href="https://www.facebook.com/artem.khirgii"><i class="fa fa-facebook"></i>

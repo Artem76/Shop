@@ -3,6 +3,7 @@ package app.controller;
 import app.entity.CustomUser;
 import app.entity.enums.UserRole;
 import app.service.user.UserService;
+import app.utils.SHA;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -11,9 +12,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 
 @Controller
 public class AdminController {
@@ -89,5 +87,13 @@ public class AdminController {
         }
         model.addAttribute("customUsers", userService.getUserByRoleSort(UserRole.MANAGER));
         return "admin/admin_shop";
+    }
+
+    @RequestMapping("/admin_contact")
+    public String adminContact(Model model) {
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        model.addAttribute("login", login);
+        return "admin/admin_contact";
     }
 }

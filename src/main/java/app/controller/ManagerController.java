@@ -463,4 +463,12 @@ public class ManagerController {
         }
         return "redirect:/manager_message";
     }
+
+    @RequestMapping("/manager_contact")
+    public String managerContact(Model model) {
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        model.addAttribute("login", login);
+        return "manager/manager_contact";
+    }
 }

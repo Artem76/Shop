@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="cp1251"?>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html;charset=cp1251" %>
 <%@ page import="java.net.URLEncoder" %>
 
@@ -59,7 +60,7 @@
                 <div class="col-sm-8">
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
-                            <li><a <%--href="#"--%>><i class="fa fa-user"></i> ${login}</a></li>
+                            <li><a><i class="fa fa-user"></i> ${login}</a></li>
                             <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Выход</a></li>
                         </ul>
                     </div>
@@ -104,7 +105,7 @@
                                 </ul>
                             </li>
                             <li><a href="/manager_message">Отзывы и предложения</a></li>
-                            <li><a href="/manager_contact">Контакты</a></li>
+                            <li><a href="/manager_contact" class="active">Контакты</a></li>
                         </ul>
                     </div>
                 </div>
@@ -113,58 +114,115 @@
     </div><!--/header-bottom-->
 </header>
 
-<section id="form" style="margin: 0"><!--form-->
-    <div class="container">
+<div id="contact-page" class="container" style="margin-top: 40px">
+    <div class="bg">
         <div class="row">
-            <h2 style="color: orange; text-align: center">Все заказы клиента ${login_client}.</h2>
+            <div class="col-sm-12">
+                <h2 class="title text-center">Разработчик</h2>
+            </div>
+        </div>
+        <section id="slider"><!--slider-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#slider-carousel" data-slide-to="1"></li>
+                                <li data-target="#slider-carousel" data-slide-to="2"></li>
+                            </ol>
+
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="col-sm-6 text-center">
+                                        <h2 style="margin-top: 60px">Обучаемость</h2>
+                                        <p>Умею быстро и эфективно учится. </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <img src="images/study.png" class="girl img-responsive" alt=""/>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-sm-6 text-center">
+                                        <h2 style="margin-top: 60px">Стрессоустойчивость</h2>
+                                        <p>Багатый опыт работы с разными людьми.</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <img src="images/cat.png" class="girl img-responsive" alt=""/>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="col-sm-6 text-center">
+                                        <h2 style="margin-top: 60px">Компанейский</h2>
+                                        <p>Быстро и легко вписываюсь в коллектив.</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <img src="images/leo.png" class="girl img-responsive" alt=""/>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!--/slider-->
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="contact-info" style="text-align: center">
+                    <h2 class="title text-center">Фото</h2>
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="images/myPhoto1.png" alt=""
+                                     style="height: 180px; width: auto; margin: 10px"/>
+                            </div>
+                            <div class="product-overlay">
+                                <div class="overlay-content">
+                                    <img src="images/myPhoto.png" alt=""
+                                         style="height: 180px; width: auto; margin: 10px"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="contact-form">
+                    <h2 class="title text-center">Контакты</h2>
+                    <div class="status alert alert-success" style="display: none"></div>
+                    <div class="form-group col-md-12">
+                        <a type="text" class="form-control" required="required"
+                           style="height: auto; margin-top: 10px">Артем Геннадьевич
+                            Хиргий</a>
+                        <a type="text" class="form-control" required="required"
+                           style="height: auto; margin-top: 10px"><i
+                                class="fa fa-phone"></i> +38(097)946 89 25</a>
+                        <a type="text" class="form-control" required="required"
+                           style="height: auto; margin-top: 10px"
+                           href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
+                            cmua76@outlook.com</a>
+                        <a type="text" class="form-control" required="required"
+                           style="height: auto; margin-top: 10px"
+                           href="https://www.facebook.com/artem.khirgii"><i class="fa fa-facebook"></i>
+                            artem.khirgii</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</section>
+</div><!--/#contact-page-->
 
-<section id="cart_items">
-    <div class="container">
-        <div class="table-responsive cart_info">
-            <table class="table table-condensed">
-                <thead>
-                <tr class="cart_menu" style="text-align: center">
-                    <td class="description">Время</td>
-                    <td class="description">Менеджер</td>
-                    <td class="description">Состояние</td>
-                    <td class="description"></td>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach items="${boxes}" var="box">
-                    <tr style="text-align: center">
-                        <td class="cart_description">
-                            <h4>
-                                <a style="margin: 0 auto">GMT ${box.date}</a>
-                            </h4>
-                        </td>
-                        <td class="cart_price">
-                            <p style="margin: 0 auto">${box.customUsers[1].login}</p>
-                        </td>
-                        <td class="cart_total_price">
-                            <c:if test="${box.status == 1}">
-                                <p style="margin: 0 auto">В работе</p>
-                            </c:if>
-                            <c:if test="${box.status == 2}">
-                                <p style="margin: 0 auto">Выполнен</p>
-                            </c:if>
-                        </td>
-                        <td>
-                            <a class="btn btn-default update" style="margin: 0 auto"
-                               href="/manager_work_box?box_id=${box.id}">Открыть</a>
-                        </td>
-                    </tr>
-                </c:forEach>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</section> <!--/#cart_items-->
-
-<footer id="footer"><!--Footer-->
+<footer id="footer" style="margin-top: 40px"><!--Footer-->
     <div class="header_top">
         <div class="container">
             <div class="row">

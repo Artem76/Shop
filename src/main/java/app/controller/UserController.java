@@ -186,4 +186,12 @@ public class UserController {
         model.addAttribute("messages", messageService.getMessageAllSort());
         return "user/user_message";
     }
+
+    @RequestMapping("/user_contact")
+    public String userContact(Model model) {
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        model.addAttribute("login", login);
+        return "user/user_contact";
+    }
 }
