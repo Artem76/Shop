@@ -1,7 +1,6 @@
 package app;
 
 import app.entity.CustomUser;
-import app.entity.Photo;
 import app.entity.Product;
 import app.entity.enums.UserRole;
 import app.service.photo.PhotoService;
@@ -13,11 +12,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import javax.sql.rowset.serial.SerialBlob;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.sql.Blob;
 import java.util.TimeZone;
 
 @SpringBootApplication
