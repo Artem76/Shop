@@ -3,6 +3,38 @@
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="windows-1251">
     <file url="file://$PROJECT_DIR$" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/app/controller/MainController.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/images/404" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/images/blog" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/images/cart" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/images/home" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/images/logo.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/images/product-details" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/images/shop" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/admin/admin_contact.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/admin/admin_shop.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/contact.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/index.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/manager/manager_all_orders_closed.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/manager/manager_all_orders_work.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/manager/manager_client.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/manager/manager_contact.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/manager/manager_message.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/manager/manager_message_open.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/manager/manager_photo.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/manager/manager_product_add.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/manager/manager_product_all.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/manager/manager_search_client.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/manager/manager_shop.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/manager/manager_their_orders_closed.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/manager/manager_their_orders_work.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/manager/manager_work_box.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/user/user_cart.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/user/user_contact.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/user/user_message.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/user/user_orders_closed.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/user/user_orders_work.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/user/user_shop.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/webapp/WEB-INF/pages/user/user_work_box.jsp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/images/404" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/images/blog" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/images/cart" charset="UTF-8" />
