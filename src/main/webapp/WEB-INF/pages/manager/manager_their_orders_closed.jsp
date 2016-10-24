@@ -85,8 +85,8 @@
                             <li><a href="/shop">Новые заказы</a></li>
                             <li class="dropdown"><a <%--href="#"--%>>Свои заказы<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="/manager_their_orders_work" class="active">В работе</a></li>
-                                    <li><a href="/manager_their_orders_closed">Выполненные</a></li>
+                                    <li><a href="/manager_their_orders_work">В работе</a></li>
+                                    <li><a href="/manager_their_orders_closed" class="active">Выполненные</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown"><a <%--href="#"--%>>Все заказы<i class="fa fa-angle-down"></i></a>

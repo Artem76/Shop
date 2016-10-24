@@ -5,8 +5,6 @@ import app.entity.CustomUser;
 import app.entity.Ord;
 import app.entity.Product;
 import app.service.ord.OrdService;
-//import app.service.product.ProductRepository;
-import app.service.photo.PhotoService;
 import app.service.product.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +15,8 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+
 
 @Service
 public class BoxServiceImpl implements BoxService {
@@ -50,6 +50,7 @@ public class BoxServiceImpl implements BoxService {
         boxes.sort((a,b) -> a.getCustomUsers().size()-b.getCustomUsers().size());
         boxes.addAll(boxRepository.findByStatusSort(2));
         List<Box> boxesFilter = new ArrayList<>();
+        System.out.println(boxes.size());
         for (Box b : boxes) {
             if (b.getCustomUserClient().getLogin().equals(customUser.getLogin())) {
                 boxesFilter.add(b);
@@ -65,7 +66,7 @@ public class BoxServiceImpl implements BoxService {
         List<Box> boxesFilter = new ArrayList<>();
         for (Box b : boxes) {
             if ((customUser == null && b.getCustomUsers().size() == 1) ||
-                    (customUser != null && b.getCustomUsers().size() > 1 && b.getCustomUserManager().getLogin().equals(customUser.getLogin()))) {
+                    ((customUser != null) && (b.getCustomUsers().size() > 1) && b.getCustomUserManager().getLogin().equals(customUser.getLogin()))) {
                 boxesFilter.add(b);
             }
         }
