@@ -17,7 +17,6 @@ import java.util.Date;
 import java.util.List;
 
 
-
 @Service
 public class BoxServiceImpl implements BoxService {
     @Autowired
@@ -33,7 +32,7 @@ public class BoxServiceImpl implements BoxService {
     @Transactional(readOnly = true)
     public List<Box> getBoxesByClientStatusSort(CustomUser customUser, Integer status) {
         List<Box> boxes = boxRepository.findByStatusSort(status);
-        boxes.sort((a,b) -> a.getCustomUsers().size()-b.getCustomUsers().size());
+        boxes.sort((a, b) -> a.getCustomUsers().size() - b.getCustomUsers().size());
         List<Box> boxesFilter = new ArrayList<>();
         for (Box b : boxes) {
             if (b.getCustomUserClient().getLogin().equals(customUser.getLogin())) {
@@ -47,7 +46,6 @@ public class BoxServiceImpl implements BoxService {
     @Transactional(readOnly = true)
     public List<Box> getBoxesByClientStatus12Sort(CustomUser customUser) {
         List<Box> boxes = boxRepository.findByStatusSort(1);
-        boxes.sort((a,b) -> a.getCustomUsers().size()-b.getCustomUsers().size());
         boxes.addAll(boxRepository.findByStatusSort(2));
         List<Box> boxesFilter = new ArrayList<>();
         for (Box b : boxes) {
@@ -55,6 +53,11 @@ public class BoxServiceImpl implements BoxService {
                 boxesFilter.add(b);
             }
         }
+        boxesFilter.sort((a, b) -> (a.getCustomUsers().size() - b.getCustomUsers().size()) != 0 ?
+                a.getCustomUsers().size() - b.getCustomUsers().size() :
+                (a.getStatus() - b.getStatus()) != 0 ?
+                        a.getStatus() - b.getStatus() :
+                        b.getDate().compareTo(a.getDate()));
         return boxesFilter;
     }
 
@@ -177,7 +180,7 @@ public class BoxServiceImpl implements BoxService {
     @Override
     public void orderBox(CustomUser customUser, String description) {
         Box box = addBox(customUser);
-        if (ordService.getOrdByBoxSort(box).size()==0) return;
+        if (ordService.getOrdByBoxSort(box).size() == 0) return;
         box.setDescription(description);
         box.setDate(new Date(System.currentTimeMillis()));
         box.setStatus(1);
