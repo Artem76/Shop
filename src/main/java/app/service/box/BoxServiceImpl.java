@@ -50,7 +50,6 @@ public class BoxServiceImpl implements BoxService {
         boxes.sort((a,b) -> a.getCustomUsers().size()-b.getCustomUsers().size());
         boxes.addAll(boxRepository.findByStatusSort(2));
         List<Box> boxesFilter = new ArrayList<>();
-        System.out.println(boxes.size());
         for (Box b : boxes) {
             if (b.getCustomUserClient().getLogin().equals(customUser.getLogin())) {
                 boxesFilter.add(b);
@@ -206,4 +205,5 @@ public class BoxServiceImpl implements BoxService {
         }
         return false;
     }
+
 }
