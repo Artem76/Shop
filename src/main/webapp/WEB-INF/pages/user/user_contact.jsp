@@ -135,7 +135,7 @@
                                         <p>Ѕогатый опыт работы с разными людьми.</p>
                                     </div>
                                     <div class="col-sm-6">
-                                        <img src="images/cat.png" class="girl img-responsive" alt=""/>
+                                        <img src="images/leo.png" class="girl img-responsive" alt=""/>
                                     </div>
                                 </div>
                             </div>

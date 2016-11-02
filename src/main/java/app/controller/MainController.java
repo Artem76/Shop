@@ -64,6 +64,8 @@ public class MainController {
                 return "redirect:/manager";
             case "ROLE_USER":
                 return "redirect:/user";
+            case "ROLE_NOT_ACTIVATED_USER":
+                return "redirect:/not_activated";
         }
         return "redirect:/";
     }
@@ -107,7 +109,7 @@ public class MainController {
     }
 
     @RequestMapping(value = "/photo_name/{photo_name}")
-    public void getImageByName(HttpServletRequest request, HttpServletResponse response, @PathVariable("photo_name") String photoName) {
+    public void getImage(HttpServletRequest request, HttpServletResponse response, @PathVariable("photo_name") String photoName) {
         try {
             Blob blob = photoService.getPhotoByName(photoName).getBody();
             response.setContentType("images/png");

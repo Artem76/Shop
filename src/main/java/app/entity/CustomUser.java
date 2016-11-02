@@ -18,9 +18,12 @@ public class CustomUser {
     @Enumerated(EnumType.STRING)
     private UserRole role;
 
+    private String name;
+    private String surname;
     private String email;
     private String phone;
     private String address;
+    private Integer checkingEmail;
 
     @ManyToMany(cascade = CascadeType.ALL)
     private List<Box> boxes = new ArrayList<>();
@@ -34,10 +37,20 @@ public class CustomUser {
         this.role = role;
     }
 
-    public CustomUser(String login, String password, UserRole role, String email, String phone, String address) {
+    public CustomUser(String login, String password, UserRole role, String name, String surname) {
         this.login = login;
         this.password = password;
         this.role = role;
+        this.name = name;
+        this.surname = surname;
+    }
+
+    public CustomUser(String login, String password, UserRole role, String name, String surname, String email, String phone, String address) {
+        this.login = login;
+        this.password = password;
+        this.role = role;
+        this.name = name;
+        this.surname = surname;
         this.email = email;
         this.phone = phone;
         this.address = address;
@@ -78,6 +91,22 @@ public class CustomUser {
         this.role = role;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -97,6 +126,14 @@ public class CustomUser {
     public String getAddress() { return address; }
 
     public void setAddress(String address) { this.address = address; }
+
+    public Integer getCheckingEmail() {
+        return checkingEmail;
+    }
+
+    public void setCheckingEmail(Integer checkingEmail) {
+        this.checkingEmail = checkingEmail;
+    }
 
     public List<Box> getBoxes() {
         return boxes;

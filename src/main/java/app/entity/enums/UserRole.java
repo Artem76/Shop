@@ -1,7 +1,7 @@
 package app.entity.enums;
 
 public enum UserRole {
-    ADMIN, MANAGER, USER;
+    ADMIN, MANAGER, USER, NOT_ACTIVATED_USER;
 
     @Override
     public String toString() {

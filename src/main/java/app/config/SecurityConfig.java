@@ -29,7 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()//отключение защиты
                 .authorizeRequests()//все страницы авторизовать
-                .antMatchers("/shop").hasAnyRole("USER", "ADMIN", "MANAGER")//кого пускать в конкретный юрл по роли
+                .antMatchers("/shop").hasAnyRole("USER", "ADMIN", "MANAGER", "NOT_ACTIVATED_USER")//кого пускать в конкретный юрл по роли
                 .antMatchers("/user**").hasRole("USER")
                 .antMatchers("/admin**").hasRole("ADMIN")
                 .antMatchers("/manager**").hasRole("MANAGER")
