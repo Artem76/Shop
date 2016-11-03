@@ -73,7 +73,8 @@
                 <br><br><br>
             </c:if>
             <c:if test="${param.reg ne null}">
-                <h2 style="color: greenyellow; margin-left: 9%">Регистрация прошла успешно, войдите под своим логином!</h2>
+                <h2 style="color: greenyellow; margin-left: 9%">Регистрация прошла успешно, войдите под своим
+                    логином!</h2>
                 <br><br><br>
             </c:if>
             <c:if test="${param.log ne null}">
@@ -83,11 +84,26 @@
             <div class="col-sm-4 col-sm-offset-1">
                 <div class="login-form"><!--login form-->
                     <h2>Вход</h2>
-                    <c:url value="/j_spring_security_check" var="loginUrl" />
+                    <c:url value="/j_spring_security_check" var="loginUrl"/>
                     <form action="${loginUrl}" method="post">
                         <input type="text" placeholder="Логин" name="j_login"/>
                         <input type="password" placeholder="Пароль" name="j_password"/>
                         <button type="submit" class="btn btn-default">Вход</button>
+                        <h6>
+                            <p align="left">Инфорамция для тестирования.</p>
+                            <br>
+                            <p align="left"><b>Администратор</b></p>
+                            <p align="left">Логин: admin</p>
+                            <p align="left">Пароль: password</p>
+                            <br>
+                            <p align="left"><b>Менеджер</b></p>
+                            <p align="left">Логин: manager</p>
+                            <p align="left">Пароль: password</p>
+                            <br>
+                            <p align="left"><b>Клиент</b></p>
+                            <p align="left">Логин: user</p>
+                            <p align="left">Пароль: password</p>
+                        </h6>
                     </form>
                 </div><!--/login form-->
             </div>
