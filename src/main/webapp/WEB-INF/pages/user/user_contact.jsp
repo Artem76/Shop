@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta http-equiv="Content-Type" content="text/html; charset=cp1251" \>
-    <title>Shop | КАБЕЛЬ.ЕСТЬ</title>
+    <title>Shop | РљРђР‘Р•Р›Р¬.Р•РЎРўР¬</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -37,7 +37,7 @@
                 <div class="col-sm-6 ">
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
-                            <li><a href="/user_contact">Артем Хиргий </a></li>
+                            <li><a href="/user_contact">РђСЂС‚РµРј РҐРёСЂРіРёР№ </a></li>
                             <li><a href="/user_contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
                             <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
                                 cmua76@outlook.com</a></li>
@@ -61,8 +61,8 @@
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
                             <li><a><i class="fa fa-user"></i> ${login}</a></li>
-                            <li><a href="/shop"><i class="fa fa-shopping-cart"></i> Магазин</a></li>
-                            <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Выход</a></li>
+                            <li><a href="/shop"><i class="fa fa-shopping-cart"></i> РњР°РіР°Р·РёРЅ</a></li>
+                            <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Р’С‹С…РѕРґ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -84,16 +84,16 @@
                     </div>
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li><a href="/shop">Главная</a></li>
-                            <li class="dropdown"><a <%--href="#"--%>>Заказы<i class="fa fa-angle-down"></i></a>
+                            <li><a href="/shop">Р“Р»Р°РІРЅР°СЏ</a></li>
+                            <li class="dropdown"><a <%--href="#"--%>>Р—Р°РєР°Р·С‹<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="/user_cart">Корзина</a></li>
-                                    <li><a href="/user_orders_work">В работе</a></li>
-                                    <li><a href="/user_orders_closed">Выполненные</a></li>
+                                    <li><a href="/user_cart">РљРѕСЂР·РёРЅР°</a></li>
+                                    <li><a href="/user_orders_work">Р’ СЂР°Р±РѕС‚Рµ</a></li>
+                                    <li><a href="/user_orders_closed">Р’С‹РїРѕР»РЅРµРЅРЅС‹Рµ</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/user_message">Отзывы и предложения</a></li>
-                            <li><a href="/user_contact" class="active">Контакты</a></li>
+                            <li><a href="/user_message">РћС‚Р·С‹РІС‹ Рё РїСЂРµРґР»РѕР¶РµРЅРёСЏ</a></li>
+                            <li><a href="/user_contact" class="active">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                         </ul>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
     <div class="bg">
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="title text-center">Разработчик</h2>
+                <h2 class="title text-center">Р Р°Р·СЂР°Р±РѕС‚С‡РёРє</h2>
             </div>
         </div>
         <section id="slider"><!--slider-->
@@ -122,8 +122,8 @@
                             <div class="carousel-inner">
                                 <div class="item active">
                                     <div class="col-sm-6 text-center">
-                                        <h2 style="margin-top: 60px">Обучаемость</h2>
-                                        <p>Умею быстро и эффективно учиться. </p>
+                                        <h2 style="margin-top: 60px">РћР±СѓС‡Р°РµРјРѕСЃС‚СЊ</h2>
+                                        <p>РЈРјРµСЋ Р±С‹СЃС‚СЂРѕ Рё СЌС„С„РµРєС‚РёРІРЅРѕ СѓС‡РёС‚СЊСЃСЏ. </p>
                                     </div>
                                     <div class="col-sm-6">
                                         <img src="images/study.png" class="girl img-responsive" alt=""/>
@@ -131,11 +131,11 @@
                                 </div>
                                 <div class="item">
                                     <div class="col-sm-6 text-center">
-                                        <h2 style="margin-top: 60px">Стрессоустойчивость</h2>
-                                        <p>Богатый опыт работы с разными людьми.</p>
+                                        <h2 style="margin-top: 60px">РЎС‚СЂРµСЃСЃРѕСѓСЃС‚РѕР№С‡РёРІРѕСЃС‚СЊ</h2>
+                                        <p>Р‘РѕРіР°С‚С‹Р№ РѕРїС‹С‚ СЂР°Р±РѕС‚С‹ СЃ СЂР°Р·РЅС‹РјРё Р»СЋРґСЊРјРё.</p>
                                     </div>
                                     <div class="col-sm-6">
-                                        <img src="images/cat.png" class="girl img-responsive" alt=""/>
+                                        <img src="images/leo.png" class="girl img-responsive" alt=""/>
                                     </div>
                                 </div>
                             </div>
@@ -155,7 +155,7 @@
         <div class="row">
             <div class="col-sm-4">
                 <div class="contact-info" style="text-align: center">
-                    <h2 class="title text-center">Фото</h2>
+                    <h2 class="title text-center">Р¤РѕС‚Рѕ</h2>
                     <div class="product-image-wrapper">
                         <div class="single-products">
                             <div class="productinfo text-center">
@@ -168,12 +168,12 @@
             </div>
             <div class="col-sm-8">
                 <div class="contact-form">
-                    <h2 class="title text-center">Контакты</h2>
+                    <h2 class="title text-center">РљРѕРЅС‚Р°РєС‚С‹</h2>
                     <div class="status alert alert-success" style="display: none"></div>
                     <div class="form-group col-md-12">
                         <a type="text" class="form-control" required="required"
-                           style="height: auto; margin-top: 10px">Артем Геннадьевич
-                            Хиргий</a>
+                           style="height: auto; margin-top: 10px">РђСЂС‚РµРј Р“РµРЅРЅР°РґСЊРµРІРёС‡
+                            РҐРёСЂРіРёР№</a>
                         <a type="text" class="form-control" required="required"
                            style="height: auto; margin-top: 10px"><i
                                 class="fa fa-phone"></i> +38(097)946 89 25</a>
@@ -199,7 +199,7 @@
                 <div class="col-sm-6 ">
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
-                            <li><a href="/user_contact">Артем Хиргий </a></li>
+                            <li><a href="/user_contact">РђСЂС‚РµРј РҐРёСЂРіРёР№ </a></li>
                             <li><a href="/user_contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
                             <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
                                 cmua76@outlook.com</a></li>
@@ -214,7 +214,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
-                <p class="pull-left">Copyright © 2013 E-Shopper. All rights reserved.</p>
+                <p class="pull-left">Copyright В© 2013 E-Shopper. All rights reserved.</p>
                 <p class="pull-right">Designed by <span><a target="_blank"
                                                            href="http://www.themeum.com">Themeum</a></span></p>
             </div>
@@ -230,7 +230,196 @@
 <script src="js/main.js"></script>
 <script>
     $("#logout").click(function (event) {
-        alert("Выход из акаунта!");
+        alert("Р’С‹С…РѕРґ РёР· Р°РєР°СѓРЅС‚Р°!");
+    });
+</script>
+</body>
+</html>
+
+        </div>
+    </div><!--/header_top-->
+    <div class="header-middle"><!--header-middle-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="logo pull-left">
+                        <a href="/shop"><img src="images/logo.png" alt=""/></a>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="shop-menu pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a><i class="fa fa-user"></i> ${login}</a></li>
+                            <li><a href="/shop"><i class="fa fa-shopping-cart"></i> ГЊГ ГЈГ Г§ГЁГ­</a></li>
+                            <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Г‚Г»ГµГ®Г¤</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-middle-->
+    <div class="header-bottom"><!--header-bottom-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="mainmenu pull-left">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li><a href="/shop">ГѓГ«Г ГўГ­Г Гї</a></li>
+                            <li class="dropdown"><a <%--href="#"--%>>Г‡Г ГЄГ Г§Г»<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="/user_cart">ГЉГ®Г°Г§ГЁГ­Г </a></li>
+                                    <li><a href="/user_orders_work">Г‚ Г°Г ГЎГ®ГІГҐ</a></li>
+                                    <li><a href="/user_orders_closed">Г‚Г»ГЇГ®Г«Г­ГҐГ­Г­Г»ГҐ</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/user_message">ГЋГІГ§Г»ГўГ» ГЁ ГЇГ°ГҐГ¤Г«Г®Г¦ГҐГ­ГЁГї</a></li>
+                            <li><a href="/user_contact" class="active">ГЉГ®Г­ГІГ ГЄГІГ»</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-bottom-->
+</header>
+
+<div id="contact-page" class="container" style="margin-top: 40px">
+    <div class="bg">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="title text-center">ГђГ Г§Г°Г ГЎГ®ГІГ·ГЁГЄ</h2>
+            </div>
+        </div>
+        <section id="slider"><!--slider-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#slider-carousel" data-slide-to="1"></li>
+                            </ol>
+
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="col-sm-6 text-center">
+                                        <h2 style="margin-top: 60px">ГЋГЎГіГ·Г ГҐГ¬Г®Г±ГІГј</h2>
+                                        <p>Г“Г¬ГҐГѕ ГЎГ»Г±ГІГ°Г® ГЁ ГЅГґГґГҐГЄГІГЁГўГ­Г® ГіГ·ГЁГІГјГ±Гї. </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <img src="images/study.png" class="girl img-responsive" alt=""/>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-sm-6 text-center">
+                                        <h2 style="margin-top: 60px">Г‘ГІГ°ГҐГ±Г±Г®ГіГ±ГІГ®Г©Г·ГЁГўГ®Г±ГІГј</h2>
+                                        <p>ГЃГ®ГЈГ ГІГ»Г© Г®ГЇГ»ГІ Г°Г ГЎГ®ГІГ» Г± Г°Г Г§Г­Г»Г¬ГЁ Г«ГѕГ¤ГјГ¬ГЁ.</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <img src="images/cat.png" class="girl img-responsive" alt=""/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!--/slider-->
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="contact-info" style="text-align: center">
+                    <h2 class="title text-center">Г”Г®ГІГ®</h2>
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="images/myPhoto1.png" alt=""
+                                     style="height: 180px; width: auto; margin: 10px"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="contact-form">
+                    <h2 class="title text-center">ГЉГ®Г­ГІГ ГЄГІГ»</h2>
+                    <div class="status alert alert-success" style="display: none"></div>
+                    <div class="form-group col-md-12">
+                        <a type="text" class="form-control" required="required"
+                           style="height: auto; margin-top: 10px">ГЂГ°ГІГҐГ¬ ГѓГҐГ­Г­Г Г¤ГјГҐГўГЁГ·
+                            Г•ГЁГ°ГЈГЁГ©</a>
+                        <a type="text" class="form-control" required="required"
+                           style="height: auto; margin-top: 10px"><i
+                                class="fa fa-phone"></i> +38(097)946 89 25</a>
+                        <a type="text" class="form-control" required="required"
+                           style="height: auto; margin-top: 10px"
+                           href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
+                            cmua76@outlook.com</a>
+                        <a type="text" class="form-control" required="required"
+                           style="height: auto; margin-top: 10px"
+                           href="https://www.facebook.com/artem.khirgii"><i class="fa fa-facebook"></i>
+                            artem.khirgii</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--/#contact-page-->
+
+<footer id="footer" style="margin-top: 40px"><!--Footer-->
+    <div class="header_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <div class="contactinfo">
+                        <ul class="nav nav-pills">
+                            <li><a href="/user_contact">ГЂГ°ГІГҐГ¬ Г•ГЁГ°ГЈГЁГ© </a></li>
+                            <li><a href="/user_contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
+                            <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
+                                cmua76@outlook.com</a></li>
+                            <li><a href="https://www.facebook.com/artem.khirgii"><i class="fa fa-facebook"></i>
+                                artem.khirgii</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <p class="pull-left">Copyright В© 2013 E-Shopper. All rights reserved.</p>
+                <p class="pull-right">Designed by <span><a target="_blank"
+                                                           href="http://www.themeum.com">Themeum</a></span></p>
+            </div>
+        </div>
+    </div>
+</footer><!--/Footer-->
+
+<script src="js/jquery.js"></script>
+<script src="js/price-range.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $("#logout").click(function (event) {
+        alert("Г‚Г»ГµГ®Г¤ ГЁГ§ Г ГЄГ ГіГ­ГІГ !");
     });
 </script>
 </body>
