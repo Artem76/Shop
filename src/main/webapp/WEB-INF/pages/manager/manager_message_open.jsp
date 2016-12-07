@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta http-equiv="Content-Type" content="text/html; charset=cp1251" \>
-    <title>Shop | КАБЕЛЬ.ЕСТЬ</title>
+    <title>Shop | РљРђР‘Р•Р›Р¬.Р•РЎРўР¬</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -37,7 +37,7 @@
                 <div class="col-sm-6 ">
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
-                            <li><a href="/manager_contact">Артем Хиргий </a></li>
+                            <li><a href="/manager_contact">РђСЂС‚РµРј РҐРёСЂРіРёР№ </a></li>
                             <li><a href="/manager_contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
                             <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
                                 cmua76@outlook.com</a></li>
@@ -61,7 +61,7 @@
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
                             <li><a <%--href="#"--%>><i class="fa fa-user"></i> ${login}</a></li>
-                            <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Выход</a></li>
+                            <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Р’С‹С…РѕРґ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -83,29 +83,29 @@
                     </div>
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li><a href="/shop">Новые заказы</a></li>
-                            <li class="dropdown"><a>Свои заказы<i class="fa fa-angle-down"></i></a>
+                            <li><a href="/shop">РќРѕРІС‹Рµ Р·Р°РєР°Р·С‹</a></li>
+                            <li class="dropdown"><a>РЎРІРѕРё Р·Р°РєР°Р·С‹<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="/manager_their_orders_work">В работе</a></li>
-                                    <li><a href="/manager_their_orders_closed">Выполненные</a></li>
+                                    <li><a href="/manager_their_orders_work">Р’ СЂР°Р±РѕС‚Рµ</a></li>
+                                    <li><a href="/manager_their_orders_closed">Р’С‹РїРѕР»РЅРµРЅРЅС‹Рµ</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a>Все заказы<i class="fa fa-angle-down"></i></a>
+                            <li class="dropdown"><a>Р’СЃРµ Р·Р°РєР°Р·С‹<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="/manager_all_orders_work">В работе</a></li>
-                                    <li><a href="/manager_all_orders_closed">Выполненные</a></li>
+                                    <li><a href="/manager_all_orders_work">Р’ СЂР°Р±РѕС‚Рµ</a></li>
+                                    <li><a href="/manager_all_orders_closed">Р’С‹РїРѕР»РЅРµРЅРЅС‹Рµ</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/manager_search_client">Поиск клиента</a></li>
-                            <li class="dropdown"><a>Продукция<i class="fa fa-angle-down"></i></a>
+                            <li><a href="/manager_search_client">РџРѕРёСЃРє РєР»РёРµРЅС‚Р°</a></li>
+                            <li class="dropdown"><a>РџСЂРѕРґСѓРєС†РёСЏ<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="/manager_product_all">Весь кабель</a></li>
-                                    <li><a href="/manager_product_add">Добавить кабель</a></li>
-                                    <li><a href="/manager_photo">Фото</a></li>
+                                    <li><a href="/manager_product_all">Р’РµСЃСЊ РєР°Р±РµР»СЊ</a></li>
+                                    <li><a href="/manager_product_add">Р”РѕР±Р°РІРёС‚СЊ РєР°Р±РµР»СЊ</a></li>
+                                    <li><a href="/manager_photo">Р¤РѕС‚Рѕ</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/manager_message">Отзывы и предложения</a></li>
-                            <li><a href="/manager_contact">Контакты</a></li>
+                            <li><a href="/manager_message">РћС‚Р·С‹РІС‹ Рё РїСЂРµРґР»РѕР¶РµРЅРёСЏ</a></li>
+                            <li><a href="/manager_contact">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                         </ul>
                     </div>
                 </div>
@@ -117,8 +117,8 @@
 <section id="form" style="margin: 0"><!--form-->
     <div class="container">
         <div class="row">
-            <h2 style="color: orange; text-align: center">Отзыв или предложение клиента ${message.user.login}</h2>
-            <h2 style="color: orange; text-align: center">от ${message.date}</h2>
+            <h2 style="color: orange; text-align: center">РћС‚Р·С‹РІ РёР»Рё РїСЂРµРґР»РѕР¶РµРЅРёРµ РєР»РёРµРЅС‚Р° ${message.user.login}</h2>
+            <h2 style="color: orange; text-align: center">РѕС‚ ${message.date}</h2>
         </div>
     </div>
 </section>
@@ -131,9 +131,9 @@
                     <form action="/manager_message_response?message_id=${message.id}" method="post">
                         <ul style="margin-left: -2%">
                             <li style="margin: 0 auto">${message.message}</li>
-                            <label style="margin-top: 15px">Ответ от менеджера ${login}:</label>
-                            <textarea name="manager_response" placeholder="Ответ." rows="3"></textarea>
-                            <input type="submit" id="message" class="btn btn-default check_out" value="Ответить">
+                            <label style="margin-top: 15px">РћС‚РІРµС‚ РѕС‚ РјРµРЅРµРґР¶РµСЂР° ${login}:</label>
+                            <textarea name="manager_response" placeholder="РћС‚РІРµС‚." rows="3"></textarea>
+                            <input type="submit" id="message" class="btn btn-default check_out" value="РћС‚РІРµС‚РёС‚СЊ">
                         </ul>
                     </form>
                 </div>
@@ -149,7 +149,7 @@
                 <div class="col-sm-6 ">
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
-                            <li><a href="/manager_contact">Артем Хиргий </a></li>
+                            <li><a href="/manager_contact">РђСЂС‚РµРј РҐРёСЂРіРёР№ </a></li>
                             <li><a href="/manager_contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
                             <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
                                 cmua76@outlook.com</a></li>
@@ -164,7 +164,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
-                <p class="pull-left">Copyright © 2013 E-Shopper. All rights reserved.</p>
+                <p class="pull-left">Copyright В© 2013 E-Shopper. All rights reserved.</p>
                 <p class="pull-right">Designed by <span><a target="_blank"
                                                            href="http://www.themeum.com">Themeum</a></span></p>
             </div>
@@ -180,7 +180,146 @@
 <script src="js/main.js"></script>
 <script>
     $("#logout").click(function (event) {
-        alert("Выход из акаунта!");
+        alert("Р’С‹С…РѕРґ РёР· Р°РєР°СѓРЅС‚Р°!");
+    });
+</script>
+</body>
+</html>
+
+        </div>
+    </div><!--/header_top-->
+    <div class="header-middle"><!--header-middle-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="logo pull-left">
+                        <a href="/shop"><img src="images/logo.png" alt=""/></a>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="shop-menu pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a <%--href="#"--%>><i class="fa fa-user"></i> ${login}</a></li>
+                            <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Г‚Г»ГµГ®Г¤</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-middle-->
+    <div class="header-bottom"><!--header-bottom-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="mainmenu pull-left">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li><a href="/shop">ГЌГ®ГўГ»ГҐ Г§Г ГЄГ Г§Г»</a></li>
+                            <li class="dropdown"><a>Г‘ГўГ®ГЁ Г§Г ГЄГ Г§Г»<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="/manager_their_orders_work">Г‚ Г°Г ГЎГ®ГІГҐ</a></li>
+                                    <li><a href="/manager_their_orders_closed">Г‚Г»ГЇГ®Г«Г­ГҐГ­Г­Г»ГҐ</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a>Г‚Г±ГҐ Г§Г ГЄГ Г§Г»<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="/manager_all_orders_work">Г‚ Г°Г ГЎГ®ГІГҐ</a></li>
+                                    <li><a href="/manager_all_orders_closed">Г‚Г»ГЇГ®Г«Г­ГҐГ­Г­Г»ГҐ</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/manager_search_client">ГЏГ®ГЁГ±ГЄ ГЄГ«ГЁГҐГ­ГІГ </a></li>
+                            <li class="dropdown"><a>ГЏГ°Г®Г¤ГіГЄГ¶ГЁГї<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="/manager_product_all">Г‚ГҐГ±Гј ГЄГ ГЎГҐГ«Гј</a></li>
+                                    <li><a href="/manager_product_add">Г„Г®ГЎГ ГўГЁГІГј ГЄГ ГЎГҐГ«Гј</a></li>
+                                    <li><a href="/manager_photo">Г”Г®ГІГ®</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/manager_message">ГЋГІГ§Г»ГўГ» ГЁ ГЇГ°ГҐГ¤Г«Г®Г¦ГҐГ­ГЁГї</a></li>
+                            <li><a href="/manager_contact">ГЉГ®Г­ГІГ ГЄГІГ»</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-bottom-->
+</header>
+
+<section id="form" style="margin: 0"><!--form-->
+    <div class="container">
+        <div class="row">
+            <h2 style="color: orange; text-align: center">ГЋГІГ§Г»Гў ГЁГ«ГЁ ГЇГ°ГҐГ¤Г«Г®Г¦ГҐГ­ГЁГҐ ГЄГ«ГЁГҐГ­ГІГ  ${message.user.login}</h2>
+            <h2 style="color: orange; text-align: center">Г®ГІ ${message.date}</h2>
+        </div>
+    </div>
+</section>
+
+<section style="margin-top: 30px">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="total_area">
+                    <form action="/manager_message_response?message_id=${message.id}" method="post">
+                        <ul style="margin-left: -2%">
+                            <li style="margin: 0 auto">${message.message}</li>
+                            <label style="margin-top: 15px">ГЋГІГўГҐГІ Г®ГІ Г¬ГҐГ­ГҐГ¤Г¦ГҐГ°Г  ${login}:</label>
+                            <textarea name="manager_response" placeholder="ГЋГІГўГҐГІ." rows="3"></textarea>
+                            <input type="submit" id="message" class="btn btn-default check_out" value="ГЋГІГўГҐГІГЁГІГј">
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="footer"><!--Footer-->
+    <div class="header_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <div class="contactinfo">
+                        <ul class="nav nav-pills">
+                            <li><a href="/manager_contact">ГЂГ°ГІГҐГ¬ Г•ГЁГ°ГЈГЁГ© </a></li>
+                            <li><a href="/manager_contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
+                            <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
+                                cmua76@outlook.com</a></li>
+                            <li><a href="https://www.facebook.com/artem.khirgii"><i class="fa fa-facebook"></i>
+                                artem.khirgii</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <p class="pull-left">Copyright В© 2013 E-Shopper. All rights reserved.</p>
+                <p class="pull-right">Designed by <span><a target="_blank"
+                                                           href="http://www.themeum.com">Themeum</a></span></p>
+            </div>
+        </div>
+    </div>
+</footer><!--/Footer-->
+
+<script src="js/jquery.js"></script>
+<script src="js/price-range.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $("#logout").click(function (event) {
+        alert("Г‚Г»ГµГ®Г¤ ГЁГ§ Г ГЄГ ГіГ­ГІГ !");
     });
 </script>
 </body>
