@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta http-equiv="Content-Type" content="text/html; charset=cp1251" \>
-    <title>Login | КАБЕЛЬ.ЕСТЬ</title>
+    <title>Login | РљРђР‘Р•Р›Р¬.Р•РЎРўР¬</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -38,7 +38,7 @@
                 <div class="col-sm-6 ">
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
-                            <li><a href="/contact">Артем Хиргий </a></li>
+                            <li><a href="/contact">РђСЂС‚РµРј РҐРёСЂРіРёР№ </a></li>
                             <li><a href="/contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
                             <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
                                 cmua76@outlook.com</a></li>
@@ -69,58 +69,58 @@
     <div class="container">
         <div class="row">
             <c:if test="${param.error ne null}">
-                <h2 style="color: red; margin-left: 28%">Данные введены с ошибками!</h2>
+                <h2 style="color: red; margin-left: 28%">Р”Р°РЅРЅС‹Рµ РІРІРµРґРµРЅС‹ СЃ РѕС€РёР±РєР°РјРё!</h2>
                 <br><br><br>
             </c:if>
             <c:if test="${param.reg ne null}">
-                <h2 style="color: greenyellow; margin-left: 9%">Регистрация прошла успешно, войдите под своим
-                    логином!</h2>
+                <h2 style="color: greenyellow; margin-left: 9%">Р РµРіРёСЃС‚СЂР°С†РёСЏ РїСЂРѕС€Р»Р° СѓСЃРїРµС€РЅРѕ, РІРѕР№РґРёС‚Рµ РїРѕРґ СЃРІРѕРёРј
+                    Р»РѕРіРёРЅРѕРј!</h2>
                 <br><br><br>
             </c:if>
             <c:if test="${param.log ne null}">
-                <h2 style="color: red; margin-left: 28%">Такой логин уже существует!</h2>
+                <h2 style="color: red; margin-left: 28%">РўР°РєРѕР№ Р»РѕРіРёРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!</h2>
                 <br><br><br>
             </c:if>
             <div class="col-sm-4 col-sm-offset-1">
                 <div class="login-form"><!--login form-->
-                    <h2>Вход</h2>
+                    <h2>Р’С…РѕРґ</h2>
                     <c:url value="/j_spring_security_check" var="loginUrl"/>
                     <form action="${loginUrl}" method="post">
-                        <input type="text" placeholder="Логин" name="j_login"/>
-                        <input type="password" placeholder="Пароль" name="j_password"/>
-                        <button type="submit" class="btn btn-default">Вход</button>
+                        <input type="text" placeholder="Р›РѕРіРёРЅ" name="j_login"/>
+                        <input type="password" placeholder="РџР°СЂРѕР»СЊ" name="j_password"/>
+                        <button type="submit" class="btn btn-default">Р’С…РѕРґ</button>
                         <h6>
-                            <p align="left">Инфорамция для тестирования.</p>
+                            <p align="left">РРЅС„РѕСЂР°РјС†РёСЏ РґР»СЏ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ.</p>
                             <br>
-                            <p align="left"><b>Администратор</b></p>
-                            <p align="left">Логин: admin</p>
-                            <p align="left">Пароль: password</p>
+                            <p align="left"><b>РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ</b></p>
+                            <p align="left">Р›РѕРіРёРЅ: admin</p>
+                            <p align="left">РџР°СЂРѕР»СЊ: password</p>
                             <br>
-                            <p align="left"><b>Менеджер</b></p>
-                            <p align="left">Логин: manager</p>
-                            <p align="left">Пароль: password</p>
+                            <p align="left"><b>РњРµРЅРµРґР¶РµСЂ</b></p>
+                            <p align="left">Р›РѕРіРёРЅ: manager</p>
+                            <p align="left">РџР°СЂРѕР»СЊ: password</p>
                             <br>
-                            <p align="left"><b>Клиент</b></p>
-                            <p align="left">Логин: user</p>
-                            <p align="left">Пароль: password</p>
+                            <p align="left"><b>РљР»РёРµРЅС‚</b></p>
+                            <p align="left">Р›РѕРіРёРЅ: user</p>
+                            <p align="left">РџР°СЂРѕР»СЊ: password</p>
                         </h6>
                     </form>
                 </div><!--/login form-->
             </div>
             <div class="col-sm-1">
-                <h2 class="or">ИЛИ</h2>
+                <h2 class="or">РР›Р</h2>
             </div>
             <div class="col-sm-4">
                 <div class="signup-form"><!--sign up form-->
-                    <h2>Регистрация!</h2>
+                    <h2>Р РµРіРёСЃС‚СЂР°С†РёСЏ!</h2>
                     <form action="/reg" method="post">
-                        <input type="text" placeholder="Логин" name="login"/>
-                        <input type="password" placeholder="Пароль" name="password1"/>
-                        <input type="password" placeholder="Повторите пароль" name="password2"/>
-                        <input type="text" placeholder="Телефон" name="phone"/>
+                        <input type="text" placeholder="Р›РѕРіРёРЅ" name="login"/>
+                        <input type="password" placeholder="РџР°СЂРѕР»СЊ" name="password1"/>
+                        <input type="password" placeholder="РџРѕРІС‚РѕСЂРёС‚Рµ РїР°СЂРѕР»СЊ" name="password2"/>
+                        <input type="text" placeholder="РўРµР»РµС„РѕРЅ" name="phone"/>
                         <input type="email" placeholder="Email" name="email"/>
-                        <input type="text" placeholder="Адрес" name="address"/>
-                        <button type="submit" class="btn btn-default">Зарегистрироваться</button>
+                        <input type="text" placeholder="РђРґСЂРµСЃ" name="address"/>
+                        <button type="submit" class="btn btn-default">Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°С‚СЊСЃСЏ</button>
                     </form>
                 </div><!--/sign up form-->
             </div>
@@ -136,8 +136,8 @@
                 <div class="row">
                     <div class="col-sm-2">
                         <div class="companyinfo">
-                            <h2><span>Кабель</span>.Есть</h2>
-                            <p href="/">Пользуйтесь услугами нашего магазина и все будет ОТЛИЧНО!!!</p>
+                            <h2><span>РљР°Р±РµР»СЊ</span>.Р•СЃС‚СЊ</h2>
+                            <p href="/">РџРѕР»СЊР·СѓР№С‚РµСЃСЊ СѓСЃР»СѓРіР°РјРё РЅР°С€РµРіРѕ РјР°РіР°Р·РёРЅР° Рё РІСЃРµ Р±СѓРґРµС‚ РћРўР›РР§РќРћ!!!</p>
                         </div>
                     </div>
                     <div class="col-sm-7">
@@ -148,11 +148,11 @@
                                         <img src="images/purse.jpg" alt=""/>
                                     </div>
                                     <div class="overlay-icon">
-                                        <i style="margin: auto">ЦЕНА</i>
+                                        <i style="margin: auto">Р¦Р•РќРђ</i>
                                     </div>
                                 </a>
-                                <p>Низкие цены</p>
-                                <h2>Дешевле не найдете</h2>
+                                <p>РќРёР·РєРёРµ С†РµРЅС‹</p>
+                                <h2>Р”РµС€РµРІР»Рµ РЅРµ РЅР°Р№РґРµС‚Рµ</h2>
                             </div>
                         </div>
 
@@ -163,11 +163,11 @@
                                         <img src="images/car.png" alt=""/>
                                     </div>
                                     <div class="overlay-icon">
-                                        <i style="margin: auto">СКОРОСТЬ</i>
+                                        <i style="margin: auto">РЎРљРћР РћРЎРўР¬</i>
                                     </div>
                                 </a>
-                                <p>Быстрая доставка</p>
-                                <h2>Быстрее всех</h2>
+                                <p>Р‘С‹СЃС‚СЂР°СЏ РґРѕСЃС‚Р°РІРєР°</p>
+                                <h2>Р‘С‹СЃС‚СЂРµРµ РІСЃРµС…</h2>
                             </div>
                         </div>
 
@@ -178,18 +178,18 @@
                                         <img src="images/kachestvo.png" alt=""/>
                                     </div>
                                     <div class="overlay-icon">
-                                        <i style="margin: auto">КАЧЕСТВО</i>
+                                        <i style="margin: auto">РљРђР§Р•РЎРўР’Рћ</i>
                                     </div>
                                 </a>
-                                <p>Высокое качество</p>
-                                <h2>Только лучшее</h2>
+                                <p>Р’С‹СЃРѕРєРѕРµ РєР°С‡РµСЃС‚РІРѕ</p>
+                                <h2>РўРѕР»СЊРєРѕ Р»СѓС‡С€РµРµ</h2>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="address">
                             <img src="images/home/map.png" alt=""/>
-                            <p href="/">Мы находимся в Украине.</p>
+                            <p href="/">РњС‹ РЅР°С…РѕРґРёРјСЃСЏ РІ РЈРєСЂР°РёРЅРµ.</p>
                         </div>
                     </div>
                 </div>
@@ -202,7 +202,7 @@
                 <div class="col-sm-6 ">
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
-                            <li><a href="/contact">Артем Хиргий </a></li>
+                            <li><a href="/contact">РђСЂС‚РµРј РҐРёСЂРіРёР№ </a></li>
                             <li><a href="/contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
                             <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
                                 cmua76@outlook.com</a></li>
@@ -219,7 +219,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
-                <p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
+                <p class="pull-left">Copyright В© 2013 E-SHOPPER Inc. All rights reserved.</p>
                 <p class="pull-right">Designed by <span><a target="_blank"
                                                            href="http://www.themeum.com">Themeum</a></span></p>
             </div>
