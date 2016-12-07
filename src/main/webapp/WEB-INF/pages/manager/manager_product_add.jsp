@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta http-equiv="Content-Type" content="text/html; charset=cp1251" \>
-    <title>Shop | КАБЕЛЬ.ЕСТЬ</title>
+    <title>Shop | РљРђР‘Р•Р›Р¬.Р•РЎРўР¬</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -37,7 +37,7 @@
                 <div class="col-sm-6 ">
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
-                            <li><a href="/manager_contact">Артем Хиргий </a></li>
+                            <li><a href="/manager_contact">РђСЂС‚РµРј РҐРёСЂРіРёР№ </a></li>
                             <li><a href="/manager_contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
                             <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
                                 cmua76@outlook.com</a></li>
@@ -61,7 +61,7 @@
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
                             <li><a <%--href="#"--%>><i class="fa fa-user"></i> ${login}</a></li>
-                            <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Выход</a></li>
+                            <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Р’С‹С…РѕРґ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -83,29 +83,29 @@
                     </div>
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li><a href="/shop">Новые заказы</a></li>
-                            <li class="dropdown"><a>Свои заказы<i class="fa fa-angle-down"></i></a>
+                            <li><a href="/shop">РќРѕРІС‹Рµ Р·Р°РєР°Р·С‹</a></li>
+                            <li class="dropdown"><a>РЎРІРѕРё Р·Р°РєР°Р·С‹<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="/manager_their_orders_work">В работе</a></li>
-                                    <li><a href="/manager_their_orders_closed">Выполненные</a></li>
+                                    <li><a href="/manager_their_orders_work">Р’ СЂР°Р±РѕС‚Рµ</a></li>
+                                    <li><a href="/manager_their_orders_closed">Р’С‹РїРѕР»РЅРµРЅРЅС‹Рµ</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a>Все заказы<i class="fa fa-angle-down"></i></a>
+                            <li class="dropdown"><a>Р’СЃРµ Р·Р°РєР°Р·С‹<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="/manager_all_orders_work">В работе</a></li>
-                                    <li><a href="/manager_all_orders_closed">Выполненные</a></li>
+                                    <li><a href="/manager_all_orders_work">Р’ СЂР°Р±РѕС‚Рµ</a></li>
+                                    <li><a href="/manager_all_orders_closed">Р’С‹РїРѕР»РЅРµРЅРЅС‹Рµ</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/manager_search_client">Поиск клиента</a></li>
-                            <li class="dropdown"><a>Продукция<i class="fa fa-angle-down"></i></a>
+                            <li><a href="/manager_search_client">РџРѕРёСЃРє РєР»РёРµРЅС‚Р°</a></li>
+                            <li class="dropdown"><a>РџСЂРѕРґСѓРєС†РёСЏ<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="/manager_product_all">Весь кабель</a></li>
-                                    <li><a href="/manager_product_add" class="active">Добавить кабель</a></li>
-                                    <li><a href="/manager_photo">Фото</a></li>
+                                    <li><a href="/manager_product_all">Р’РµСЃСЊ РєР°Р±РµР»СЊ</a></li>
+                                    <li><a href="/manager_product_add" class="active">Р”РѕР±Р°РІРёС‚СЊ РєР°Р±РµР»СЊ</a></li>
+                                    <li><a href="/manager_photo">Р¤РѕС‚Рѕ</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/manager_message">Отзывы и предложения</a></li>
-                            <li><a href="/manager_contact">Контакты</a></li>
+                            <li><a href="/manager_message">РћС‚Р·С‹РІС‹ Рё РїСЂРµРґР»РѕР¶РµРЅРёСЏ</a></li>
+                            <li><a href="/manager_contact">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                         </ul>
                     </div>
                 </div>
@@ -119,18 +119,18 @@
     <div class="container">
         <div class="row">
             <c:if test="${not empty data_error}">
-                <h2 style="color: red; text-align: center">Ошибочые данные</h2>
+                <h2 style="color: red; text-align: center">РћС€РёР±РѕС‡С‹Рµ РґР°РЅРЅС‹Рµ</h2>
             </c:if>
             <c:if test="${not empty photo_error}">
-                <h2 style="color: red; text-align: center">Не выбрано фото</h2>
+                <h2 style="color: red; text-align: center">РќРµ РІС‹Р±СЂР°РЅРѕ С„РѕС‚Рѕ</h2>
             </c:if>
             <c:if test="${not empty type_erorr}">
-                <h2 style="color: red; text-align: center">Такой кабель уже существует</h2>
+                <h2 style="color: red; text-align: center">РўР°РєРѕР№ РєР°Р±РµР»СЊ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚</h2>
             </c:if>
             <c:if test="${not empty add}">
-                <h2 style="color: greenyellow; text-align: center">Кабель успешно добавлен</h2>
+                <h2 style="color: greenyellow; text-align: center">РљР°Р±РµР»СЊ СѓСЃРїРµС€РЅРѕ РґРѕР±Р°РІР»РµРЅ</h2>
             </c:if>
-            <h2 style="color: orange; text-align: center">Добавление кабеля</h2>
+            <h2 style="color: orange; text-align: center">Р”РѕР±Р°РІР»РµРЅРёРµ РєР°Р±РµР»СЏ</h2>
         </div>
     </div>
 </section>
@@ -141,35 +141,35 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="left-sidebar">
-                        <h2>Параметры</h2>
+                        <h2>РџР°СЂР°РјРµС‚СЂС‹</h2>
                         <div class="panel-group category-products" id="accordian"><!--category-productsr-->
                             <section>
                                 <div class="container">
                                     <h4 class="panel-title">
-                                        <p>Тип кабеля</p>
-                                        <input type="text" name="type_cable" placeholder="Тип">
+                                        <p>РўРёРї РєР°Р±РµР»СЏ</p>
+                                        <input type="text" name="type_cable" placeholder="РўРёРї">
                                         <p></p>
-                                        <p>Количество жил кабеля</p>
-                                        <input type="text" name="numberOfWires_cable" placeholder="Количество жил">
+                                        <p>РљРѕР»РёС‡РµСЃС‚РІРѕ Р¶РёР» РєР°Р±РµР»СЏ</p>
+                                        <input type="text" name="numberOfWires_cable" placeholder="РљРѕР»РёС‡РµСЃС‚РІРѕ Р¶РёР»">
                                         <p></p>
-                                        <p>Площадь поперечного сечения жилы</p>
-                                        <input type="text" name="area_cable" placeholder="Сечение">
+                                        <p>РџР»РѕС‰Р°РґСЊ РїРѕРїРµСЂРµС‡РЅРѕРіРѕ СЃРµС‡РµРЅРёСЏ Р¶РёР»С‹</p>
+                                        <input type="text" name="area_cable" placeholder="РЎРµС‡РµРЅРёРµ">
                                         <p></p>
-                                        <p>Стоимость кабеля, грн.</p>
-                                        <input type="text" name="price_cable" placeholder="Цена">
+                                        <p>РЎС‚РѕРёРјРѕСЃС‚СЊ РєР°Р±РµР»СЏ, РіСЂРЅ.</p>
+                                        <input type="text" name="price_cable" placeholder="Р¦РµРЅР°">
                                         <p></p>
-                                        <p>Количество кабеля, м.</p>
-                                        <input type="text" name="number_cable" placeholder="Количество">
+                                        <p>РљРѕР»РёС‡РµСЃС‚РІРѕ РєР°Р±РµР»СЏ, Рј.</p>
+                                        <input type="text" name="number_cable" placeholder="РљРѕР»РёС‡РµСЃС‚РІРѕ">
                                         <p></p>
-                                        <p>Описание кабеля</p>
-                                        <input type="text" name="description_cable" placeholder="Описание">
+                                        <p>РћРїРёСЃР°РЅРёРµ РєР°Р±РµР»СЏ</p>
+                                        <input type="text" name="description_cable" placeholder="РћРїРёСЃР°РЅРёРµ">
                                         <p></p>
                                     </h4>
                                 </div>
                             </section>
                             <section>
                                 <div class="container">
-                                    <input type="submit" class="btn btn-default update" value="Добавить"
+                                    <input type="submit" class="btn btn-default update" value="Р”РѕР±Р°РІРёС‚СЊ"
                                            style="margin: 0 auto">
                                 </div>
                             </section>
@@ -178,14 +178,14 @@
                 </div>
                 <div class="col-sm-8 padding-right">
                     <div class="features_items"><!--features_items-->
-                        <h2 class="title text-center">Фото для кабеля</h2>
+                        <h2 class="title text-center">Р¤РѕС‚Рѕ РґР»СЏ РєР°Р±РµР»СЏ</h2>
                         <div class="col-sm-2">
                             <div class="product-image-wrapper">
                                 <div class="single-products">
                                     <div class="productinfo text-center">
                                         <img src="images/not.png" alt=""/>
                                         <h4><input type="radio" name="photo_name"
-                                                   value="" checked> пусто</h4>
+                                                   value="" checked> РїСѓСЃС‚Рѕ</h4>
                                     </div>
                                 </div>
                             </div>
@@ -217,7 +217,7 @@
                 <div class="col-sm-6 ">
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
-                            <li><a href="/contact">Артем Хиргий </a></li>
+                            <li><a href="/contact">РђСЂС‚РµРј РҐРёСЂРіРёР№ </a></li>
                             <li><a href="/contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
                             <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
                                 cmua76@outlook.com</a></li>
@@ -232,7 +232,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
-                <p class="pull-left">Copyright © 2013 E-Shopper. All rights reserved.</p>
+                <p class="pull-left">Copyright В© 2013 E-Shopper. All rights reserved.</p>
                 <p class="pull-right">Designed by <span><a target="_blank"
                                                            href="http://www.themeum.com">Themeum</a></span></p>
             </div>
@@ -248,7 +248,214 @@
 <script src="js/main.js"></script>
 <script>
     $("#logout").click(function (event) {
-        alert("Выход из акаунта!");
+        alert("Р’С‹С…РѕРґ РёР· Р°РєР°СѓРЅС‚Р°!");
+    });
+</script>
+</body>
+</html>
+
+        </div>
+    </div><!--/header_top-->
+    <div class="header-middle"><!--header-middle-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="logo pull-left">
+                        <a href="/shop"><img src="images/logo.png" alt=""/></a>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="shop-menu pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a <%--href="#"--%>><i class="fa fa-user"></i> ${login}</a></li>
+                            <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Г‚Г»ГµГ®Г¤</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-middle-->
+    <div class="header-bottom"><!--header-bottom-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="mainmenu pull-left">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li><a href="/shop">ГЌГ®ГўГ»ГҐ Г§Г ГЄГ Г§Г»</a></li>
+                            <li class="dropdown"><a>Г‘ГўГ®ГЁ Г§Г ГЄГ Г§Г»<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="/manager_their_orders_work">Г‚ Г°Г ГЎГ®ГІГҐ</a></li>
+                                    <li><a href="/manager_their_orders_closed">Г‚Г»ГЇГ®Г«Г­ГҐГ­Г­Г»ГҐ</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a>Г‚Г±ГҐ Г§Г ГЄГ Г§Г»<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="/manager_all_orders_work">Г‚ Г°Г ГЎГ®ГІГҐ</a></li>
+                                    <li><a href="/manager_all_orders_closed">Г‚Г»ГЇГ®Г«Г­ГҐГ­Г­Г»ГҐ</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/manager_search_client">ГЏГ®ГЁГ±ГЄ ГЄГ«ГЁГҐГ­ГІГ </a></li>
+                            <li class="dropdown"><a>ГЏГ°Г®Г¤ГіГЄГ¶ГЁГї<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="/manager_product_all">Г‚ГҐГ±Гј ГЄГ ГЎГҐГ«Гј</a></li>
+                                    <li><a href="/manager_product_add" class="active">Г„Г®ГЎГ ГўГЁГІГј ГЄГ ГЎГҐГ«Гј</a></li>
+                                    <li><a href="/manager_photo">Г”Г®ГІГ®</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/manager_message">ГЋГІГ§Г»ГўГ» ГЁ ГЇГ°ГҐГ¤Г«Г®Г¦ГҐГ­ГЁГї</a></li>
+                            <li><a href="/manager_contact">ГЉГ®Г­ГІГ ГЄГІГ»</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-bottom-->
+</header>
+
+
+<section id="form" style="margin: 0"><!--form-->
+    <div class="container">
+        <div class="row">
+            <c:if test="${not empty data_error}">
+                <h2 style="color: red; text-align: center">ГЋГёГЁГЎГ®Г·Г»ГҐ Г¤Г Г­Г­Г»ГҐ</h2>
+            </c:if>
+            <c:if test="${not empty photo_error}">
+                <h2 style="color: red; text-align: center">ГЌГҐ ГўГ»ГЎГ°Г Г­Г® ГґГ®ГІГ®</h2>
+            </c:if>
+            <c:if test="${not empty type_erorr}">
+                <h2 style="color: red; text-align: center">Г’Г ГЄГ®Г© ГЄГ ГЎГҐГ«Гј ГіГ¦ГҐ Г±ГіГ№ГҐГ±ГІГўГіГҐГІ</h2>
+            </c:if>
+            <c:if test="${not empty add}">
+                <h2 style="color: greenyellow; text-align: center">ГЉГ ГЎГҐГ«Гј ГіГ±ГЇГҐГёГ­Г® Г¤Г®ГЎГ ГўГ«ГҐГ­</h2>
+            </c:if>
+            <h2 style="color: orange; text-align: center">Г„Г®ГЎГ ГўГ«ГҐГ­ГЁГҐ ГЄГ ГЎГҐГ«Гї</h2>
+        </div>
+    </div>
+</section>
+
+<form action="/manager_product_add_post" method="post">
+    <section style="margin-top: 30px">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="left-sidebar">
+                        <h2>ГЏГ Г°Г Г¬ГҐГІГ°Г»</h2>
+                        <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+                            <section>
+                                <div class="container">
+                                    <h4 class="panel-title">
+                                        <p>Г’ГЁГЇ ГЄГ ГЎГҐГ«Гї</p>
+                                        <input type="text" name="type_cable" placeholder="Г’ГЁГЇ">
+                                        <p></p>
+                                        <p>ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г¦ГЁГ« ГЄГ ГЎГҐГ«Гї</p>
+                                        <input type="text" name="numberOfWires_cable" placeholder="ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г¦ГЁГ«">
+                                        <p></p>
+                                        <p>ГЏГ«Г®Г№Г Г¤Гј ГЇГ®ГЇГҐГ°ГҐГ·Г­Г®ГЈГ® Г±ГҐГ·ГҐГ­ГЁГї Г¦ГЁГ«Г»</p>
+                                        <input type="text" name="area_cable" placeholder="Г‘ГҐГ·ГҐГ­ГЁГҐ">
+                                        <p></p>
+                                        <p>Г‘ГІГ®ГЁГ¬Г®Г±ГІГј ГЄГ ГЎГҐГ«Гї, ГЈГ°Г­.</p>
+                                        <input type="text" name="price_cable" placeholder="Г–ГҐГ­Г ">
+                                        <p></p>
+                                        <p>ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЄГ ГЎГҐГ«Гї, Г¬.</p>
+                                        <input type="text" name="number_cable" placeholder="ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ®">
+                                        <p></p>
+                                        <p>ГЋГЇГЁГ±Г Г­ГЁГҐ ГЄГ ГЎГҐГ«Гї</p>
+                                        <input type="text" name="description_cable" placeholder="ГЋГЇГЁГ±Г Г­ГЁГҐ">
+                                        <p></p>
+                                    </h4>
+                                </div>
+                            </section>
+                            <section>
+                                <div class="container">
+                                    <input type="submit" class="btn btn-default update" value="Г„Г®ГЎГ ГўГЁГІГј"
+                                           style="margin: 0 auto">
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8 padding-right">
+                    <div class="features_items"><!--features_items-->
+                        <h2 class="title text-center">Г”Г®ГІГ® Г¤Г«Гї ГЄГ ГЎГҐГ«Гї</h2>
+                        <div class="col-sm-2">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+                                        <img src="images/not.png" alt=""/>
+                                        <h4><input type="radio" name="photo_name"
+                                                   value="" checked> ГЇГіГ±ГІГ®</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <c:forEach items="${photoNames}" var="name">
+                            <div class="col-sm-2">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="/photo_name/${name}" alt=""/>
+                                            <h4><input type="radio" name="photo_name"
+                                                       value="${name}"> ${name}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </c:forEach>
+                    </div><!--features_items-->
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+
+<footer id="footer"><!--Footer-->
+    <div class="header_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <div class="contactinfo">
+                        <ul class="nav nav-pills">
+                            <li><a href="/contact">ГЂГ°ГІГҐГ¬ Г•ГЁГ°ГЈГЁГ© </a></li>
+                            <li><a href="/contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
+                            <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
+                                cmua76@outlook.com</a></li>
+                            <li><a href="https://www.facebook.com/artem.khirgii"><i class="fa fa-facebook"></i>
+                                artem.khirgii</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <p class="pull-left">Copyright В© 2013 E-Shopper. All rights reserved.</p>
+                <p class="pull-right">Designed by <span><a target="_blank"
+                                                           href="http://www.themeum.com">Themeum</a></span></p>
+            </div>
+        </div>
+    </div>
+</footer><!--/Footer-->
+
+<script src="js/jquery.js"></script>
+<script src="js/price-range.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $("#logout").click(function (event) {
+        alert("Г‚Г»ГµГ®Г¤ ГЁГ§ Г ГЄГ ГіГ­ГІГ !");
     });
 </script>
 </body>
