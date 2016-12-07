@@ -41,18 +41,18 @@ public class Application {
 //                    }
 //                }
                 userService.addUser(new CustomUser("admin", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.ADMIN));
-//                userService.addUser(new CustomUser("user", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.USER, "cmua76@outlook.com", "+380979468925", "г.Киев, ул. Кукурузная 48"));
-//                userService.addUser(new CustomUser("user1", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.USER, "inset@live.ru", "+380950138166", "г.Киев, ул. Кукурузная 50"));
+//                userService.addUser(new CustomUser("user", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.USER, "cmua76@outlook.com", "+380979468925", "Рі.РљРёРµРІ, СѓР». РљСѓРєСѓСЂСѓР·РЅР°СЏ 48"));
+//                userService.addUser(new CustomUser("user1", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.USER, "inset@live.ru", "+380950138166", "Рі.РљРёРµРІ, СѓР». РљСѓРєСѓСЂСѓР·РЅР°СЏ 50"));
 //                userService.addUser(new CustomUser("manager", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.MANAGER));
 //                userService.addUser(new CustomUser("manager1", "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8", UserRole.MANAGER));
-//                productService.addProduct(new Product("ВВГ",3,6.0,750,38.40,"Медный силовой кабель для наружных и внутренних работ.",photoService.getPhotoByName("vvg3")));
-//                productService.addProduct(new Product("ПВС",4,4.0,350,25.90,"Медный гибкий шнур для внутренних работ.",photoService.getPhotoByName("pvs4")));
-//                productService.addProduct(new Product("ПВС",2,1.5,350,9.56,"Медный гибкий шнур для внутренних работ.",photoService.getPhotoByName("pvs2")));
-//                productService.addProduct(new Product("ВВГ",5,4.0,300,35.87,"Медный силовой кабель для наружных и внутренних работ.",photoService.getPhotoByName("vvg5")));
-//                productService.addProduct(new Product("ВВГ",2,1.5,450,12.34,"Медный силовой кабель для наружных и внутренних работ.",photoService.getPhotoByName("vvg2")));
-//                productService.addProduct(new Product("ПВС",5,6.0,850,42.84,"Медный гибкий шнур для внутренних работ.",photoService.getPhotoByName("pvs5")));
-//                productService.addProduct(new Product("ПВС",3,2.5,250,17.66,"Медный гибкий шнур для внутренних работ.",photoService.getPhotoByName("pvs3")));
-//                productService.addProduct(new Product("ВВГ",4,2.5,450,24.54,"Медный силовой кабель для наружных и внутренних работ.",photoService.getPhotoByName("vvg4")));
+//                productService.addProduct(new Product("Р’Р’Р“",3,6.0,750,38.40,"РњРµРґРЅС‹Р№ СЃРёР»РѕРІРѕР№ РєР°Р±РµР»СЊ РґР»СЏ РЅР°СЂСѓР¶РЅС‹С… Рё РІРЅСѓС‚СЂРµРЅРЅРёС… СЂР°Р±РѕС‚.",photoService.getPhotoByName("vvg3")));
+//                productService.addProduct(new Product("РџР’РЎ",4,4.0,350,25.90,"РњРµРґРЅС‹Р№ РіРёР±РєРёР№ С€РЅСѓСЂ РґР»СЏ РІРЅСѓС‚СЂРµРЅРЅРёС… СЂР°Р±РѕС‚.",photoService.getPhotoByName("pvs4")));
+//                productService.addProduct(new Product("РџР’РЎ",2,1.5,350,9.56,"РњРµРґРЅС‹Р№ РіРёР±РєРёР№ С€РЅСѓСЂ РґР»СЏ РІРЅСѓС‚СЂРµРЅРЅРёС… СЂР°Р±РѕС‚.",photoService.getPhotoByName("pvs2")));
+//                productService.addProduct(new Product("Р’Р’Р“",5,4.0,300,35.87,"РњРµРґРЅС‹Р№ СЃРёР»РѕРІРѕР№ РєР°Р±РµР»СЊ РґР»СЏ РЅР°СЂСѓР¶РЅС‹С… Рё РІРЅСѓС‚СЂРµРЅРЅРёС… СЂР°Р±РѕС‚.",photoService.getPhotoByName("vvg5")));
+//                productService.addProduct(new Product("Р’Р’Р“",2,1.5,450,12.34,"РњРµРґРЅС‹Р№ СЃРёР»РѕРІРѕР№ РєР°Р±РµР»СЊ РґР»СЏ РЅР°СЂСѓР¶РЅС‹С… Рё РІРЅСѓС‚СЂРµРЅРЅРёС… СЂР°Р±РѕС‚.",photoService.getPhotoByName("vvg2")));
+//                productService.addProduct(new Product("РџР’РЎ",5,6.0,850,42.84,"РњРµРґРЅС‹Р№ РіРёР±РєРёР№ С€РЅСѓСЂ РґР»СЏ РІРЅСѓС‚СЂРµРЅРЅРёС… СЂР°Р±РѕС‚.",photoService.getPhotoByName("pvs5")));
+//                productService.addProduct(new Product("РџР’РЎ",3,2.5,250,17.66,"РњРµРґРЅС‹Р№ РіРёР±РєРёР№ С€РЅСѓСЂ РґР»СЏ РІРЅСѓС‚СЂРµРЅРЅРёС… СЂР°Р±РѕС‚.",photoService.getPhotoByName("pvs3")));
+//                productService.addProduct(new Product("Р’Р’Р“",4,2.5,450,24.54,"РњРµРґРЅС‹Р№ СЃРёР»РѕРІРѕР№ РєР°Р±РµР»СЊ РґР»СЏ РЅР°СЂСѓР¶РЅС‹С… Рё РІРЅСѓС‚СЂРµРЅРЅРёС… СЂР°Р±РѕС‚.",photoService.getPhotoByName("vvg4")));
             }
         };
     }
