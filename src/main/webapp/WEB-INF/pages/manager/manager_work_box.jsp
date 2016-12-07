@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta http-equiv="Content-Type" content="text/html; charset=cp1251" \>
-    <title>Shop | КАБЕЛЬ.ЕСТЬ</title>
+    <title>Shop | РљРђР‘Р•Р›Р¬.Р•РЎРўР¬</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -37,7 +37,7 @@
                 <div class="col-sm-6 ">
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
-                            <li><a href="/manager_contact">Артем Хиргий </a></li>
+                            <li><a href="/manager_contact">РђСЂС‚РµРј РҐРёСЂРіРёР№ </a></li>
                             <li><a href="/manager_contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
                             <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
                                 cmua76@outlook.com</a></li>
@@ -61,7 +61,7 @@
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
                             <li><a <%--href="#"--%>><i class="fa fa-user"></i> ${login}</a></li>
-                            <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Выход</a></li>
+                            <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Р’С‹С…РѕРґ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -83,29 +83,29 @@
                     </div>
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li><a href="/shop">Новые заказы</a></li>
-                            <li class="dropdown"><a>Свои заказы<i class="fa fa-angle-down"></i></a>
+                            <li><a href="/shop">РќРѕРІС‹Рµ Р·Р°РєР°Р·С‹</a></li>
+                            <li class="dropdown"><a>РЎРІРѕРё Р·Р°РєР°Р·С‹<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="/manager_their_orders_work">В работе</a></li>
-                                    <li><a href="/manager_their_orders_closed">Выполненные</a></li>
+                                    <li><a href="/manager_their_orders_work">Р’ СЂР°Р±РѕС‚Рµ</a></li>
+                                    <li><a href="/manager_their_orders_closed">Р’С‹РїРѕР»РЅРµРЅРЅС‹Рµ</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a>Все заказы<i class="fa fa-angle-down"></i></a>
+                            <li class="dropdown"><a>Р’СЃРµ Р·Р°РєР°Р·С‹<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="/manager_all_orders_work">В работе</a></li>
-                                    <li><a href="/manager_all_orders_closed">Выполненные</a></li>
+                                    <li><a href="/manager_all_orders_work">Р’ СЂР°Р±РѕС‚Рµ</a></li>
+                                    <li><a href="/manager_all_orders_closed">Р’С‹РїРѕР»РЅРµРЅРЅС‹Рµ</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/manager_search_client">Поиск клиента</a></li>
-                            <li class="dropdown"><a>Продукция<i class="fa fa-angle-down"></i></a>
+                            <li><a href="/manager_search_client">РџРѕРёСЃРє РєР»РёРµРЅС‚Р°</a></li>
+                            <li class="dropdown"><a>РџСЂРѕРґСѓРєС†РёСЏ<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="/manager_product_all">Весь кабель</a></li>
-                                    <li><a href="/manager_product_add">Добавить кабель</a></li>
-                                    <li><a href="/manager_photo">Фото</a></li>
+                                    <li><a href="/manager_product_all">Р’РµСЃСЊ РєР°Р±РµР»СЊ</a></li>
+                                    <li><a href="/manager_product_add">Р”РѕР±Р°РІРёС‚СЊ РєР°Р±РµР»СЊ</a></li>
+                                    <li><a href="/manager_photo">Р¤РѕС‚Рѕ</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/manager_message">Отзывы и предложения</a></li>
-                            <li><a href="/manager_contact">Контакты</a></li>
+                            <li><a href="/manager_message">РћС‚Р·С‹РІС‹ Рё РїСЂРµРґР»РѕР¶РµРЅРёСЏ</a></li>
+                            <li><a href="/manager_contact">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                         </ul>
                     </div>
                 </div>
@@ -118,17 +118,17 @@
     <div class="container">
         <div class="row">
             <c:if test="${not empty data_error}">
-                <h2 style="color: red; text-align: center">Ошибочые данные.</h2>
+                <h2 style="color: red; text-align: center">РћС€РёР±РѕС‡С‹Рµ РґР°РЅРЅС‹Рµ.</h2>
             </c:if>
-            <h2 style="color: orange; text-align: center">Заказ от GMT ${date}.</h2>
-            <h2 style="color: orange; text-align: center">Клиент
+            <h2 style="color: orange; text-align: center">Р—Р°РєР°Р· РѕС‚ GMT ${date}.</h2>
+            <h2 style="color: orange; text-align: center">РљР»РёРµРЅС‚
                 <a href="/manager_client?id_client=${id_client}" style="color: orange; text-decoration: underline">${login_client}</a>
-                . Менеджер
+                . РњРµРЅРµРґР¶РµСЂ
                 <c:if test="${not empty login_manager}">
                     ${login_manager}
                 </c:if>
                 <c:if test="${empty login_manager}">
-                    еще не назначен
+                    РµС‰Рµ РЅРµ РЅР°Р·РЅР°С‡РµРЅ
                 </c:if>
                 .</h2>
         </div>
@@ -141,14 +141,14 @@
         <table class="table table-condensed">
             <thead>
             <tr class="cart_menu">
-                <td class="image">Кабель</td>
+                <td class="image">РљР°Р±РµР»СЊ</td>
                 <td class="description"></td>
-                <td class="price">Цена за единицу, грн.</td>
-                <td class="quantity">Количество, м.</td>
+                <td class="price">Р¦РµРЅР° Р·Р° РµРґРёРЅРёС†Сѓ, РіСЂРЅ.</td>
+                <td class="quantity">РљРѕР»РёС‡РµСЃС‚РІРѕ, Рј.</td>
                 <c:if test="${not empty edit}">
                     <td class="description"></td>
                 </c:if>
-                <td class="total">Стоимость, грн.</td>
+                <td class="total">РЎС‚РѕРёРјРѕСЃС‚СЊ, РіСЂРЅ.</td>
                 <c:if test="${not empty edit}">
                     <td style="width: 38px"></td>
                 </c:if>
@@ -191,7 +191,7 @@
                                 </td>
                             </c:if>
                             <td>
-                                <input type="submit" class="btn btn-default update" value="Обновить"
+                                <input type="submit" class="btn btn-default update" value="РћР±РЅРѕРІРёС‚СЊ"
                                        style="margin: 0 auto">
                             </td>
                         </form>
@@ -226,21 +226,21 @@
             <div class="col-sm-6">
                 <div class="total_area">
                     <ul>
-                        <label style="margin: 0 auto">Сообщение:</label>
+                        <label style="margin: 0 auto">РЎРѕРѕР±С‰РµРЅРёРµ:</label>
                         <li>${description}</li>
-                        <li>Общая стоимость <span>${sum} грн.</span></li>
+                        <li>РћР±С‰Р°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ <span>${sum} РіСЂРЅ.</span></li>
                         <c:if test="${not empty edit}">
                             <c:if test="${empty complete}">
                                 <a class="btn btn-default check_out"
-                                   href="/manager_box_complete?box_id=${box_id}">Выполнить</a>
+                                   href="/manager_box_complete?box_id=${box_id}">Р’С‹РїРѕР»РЅРёС‚СЊ</a>
                             </c:if>
                             <c:if test="${not empty complete}">
-                                <a class="btn btn-default check_out" style="background-color: red">Недостаточно
-                                    кабеля</a>
+                                <a class="btn btn-default check_out" style="background-color: red">РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ
+                                    РєР°Р±РµР»СЏ</a>
                             </c:if>
                         </c:if>
                         <c:if test="${not empty closed}">
-                            <a class="btn btn-default check_out" style="background-color: red">Заказ уже выполнен</a>
+                            <a class="btn btn-default check_out" style="background-color: red">Р—Р°РєР°Р· СѓР¶Рµ РІС‹РїРѕР»РЅРµРЅ</a>
                         </c:if>
                     </ul>
                 </div>
@@ -248,11 +248,11 @@
             <div class="col-sm-6">
                 <div class="total_area">
                     <ul>
-                        <label style="margin: 0 auto">Телефон:</label>
+                        <label style="margin: 0 auto">РўРµР»РµС„РѕРЅ:</label>
                         <li style="margin: 0 auto">${phone}</li>
                         <label style="margin: 0 auto">Email:</label>
                         <li style="margin: 0 auto">${email}</li>
-                        <label style="margin: 0 auto">Адрес доставки:</label>
+                        <label style="margin: 0 auto">РђРґСЂРµСЃ РґРѕСЃС‚Р°РІРєРё:</label>
                         <li style="margin: 0 auto">${address}</li>
                     </ul>
                 </div>
@@ -268,7 +268,7 @@
                 <div class="col-sm-6 ">
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
-                            <li><a href="/manager_contact">Артем Хиргий </a></li>
+                            <li><a href="/manager_contact">РђСЂС‚РµРј РҐРёСЂРіРёР№ </a></li>
                             <li><a href="/manager_contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
                             <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
                                 cmua76@outlook.com</a></li>
@@ -283,7 +283,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
-                <p class="pull-left">Copyright © 2013 E-Shopper. All rights reserved.</p>
+                <p class="pull-left">Copyright В© 2013 E-Shopper. All rights reserved.</p>
                 <p class="pull-right">Designed by <span><a target="_blank"
                                                            href="http://www.themeum.com">Themeum</a></span></p>
             </div>
@@ -299,7 +299,265 @@
 <script src="js/main.js"></script>
 <script>
     $("#logout").click(function (event) {
-        alert("Выход из акаунта!");
+        alert("Р’С‹С…РѕРґ РёР· Р°РєР°СѓРЅС‚Р°!");
+    });
+</script>
+</body>
+</html>
+
+        </div>
+    </div><!--/header_top-->
+    <div class="header-middle"><!--header-middle-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="logo pull-left">
+                        <a href="/shop"><img src="images/logo.png" alt=""/></a>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="shop-menu pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a <%--href="#"--%>><i class="fa fa-user"></i> ${login}</a></li>
+                            <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Г‚Г»ГµГ®Г¤</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-middle-->
+    <div class="header-bottom"><!--header-bottom-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="mainmenu pull-left">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li><a href="/shop">ГЌГ®ГўГ»ГҐ Г§Г ГЄГ Г§Г»</a></li>
+                            <li class="dropdown"><a>Г‘ГўГ®ГЁ Г§Г ГЄГ Г§Г»<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="/manager_their_orders_work">Г‚ Г°Г ГЎГ®ГІГҐ</a></li>
+                                    <li><a href="/manager_their_orders_closed">Г‚Г»ГЇГ®Г«Г­ГҐГ­Г­Г»ГҐ</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a>Г‚Г±ГҐ Г§Г ГЄГ Г§Г»<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="/manager_all_orders_work">Г‚ Г°Г ГЎГ®ГІГҐ</a></li>
+                                    <li><a href="/manager_all_orders_closed">Г‚Г»ГЇГ®Г«Г­ГҐГ­Г­Г»ГҐ</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/manager_search_client">ГЏГ®ГЁГ±ГЄ ГЄГ«ГЁГҐГ­ГІГ </a></li>
+                            <li class="dropdown"><a>ГЏГ°Г®Г¤ГіГЄГ¶ГЁГї<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="/manager_product_all">Г‚ГҐГ±Гј ГЄГ ГЎГҐГ«Гј</a></li>
+                                    <li><a href="/manager_product_add">Г„Г®ГЎГ ГўГЁГІГј ГЄГ ГЎГҐГ«Гј</a></li>
+                                    <li><a href="/manager_photo">Г”Г®ГІГ®</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/manager_message">ГЋГІГ§Г»ГўГ» ГЁ ГЇГ°ГҐГ¤Г«Г®Г¦ГҐГ­ГЁГї</a></li>
+                            <li><a href="/manager_contact">ГЉГ®Г­ГІГ ГЄГІГ»</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-bottom-->
+</header>
+
+<section id="form" style="margin: 0"><!--form-->
+    <div class="container">
+        <div class="row">
+            <c:if test="${not empty data_error}">
+                <h2 style="color: red; text-align: center">ГЋГёГЁГЎГ®Г·Г»ГҐ Г¤Г Г­Г­Г»ГҐ.</h2>
+            </c:if>
+            <h2 style="color: orange; text-align: center">Г‡Г ГЄГ Г§ Г®ГІ GMT ${date}.</h2>
+            <h2 style="color: orange; text-align: center">ГЉГ«ГЁГҐГ­ГІ
+                <a href="/manager_client?id_client=${id_client}" style="color: orange; text-decoration: underline">${login_client}</a>
+                . ГЊГҐГ­ГҐГ¤Г¦ГҐГ°
+                <c:if test="${not empty login_manager}">
+                    ${login_manager}
+                </c:if>
+                <c:if test="${empty login_manager}">
+                    ГҐГ№ГҐ Г­ГҐ Г­Г Г§Г­Г Г·ГҐГ­
+                </c:if>
+                .</h2>
+        </div>
+    </div>
+</section>
+
+<section id="cart_items">
+    <div class="container">
+        <div class="table-responsive cart_info">
+        <table class="table table-condensed">
+            <thead>
+            <tr class="cart_menu">
+                <td class="image">ГЉГ ГЎГҐГ«Гј</td>
+                <td class="description"></td>
+                <td class="price">Г–ГҐГ­Г  Г§Г  ГҐГ¤ГЁГ­ГЁГ¶Гі, ГЈГ°Г­.</td>
+                <td class="quantity">ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ®, Г¬.</td>
+                <c:if test="${not empty edit}">
+                    <td class="description"></td>
+                </c:if>
+                <td class="total">Г‘ГІГ®ГЁГ¬Г®Г±ГІГј, ГЈГ°Г­.</td>
+                <c:if test="${not empty edit}">
+                    <td style="width: 38px"></td>
+                </c:if>
+            </tr>
+            </thead>
+            <tbody>
+            <c:forEach items="${ords}" var="ord">
+                <tr>
+                    <td class="cart_product">
+                        <a><img src="/photo/${ord.product.photo.id}" alt=""
+                                style="height: 40px; width: 40px; margin: 0 auto"></a>
+                    </td>
+                    <td class="cart_description">
+                        <h4>
+                            <a style="margin: 0 auto">${ord.product.type}${ord.product.numberOfWires}x${ord.product.area}</a>
+                        </h4>
+                    </td>
+                    <td class="cart_price">
+                        <p style="margin: 0 auto">${ord.priceOrd}</p>
+                    </td>
+                    <c:if test="${not empty edit}">
+                        <form action="/manager_box_update_ord?ord_id=${ord.id}&box_id=${box_id}" method="post">
+                            <c:if test="${ord.numberProduct <= ord.product.number}">
+                                <td class="cart_quantity" style="vertical-align: middle">
+                                    <div class="cart_quantity_button">
+                                        <input class="cart_quantity_input" type="text" name="numberProduct"
+                                               value="${ord.numberProduct}"
+                                               autocomplete="off" size="8" style="margin: 0 auto">
+                                    </div>
+                                </td>
+                            </c:if>
+                            <c:if test="${ord.numberProduct > ord.product.number}">
+                                <td class="cart_quantity" style="vertical-align: middle">
+                                    <div class="cart_quantity_button">
+                                        <input class="cart_quantity_input" type="text" name="numberProduct"
+                                               value="${ord.numberProduct}"
+                                               autocomplete="off" size="8"
+                                               style="margin: 0 auto; background-color: red">
+                                    </div>
+                                </td>
+                            </c:if>
+                            <td>
+                                <input type="submit" class="btn btn-default update" value="ГЋГЎГ­Г®ГўГЁГІГј"
+                                       style="margin: 0 auto">
+                            </td>
+                        </form>
+                    </c:if>
+                    <c:if test="${empty edit}">
+                        <td>
+                            <a class="cart_quantity_input" size="8" style="margin: 0 auto">${ord.numberProduct}</a>
+                        </td>
+                    </c:if>
+                    <td class="cart_total">
+                        <fmt:formatNumber var="pr" maxFractionDigits="2" value="${ord.numberProduct*ord.priceOrd}"/>
+                        <p class="cart_total_price" style="margin: 0 auto">${pr}</p>
+                    </td>
+                    <td class="cart_delete">
+                        <c:if test="${not empty edit}">
+                            <a class="cart_quantity_delete" href="/manager_box_delete_ord?ord_id=${ord.id}"
+                               style="margin: 0 auto"><i
+                                    class="fa fa-times"></i></a>
+                        </c:if>
+                    </td>
+                </tr>
+            </c:forEach>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</section> <!--/#cart_items-->
+
+<section id="do_action">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="total_area">
+                    <ul>
+                        <label style="margin: 0 auto">Г‘Г®Г®ГЎГ№ГҐГ­ГЁГҐ:</label>
+                        <li>${description}</li>
+                        <li>ГЋГЎГ№Г Гї Г±ГІГ®ГЁГ¬Г®Г±ГІГј <span>${sum} ГЈГ°Г­.</span></li>
+                        <c:if test="${not empty edit}">
+                            <c:if test="${empty complete}">
+                                <a class="btn btn-default check_out"
+                                   href="/manager_box_complete?box_id=${box_id}">Г‚Г»ГЇГ®Г«Г­ГЁГІГј</a>
+                            </c:if>
+                            <c:if test="${not empty complete}">
+                                <a class="btn btn-default check_out" style="background-color: red">ГЌГҐГ¤Г®Г±ГІГ ГІГ®Г·Г­Г®
+                                    ГЄГ ГЎГҐГ«Гї</a>
+                            </c:if>
+                        </c:if>
+                        <c:if test="${not empty closed}">
+                            <a class="btn btn-default check_out" style="background-color: red">Г‡Г ГЄГ Г§ ГіГ¦ГҐ ГўГ»ГЇГ®Г«Г­ГҐГ­</a>
+                        </c:if>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="total_area">
+                    <ul>
+                        <label style="margin: 0 auto">Г’ГҐГ«ГҐГґГ®Г­:</label>
+                        <li style="margin: 0 auto">${phone}</li>
+                        <label style="margin: 0 auto">Email:</label>
+                        <li style="margin: 0 auto">${email}</li>
+                        <label style="margin: 0 auto">ГЂГ¤Г°ГҐГ± Г¤Г®Г±ГІГ ГўГЄГЁ:</label>
+                        <li style="margin: 0 auto">${address}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--/#do_action-->
+
+<footer id="footer"><!--Footer-->
+    <div class="header_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <div class="contactinfo">
+                        <ul class="nav nav-pills">
+                            <li><a href="/manager_contact">ГЂГ°ГІГҐГ¬ Г•ГЁГ°ГЈГЁГ© </a></li>
+                            <li><a href="/manager_contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
+                            <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
+                                cmua76@outlook.com</a></li>
+                            <li><a href="https://www.facebook.com/artem.khirgii"><i class="fa fa-facebook"></i>
+                                artem.khirgii</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <p class="pull-left">Copyright В© 2013 E-Shopper. All rights reserved.</p>
+                <p class="pull-right">Designed by <span><a target="_blank"
+                                                           href="http://www.themeum.com">Themeum</a></span></p>
+            </div>
+        </div>
+    </div>
+</footer><!--/Footer-->
+
+<script src="js/jquery.js"></script>
+<script src="js/price-range.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $("#logout").click(function (event) {
+        alert("Г‚Г»ГµГ®Г¤ ГЁГ§ Г ГЄГ ГіГ­ГІГ !");
     });
 </script>
 </body>
