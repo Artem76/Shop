@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta http-equiv="Content-Type" content="text/html; charset=cp1251" \>
-    <title>Shop | КАБЕЛЬ.ЕСТЬ</title>
+    <title>Shop | РљРђР‘Р•Р›Р¬.Р•РЎРўР¬</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -37,7 +37,7 @@
                 <div class="col-sm-6 ">
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
-                            <li><a href="/user_contact">Артем Хиргий </a></li>
+                            <li><a href="/user_contact">РђСЂС‚РµРј РҐРёСЂРіРёР№ </a></li>
                             <li><a href="/user_contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
                             <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
                                 cmua76@outlook.com</a></li>
@@ -62,8 +62,8 @@
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
                             <li><a><i class="fa fa-user"></i> ${login}</a></li>
-                            <li><a href="/shop"><i class="fa fa-shopping-cart"></i> Магазин</a></li>
-                            <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Выход</a></li>
+                            <li><a href="/shop"><i class="fa fa-shopping-cart"></i> РњР°РіР°Р·РёРЅ</a></li>
+                            <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Р’С‹С…РѕРґ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -85,16 +85,16 @@
                     </div>
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li><a href="/shop">Главная</a></li>
-                            <li class="dropdown"><a <%--href="#"--%>>Заказы<i class="fa fa-angle-down"></i></a>
+                            <li><a href="/shop">Р“Р»Р°РІРЅР°СЏ</a></li>
+                            <li class="dropdown"><a <%--href="#"--%>>Р—Р°РєР°Р·С‹<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="/user_cart">Корзина</a></li>
-                                    <li><a href="/user_orders_work">В работе</a></li>
-                                    <li><a href="/user_orders_closed" class="active">Выполненные</a></li>
+                                    <li><a href="/user_cart">РљРѕСЂР·РёРЅР°</a></li>
+                                    <li><a href="/user_orders_work">Р’ СЂР°Р±РѕС‚Рµ</a></li>
+                                    <li><a href="/user_orders_closed" class="active">Р’С‹РїРѕР»РЅРµРЅРЅС‹Рµ</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/user_message">Отзывы и предложения</a></li>
-                            <li><a href="/user_contact">Контакты</a></li>
+                            <li><a href="/user_message">РћС‚Р·С‹РІС‹ Рё РїСЂРµРґР»РѕР¶РµРЅРёСЏ</a></li>
+                            <li><a href="/user_contact">РљРѕРЅС‚Р°РєС‚С‹</a></li>
                         </ul>
                     </div>
                 </div>
@@ -116,10 +116,10 @@
                     <div class="carousel-inner">
                         <div class="item active">
                             <div class="col-sm-6">
-                                <h1><span>КАБЕЛЬ</span>.ЕСТЬ</h1>
-                                <h2>Лучшие цены</h2>
-                                <p>Мы работаем напрямую с производителями, что позволяет нам обеспечить самые низкие
-                                    цены на рынке. </p>
+                                <h1><span>РљРђР‘Р•Р›Р¬</span>.Р•РЎРўР¬</h1>
+                                <h2>Р›СѓС‡С€РёРµ С†РµРЅС‹</h2>
+                                <p>РњС‹ СЂР°Р±РѕС‚Р°РµРј РЅР°РїСЂСЏРјСѓСЋ СЃ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЏРјРё, С‡С‚Рѕ РїРѕР·РІРѕР»СЏРµС‚ РЅР°Рј РѕР±РµСЃРїРµС‡РёС‚СЊ СЃР°РјС‹Рµ РЅРёР·РєРёРµ
+                                    С†РµРЅС‹ РЅР° СЂС‹РЅРєРµ. </p>
                             </div>
                             <div class="col-sm-6">
                                 <img src="images/purse.jpg" class="girl img-responsive" alt=""/>
@@ -127,10 +127,10 @@
                         </div>
                         <div class="item">
                             <div class="col-sm-6">
-                                <h1><span>КАБЕЛЬ</span>.ЕСТЬ</h1>
-                                <h2>Быстрая доставка</h2>
-                                <p>В нашем распоряжении огромный парк автомобилей, мы гарантируем поставку товара в
-                                    течении одного дня после совершения покупки. </p>
+                                <h1><span>РљРђР‘Р•Р›Р¬</span>.Р•РЎРўР¬</h1>
+                                <h2>Р‘С‹СЃС‚СЂР°СЏ РґРѕСЃС‚Р°РІРєР°</h2>
+                                <p>Р’ РЅР°С€РµРј СЂР°СЃРїРѕСЂСЏР¶РµРЅРёРё РѕРіСЂРѕРјРЅС‹Р№ РїР°СЂРє Р°РІС‚РѕРјРѕР±РёР»РµР№, РјС‹ РіР°СЂР°РЅС‚РёСЂСѓРµРј РїРѕСЃС‚Р°РІРєСѓ С‚РѕРІР°СЂР° РІ
+                                    С‚РµС‡РµРЅРёРё РѕРґРЅРѕРіРѕ РґРЅСЏ РїРѕСЃР»Рµ СЃРѕРІРµСЂС€РµРЅРёСЏ РїРѕРєСѓРїРєРё. </p>
                             </div>
                             <div class="col-sm-6">
                                 <img src="images/car.png" class="girl img-responsive" alt=""/>
@@ -138,10 +138,10 @@
                         </div>
                         <div class="item">
                             <div class="col-sm-6">
-                                <h1><span>КАБЕЛЬ</span>.ЕСТЬ</h1>
-                                <h2>Отличное качество</h2>
-                                <p>Мы работаем только с теми произодителями которые заслужили общее признание и
-                                    доверие. </p>
+                                <h1><span>РљРђР‘Р•Р›Р¬</span>.Р•РЎРўР¬</h1>
+                                <h2>РћС‚Р»РёС‡РЅРѕРµ РєР°С‡РµСЃС‚РІРѕ</h2>
+                                <p>РњС‹ СЂР°Р±РѕС‚Р°РµРј С‚РѕР»СЊРєРѕ СЃ С‚РµРјРё РїСЂРѕРёР·РѕРґРёС‚РµР»СЏРјРё РєРѕС‚РѕСЂС‹Рµ Р·Р°СЃР»СѓР¶РёР»Рё РѕР±С‰РµРµ РїСЂРёР·РЅР°РЅРёРµ Рё
+                                    РґРѕРІРµСЂРёРµ. </p>
                             </div>
                             <div class="col-sm-6">
                                 <img src="images/kachestvo.png" class="girl img-responsive" alt=""/>
@@ -163,7 +163,7 @@
 <section id="form" style="margin: 0"><!--form-->
     <div class="container">
         <div class="row">
-            <h2 style="color: orange; text-align: center">Свои выполненные заказы.</h2>
+            <h2 style="color: orange; text-align: center">РЎРІРѕРё РІС‹РїРѕР»РЅРµРЅРЅС‹Рµ Р·Р°РєР°Р·С‹.</h2>
         </div>
     </div>
 </section>
@@ -174,8 +174,8 @@
             <table class="table table-condensed">
                 <thead>
                 <tr class="cart_menu" style="text-align: center">
-                    <td class="description">Время</td>
-                    <td class="price">Менеджер</td>
+                    <td class="description">Р’СЂРµРјСЏ</td>
+                    <td class="price">РњРµРЅРµРґР¶РµСЂ</td>
                     <td class="description"></td>
                 </tr>
                 </thead>
@@ -192,7 +192,7 @@
                         </td>
                         <td>
                             <a class="btn btn-default update" style="margin: 0 auto"
-                               href="/user_work_box?box_id=${box.id}">Открыть</a>
+                               href="/user_work_box?box_id=${box.id}">РћС‚РєСЂС‹С‚СЊ</a>
                         </td>
                     </tr>
                 </c:forEach>
@@ -208,8 +208,8 @@
             <div class="row">
                 <div class="col-sm-2">
                     <div class="companyinfo">
-                        <h2><span>Кабель</span>.Есть</h2>
-                        <p>Пользуйтесь услугами нашего магазина и все будет ОТЛИЧНО!!!</p>
+                        <h2><span>РљР°Р±РµР»СЊ</span>.Р•СЃС‚СЊ</h2>
+                        <p>РџРѕР»СЊР·СѓР№С‚РµСЃСЊ СѓСЃР»СѓРіР°РјРё РЅР°С€РµРіРѕ РјР°РіР°Р·РёРЅР° Рё РІСЃРµ Р±СѓРґРµС‚ РћРўР›РР§РќРћ!!!</p>
                     </div>
                 </div>
                 <div class="col-sm-7">
@@ -220,11 +220,11 @@
                                     <img src="images/purse.jpg" alt=""/>
                                 </div>
                                 <div class="overlay-icon">
-                                    <i style="margin: auto" <%--class="fa fa-play-circle-o"--%>>ЦЕНА</i>
+                                    <i style="margin: auto" <%--class="fa fa-play-circle-o"--%>>Р¦Р•РќРђ</i>
                                 </div>
                             </a>
-                            <p>Низкие цены</p>
-                            <h2>Дешевле не найдете</h2>
+                            <p>РќРёР·РєРёРµ С†РµРЅС‹</p>
+                            <h2>Р”РµС€РµРІР»Рµ РЅРµ РЅР°Р№РґРµС‚Рµ</h2>
                         </div>
                     </div>
                     <div class="col-sm-3">
@@ -234,11 +234,11 @@
                                     <img src="images/car.png" alt=""/>
                                 </div>
                                 <div class="overlay-icon">
-                                    <i style="margin: auto" <%--class="fa fa-play-circle-o"--%>>СКОРОСТЬ</i>
+                                    <i style="margin: auto" <%--class="fa fa-play-circle-o"--%>>РЎРљРћР РћРЎРўР¬</i>
                                 </div>
                             </a>
-                            <p>Быстрая доставка</p>
-                            <h2>Быстрее всех</h2>
+                            <p>Р‘С‹СЃС‚СЂР°СЏ РґРѕСЃС‚Р°РІРєР°</p>
+                            <h2>Р‘С‹СЃС‚СЂРµРµ РІСЃРµС…</h2>
                         </div>
                     </div>
                     <div class="col-sm-3">
@@ -248,18 +248,18 @@
                                     <img src="images/kachestvo.png" alt=""/>
                                 </div>
                                 <div class="overlay-icon">
-                                    <i style="margin: auto" <%--class="fa fa-play-circle-o"--%>>КАЧЕСТВО</i>
+                                    <i style="margin: auto" <%--class="fa fa-play-circle-o"--%>>РљРђР§Р•РЎРўР’Рћ</i>
                                 </div>
                             </a>
-                            <p>Высокое качество</p>
-                            <h2>Только лучшее</h2>
+                            <p>Р’С‹СЃРѕРєРѕРµ РєР°С‡РµСЃС‚РІРѕ</p>
+                            <h2>РўРѕР»СЊРєРѕ Р»СѓС‡С€РµРµ</h2>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="address">
                         <img src="images/home/map.png" alt=""/>
-                        <p>Мы находимся в Украине.</p>
+                        <p>РњС‹ РЅР°С…РѕРґРёРјСЃСЏ РІ РЈРєСЂР°РёРЅРµ.</p>
                     </div>
                 </div>
             </div>
@@ -271,7 +271,7 @@
                 <div class="col-sm-6 ">
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
-                            <li><a href="/user_contact">Артем Хиргий </a></li>
+                            <li><a href="/user_contact">РђСЂС‚РµРј РҐРёСЂРіРёР№ </a></li>
                             <li><a href="/user_contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
                             <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
                                 cmua76@outlook.com</a></li>
@@ -286,7 +286,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
-                <p class="pull-left">Copyright © 2013 E-Shopper. All rights reserved.</p>
+                <p class="pull-left">Copyright В© 2013 E-Shopper. All rights reserved.</p>
                 <p class="pull-right">Designed by <span><a target="_blank"
                                                            href="http://www.themeum.com">Themeum</a></span></p>
             </div>
@@ -302,7 +302,268 @@
 <script src="js/main.js"></script>
 <script>
     $("#logout").click(function (event) {
-        alert("Выход из акаунта!");
+        alert("Р’С‹С…РѕРґ РёР· Р°РєР°СѓРЅС‚Р°!");
+    });
+</script>
+</body>
+</html>
+
+        </div>
+    </div><!--/header_top-->
+
+    <div class="header-middle"><!--header-middle-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="logo pull-left">
+                        <a href="/shop"><img src="images/logo.png" alt=""/></a>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="shop-menu pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a><i class="fa fa-user"></i> ${login}</a></li>
+                            <li><a href="/shop"><i class="fa fa-shopping-cart"></i> ГЊГ ГЈГ Г§ГЁГ­</a></li>
+                            <li><a id="logout" href="/logout"><i class="fa fa-lock"></i> Г‚Г»ГµГ®Г¤</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-middle-->
+    <div class="header-bottom"><!--header-bottom-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="mainmenu pull-left">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li><a href="/shop">ГѓГ«Г ГўГ­Г Гї</a></li>
+                            <li class="dropdown"><a <%--href="#"--%>>Г‡Г ГЄГ Г§Г»<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="/user_cart">ГЉГ®Г°Г§ГЁГ­Г </a></li>
+                                    <li><a href="/user_orders_work">Г‚ Г°Г ГЎГ®ГІГҐ</a></li>
+                                    <li><a href="/user_orders_closed" class="active">Г‚Г»ГЇГ®Г«Г­ГҐГ­Г­Г»ГҐ</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/user_message">ГЋГІГ§Г»ГўГ» ГЁ ГЇГ°ГҐГ¤Г«Г®Г¦ГҐГ­ГЁГї</a></li>
+                            <li><a href="/user_contact">ГЉГ®Г­ГІГ ГЄГІГ»</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-bottom-->
+</header>
+
+<section id="slider"><!--slider-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#slider-carousel" data-slide-to="1"></li>
+                        <li data-target="#slider-carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="col-sm-6">
+                                <h1><span>ГЉГЂГЃГ…Г‹Гњ</span>.Г…Г‘Г’Гњ</h1>
+                                <h2>Г‹ГіГ·ГёГЁГҐ Г¶ГҐГ­Г»</h2>
+                                <p>ГЊГ» Г°Г ГЎГ®ГІГ ГҐГ¬ Г­Г ГЇГ°ГїГ¬ГіГѕ Г± ГЇГ°Г®ГЁГ§ГўГ®Г¤ГЁГІГҐГ«ГїГ¬ГЁ, Г·ГІГ® ГЇГ®Г§ГўГ®Г«ГїГҐГІ Г­Г Г¬ Г®ГЎГҐГ±ГЇГҐГ·ГЁГІГј Г±Г Г¬Г»ГҐ Г­ГЁГ§ГЄГЁГҐ
+                                    Г¶ГҐГ­Г» Г­Г  Г°Г»Г­ГЄГҐ. </p>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="images/purse.jpg" class="girl img-responsive" alt=""/>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-sm-6">
+                                <h1><span>ГЉГЂГЃГ…Г‹Гњ</span>.Г…Г‘Г’Гњ</h1>
+                                <h2>ГЃГ»Г±ГІГ°Г Гї Г¤Г®Г±ГІГ ГўГЄГ </h2>
+                                <p>Г‚ Г­Г ГёГҐГ¬ Г°Г Г±ГЇГ®Г°ГїГ¦ГҐГ­ГЁГЁ Г®ГЈГ°Г®Г¬Г­Г»Г© ГЇГ Г°ГЄ Г ГўГІГ®Г¬Г®ГЎГЁГ«ГҐГ©, Г¬Г» ГЈГ Г°Г Г­ГІГЁГ°ГіГҐГ¬ ГЇГ®Г±ГІГ ГўГЄГі ГІГ®ГўГ Г°Г  Гў
+                                    ГІГҐГ·ГҐГ­ГЁГЁ Г®Г¤Г­Г®ГЈГ® Г¤Г­Гї ГЇГ®Г±Г«ГҐ Г±Г®ГўГҐГ°ГёГҐГ­ГЁГї ГЇГ®ГЄГіГЇГЄГЁ. </p>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="images/car.png" class="girl img-responsive" alt=""/>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-sm-6">
+                                <h1><span>ГЉГЂГЃГ…Г‹Гњ</span>.Г…Г‘Г’Гњ</h1>
+                                <h2>ГЋГІГ«ГЁГ·Г­Г®ГҐ ГЄГ Г·ГҐГ±ГІГўГ®</h2>
+                                <p>ГЊГ» Г°Г ГЎГ®ГІГ ГҐГ¬ ГІГ®Г«ГјГЄГ® Г± ГІГҐГ¬ГЁ ГЇГ°Г®ГЁГ§Г®Г¤ГЁГІГҐГ«ГїГ¬ГЁ ГЄГ®ГІГ®Г°Г»ГҐ Г§Г Г±Г«ГіГ¦ГЁГ«ГЁ Г®ГЎГ№ГҐГҐ ГЇГ°ГЁГ§Г­Г Г­ГЁГҐ ГЁ
+                                    Г¤Г®ГўГҐГ°ГЁГҐ. </p>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="images/kachestvo.png" class="girl img-responsive" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--/slider-->
+
+<section id="form" style="margin: 0"><!--form-->
+    <div class="container">
+        <div class="row">
+            <h2 style="color: orange; text-align: center">Г‘ГўГ®ГЁ ГўГ»ГЇГ®Г«Г­ГҐГ­Г­Г»ГҐ Г§Г ГЄГ Г§Г».</h2>
+        </div>
+    </div>
+</section>
+
+<section id="cart_items">
+    <div class="container">
+        <div class="table-responsive cart_info">
+            <table class="table table-condensed">
+                <thead>
+                <tr class="cart_menu" style="text-align: center">
+                    <td class="description">Г‚Г°ГҐГ¬Гї</td>
+                    <td class="price">ГЊГҐГ­ГҐГ¤Г¦ГҐГ°</td>
+                    <td class="description"></td>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach items="${boxes}" var="box">
+                    <tr style="text-align: center">
+                        <td class="cart_description">
+                            <h4>
+                                <a style="margin: 0 auto">GMT ${box.date}</a>
+                            </h4>
+                        </td>
+                        <td class="cart_price">
+                            <p style="margin: 0 auto">${box.customUsers[1].login}</p>
+                        </td>
+                        <td>
+                            <a class="btn btn-default update" style="margin: 0 auto"
+                               href="/user_work_box?box_id=${box.id}">ГЋГІГЄГ°Г»ГІГј</a>
+                        </td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section> <!--/#cart_items-->
+
+<footer id="footer"><!--Footer-->
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="companyinfo">
+                        <h2><span>ГЉГ ГЎГҐГ«Гј</span>.Г…Г±ГІГј</h2>
+                        <p>ГЏГ®Г«ГјГ§ГіГ©ГІГҐГ±Гј ГіГ±Г«ГіГЈГ Г¬ГЁ Г­Г ГёГҐГЈГ® Г¬Г ГЈГ Г§ГЁГ­Г  ГЁ ГўГ±ГҐ ГЎГіГ¤ГҐГІ ГЋГ’Г‹Г€Г—ГЌГЋ!!!</p>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                            <a href="/shop">
+                                <div class="iframe-img" style="width: 60px; height: 60px; margin: 0 auto">
+                                    <img src="images/purse.jpg" alt=""/>
+                                </div>
+                                <div class="overlay-icon">
+                                    <i style="margin: auto" <%--class="fa fa-play-circle-o"--%>>Г–Г…ГЌГЂ</i>
+                                </div>
+                            </a>
+                            <p>ГЌГЁГ§ГЄГЁГҐ Г¶ГҐГ­Г»</p>
+                            <h2>Г„ГҐГёГҐГўГ«ГҐ Г­ГҐ Г­Г Г©Г¤ГҐГІГҐ</h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                            <a href="/shop">
+                                <div class="iframe-img" style="width: 60px; height: 60px; margin: 0 auto">
+                                    <img src="images/car.png" alt=""/>
+                                </div>
+                                <div class="overlay-icon">
+                                    <i style="margin: auto" <%--class="fa fa-play-circle-o"--%>>Г‘ГЉГЋГђГЋГ‘Г’Гњ</i>
+                                </div>
+                            </a>
+                            <p>ГЃГ»Г±ГІГ°Г Гї Г¤Г®Г±ГІГ ГўГЄГ </p>
+                            <h2>ГЃГ»Г±ГІГ°ГҐГҐ ГўГ±ГҐГµ</h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                            <a href="/shop">
+                                <div class="iframe-img" style="width: 60px; height: 60px; margin: 0 auto">
+                                    <img src="images/kachestvo.png" alt=""/>
+                                </div>
+                                <div class="overlay-icon">
+                                    <i style="margin: auto" <%--class="fa fa-play-circle-o"--%>>ГЉГЂГ—Г…Г‘Г’Г‚ГЋ</i>
+                                </div>
+                            </a>
+                            <p>Г‚Г»Г±Г®ГЄГ®ГҐ ГЄГ Г·ГҐГ±ГІГўГ®</p>
+                            <h2>Г’Г®Г«ГјГЄГ® Г«ГіГ·ГёГҐГҐ</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="address">
+                        <img src="images/home/map.png" alt=""/>
+                        <p>ГЊГ» Г­Г ГµГ®Г¤ГЁГ¬Г±Гї Гў Г“ГЄГ°Г ГЁГ­ГҐ.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <div class="contactinfo">
+                        <ul class="nav nav-pills">
+                            <li><a href="/user_contact">ГЂГ°ГІГҐГ¬ Г•ГЁГ°ГЈГЁГ© </a></li>
+                            <li><a href="/user_contact"><i class="fa fa-phone"></i> +38(097)946 89 25</a></li>
+                            <li><a href="mailto:cmua76@outlook.com"><i class="fa fa-envelope"></i>
+                                cmua76@outlook.com</a></li>
+                            <li><a href="https://www.facebook.com/artem.khirgii"><i class="fa fa-facebook"></i>
+                                artem.khirgii</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <p class="pull-left">Copyright В© 2013 E-Shopper. All rights reserved.</p>
+                <p class="pull-right">Designed by <span><a target="_blank"
+                                                           href="http://www.themeum.com">Themeum</a></span></p>
+            </div>
+        </div>
+    </div>
+</footer><!--/Footer-->
+
+<script src="js/jquery.js"></script>
+<script src="js/price-range.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $("#logout").click(function (event) {
+        alert("Г‚Г»ГµГ®Г¤ ГЁГ§ Г ГЄГ ГіГ­ГІГ !");
     });
 </script>
 </body>
